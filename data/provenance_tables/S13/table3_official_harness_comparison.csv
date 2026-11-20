@@ -1,0 +1,5 @@
+model,num_tasks,native_agent_raw,native_agent_display,native_without_pct,native_with_pct,native_lift_col_pp,native_lift_display_diff_pp,openhands_without_pct,openhands_with_pct,openhands_lift_col_pp,openhands_lift_display_diff_pp,lift_diff_col_pp,rel_diff_col_pct,lift_diff_display_pp,rel_diff_display_pct
+GPT-5.5,87,codex,Codex,46.8,66.5,19.7,19.7,51.5,67.3,15.8,15.8,-3.9,-19.8,-3.9,-19.8
+Opus 4.7,87,claude-code,Claude Code,43.0,61.2,18.2,18.2,42.1,53.1,11.1,11.0,-7.1,-39.0,-7.2,-39.6
+Gemini 3.1 Pro,87,gemini-cli,Gemini CLI,36.0,60.8,24.8,24.8,33.8,52.8,19.0,19.0,-5.8,-23.4,-5.8,-23.4
+Three-Model Arithmetic Mean,87,mean,Native CLI Mean,41.93,62.83,20.9,20.9,42.47,57.73,15.3,15.27,-5.6,-26.8,-5.63,-27.0

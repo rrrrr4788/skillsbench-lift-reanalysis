@@ -1,0 +1,16 @@
+group,subgroup,count,denominator,pct
+audit_records_total,"pr7 (2,333) + failure (678)",3011,3011,100.00
+pr7_leakage,no_skill_leakage (without-skills),58,2333,26.7
+pr7_leakage,no_skill_leakage_full_pass (reward==1),13,58,22.41
+pr7_leakage,verifier_leakage_all,7,2333,42.86
+pr7_leakage,verifier_leakage_without_skills,6,7,50.00
+pr7_leakage,verifier_leakage_with_skills,1,7,0.00
+failure_678,model_capability_failure,622,678,91.74
+failure_678,infra_or_environment_failure,48,678,7.08
+failure_678,unclear_needs_human_followup,8,678,1.18
+cap_fail_622_fail_mode,healthy_fail_reward_0,562,622,90.35
+cap_fail_622_fail_mode,partial_reward_fail,60,622,9.65
+cap_fail_622_category,incomplete_premature_unfinished_prefix,35,622,5.63
+cap_fail_622_category,non_incomplete_complement,587,622,94.37
+cap_fail_622_category,tool_or_schema_errors,3,622,0.48
+cap_fail_622_category,completed_deliverable_assertion_mismatches,584,622,93.89

@@ -1,0 +1,3 @@
+scope,n_blocks,n_slots,n_triple_windows,n_triplets,assign_vars_x_formula,assign_vars_x,window_vars_w_formula,window_vars_w,total_xw_binary_vars_formula,total_xw_binary_vars,triplet_lin_constraints_formula,triplet_lin_constraints
+"distinct_block_triplets_only (|{i,j,k}| == 3)",24,24,22,11130,24 * 24,576,11130 * 22,244860,576 + 244860,245436,4 * 244860,979440
+all_nonzero_csv_triplets (all rows in triplet_counts.csv),24,24,22,12415,24 * 24,576,12415 * 22,273130,576 + 273130,273706,4 * 273130,1092520

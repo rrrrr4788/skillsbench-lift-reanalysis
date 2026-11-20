@@ -1,0 +1,4 @@
+distinct_block_cardinality,row_count,share_of_csv_pct,included_in_feasible_permutation_mip
+3,11130,89.6496,True
+2,1272,10.2457,False
+1,13,0.1047,False

@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "KEEP|Clean_Core_Module": {
+      "files": 784,
+      "bytes": 7324751
+    },
+    "PRUNE|Cat2_License_Pollution": {
+      "files": 4,
+      "bytes": 87672
+    },
+    "FLAG_ORACLE_CONFLICT|Cat0_Oracle_Algorithmic_Conflict": {
+      "files": 6,
+      "bytes": 28598
+    },
+    "PRUNE|Cat5_Unaligned_Auxiliary_Ref_Script": {
+      "files": 17,
+      "bytes": 740012
+    },
+    "PRUNE|Cat3_Mismatched_PDF_Forms_Submodule": {
+      "files": 41,
+      "bytes": 262669
+    },
+    "PRUNE|Cat4_Mismatched_XLSX_Recalc_Submodule": {
+      "files": 5,
+      "bytes": 32129
+    },
+    "PRUNE|Cat1_Synthetic_Stub": {
+      "files": 53,
+      "bytes": 597567
+    }
+  },
+  "prompt_patches": [
+    {
+      "task": "protein-expression-analysis",
+      "verifier_trap": "verifier/test_outputs.py loads output workbook with openpyxl.load_workbook(..., data_only=True), which returns None for un-evaluated formula cells.",
+      "prompt_patch_addition": "\n\n**Proposed grading clarification**: Preserve the Excel formulas required by the task and evaluate them before final saving so the output workbook contains their cached results. The verifier reads cached values with openpyxl data_only=True; do not replace required formulas with constants."
+    },
+    {
+      "task": "flood-risk-analysis",
+      "verifier_trap": "The instruction omits the operational flood definition. Skills specify NWS minor flood stage, daily maximum and >=; the oracle uses frozen station thresholds.",
+      "prompt_patch_addition": "\n\n**Proposed grading clarification**: Count a flood day when the daily maximum water level is greater than or equal to the station-specific NWS minor flood stage, using matching units. Use the same frozen station threshold table as the reference calculation; benchmark maintainers must expose that table to both conditions. This proposed baseline has not been run."
+    },
+    {
+      "task": "earthquake-plate-calculation",
+      "verifier_trap": "verifier/test_outputs.py enforces DISTANCE_TOLERANCE = 0.01 km (10m over 3,878.27 km = 0.000258% / 0.00026%), failing spherical Haversine (3,552.98 km) by 325.29 km and Web Mercator EPSG:3857 (4,152.56 km) by 274.29 km; among the 3 tested implementations, only EPSG:4087 (specified in SKILL.md) passes.",
+      "prompt_patch_addition": "\n\n**Grading Contract Note (SkillsBench-Clean)**: Distance to the plate boundary is graded with a tolerance of `\u00b10.01 km` (`10 meters`). Project both earthquake points and plate boundary geometries from `EPSG:4326` to World Equidistant Cylindrical (`EPSG:4087`) before computing Euclidean planar distance in kilometers."
+    }
+  ],
+  "revision_note": "Three reviewed cases; previous five-case patches archived in docs/section3/historical_prompt_patches.json. Proposals are not validated agent interventions."
+}

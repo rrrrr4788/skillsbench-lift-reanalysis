@@ -1,0 +1,190 @@
+{
+ "analysis_version": 3,
+ "date": "2026-11-15",
+ "source_repository": {
+  "name": "agent-skills-hurt",
+  "url": "https://github.com/rrrrr4788/agent-skills-hurt",
+  "commit": "6b11d0beaff1707a193465e088aff519e0e2a730",
+  "tag": "v1.0.0-rc1"
+ },
+ "environment": {
+  "python": "3.11.18",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.41"
+ },
+ "note_on_environment": "run in the Docker image python:3.11-slim with numpy installed in a virtual environment; matplotlib 3.x for figures",
+ "inputs_sha256": {
+  "normalized_trials": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
+  "paired_cells": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
+  "cell_features": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
+  "task_partition": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+  "method_config": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
+  "model_code": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de"
+ },
+ "inputs_git_blob": {
+  "normalized_trials": "4987aa9465541922f96dd67b9d891c384f23c5a2",
+  "paired_cells": "c1b6cd3b6512051096e72814e49f1db2c336298f",
+  "cell_features": "21b0cde5ea76a10d7883ad1a86243a1332ce74d7",
+  "task_partition": "f3fb9ebd78e2415dfcb72b4141f7b3f1224a7bf7",
+  "method_config": "eaf81ac4f09148ab1fe54664eae39a2c6162071a",
+  "model_code": "d08b7c260881f9086a73b17d581d5377e840dc4e"
+ },
+ "inputs_path": {
+  "normalized_trials": "data/provenance_tables/S02/normalized_trials.csv",
+  "paired_cells": "data/provenance_tables/S02/paired_cells.csv",
+  "cell_features": "data/provenance_tables/S05/cell_features_1421.csv",
+  "task_partition": "data/provenance_tables/S18/task_partition_87.csv",
+  "method_config": "data/provenance_tables/S12/method_config.json",
+  "model_code": "scripts/train_gate_oof.py"
+ },
+ "inputs_sha256_with_crlf_line_endings": {
+  "normalized_trials": "782c03774c94c0cfda88b7be7788aed6cc00a179fb070c048cb11c32a9fe2a9b",
+  "paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+  "cell_features": "45a12e00e5ec34ac50f232e51ec7b2af83d7e43f240c10416f363e352b7f9331",
+  "task_partition": "51c41fa9b8dadaf630c9928c6c1afaf1273c5514a3b55afe624d4672355f029d",
+  "method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629",
+  "model_code": "8a03cfb195c8452bdfe1870a089a1f85266a1c5e5bec40606bbab83624ab12f7"
+ },
+ "model_code_dependency": {
+  "scripts/provenance_common.py": {
+   "sha256": "7ae0b1c428e9f464979f4dfcbe05d7fdcae62a50f3e9de5cc84c983bd6b46474",
+   "git_blob": "ec3bbc1e3d8c6c6559ebd0758314eca9af94e0db"
+  }
+ },
+ "note_on_input_hashes": "inputs_sha256 are the hashes of the files as committed at the commit above (LF line endings); they equal 'git show <commit>:<path> | sha256sum' and the files in repo_snapshot/. The version-2 manifest recorded the hashes of the same text with CRLF line endings, listed here under inputs_sha256_with_crlf_line_endings; no recorded hash was edited.",
+ "seeds": {
+  "null": 20261112,
+  "split": 20261113,
+  "tasks": 20261114,
+  "bootstrap": 42
+ },
+ "thresholds_from_method_config": {
+  "level_cutoff_p0_mid_split": 0.3,
+  "level_cutoff_p0_threshold": 0.8,
+  "max_gain_tau_gain": 0.02,
+  "max_gain_tau_risk": 1.0,
+  "risk_averse_tau_gain": 0.0,
+  "risk_averse_tau_risk": 0.25,
+  "sensitivity_sweep_balanced_tau_risk": 0.25,
+  "sensitivity_sweep_conservative_tau_risk": 0.15,
+  "sensitivity_sweep_gain_priority_tau_risk": 0.5,
+  "static_hygiene_max_ratio": 25.0,
+  "zero_prior_static_tau_gain": 0.04
+ },
+ "commands": {
+  "base": "python skillgate_checks.py REPO OUT base",
+  "exact": "python skillgate_checks.py REPO OUT exact",
+  "tasks": "python skillgate_checks.py REPO OUT tasks 100000",
+  "seeds": "python skillgate_checks.py REPO OUT seeds 8",
+  "null": "python skillgate_checks.py REPO OUT null 60",
+  "split": "python skillgate_checks.py REPO OUT split 60",
+  "figures": "python make_figures.py OUT figures",
+  "verify": "python verify_paper_numbers.py OUT main.tex",
+  "check_inputs": "python check_inputs.py REPO",
+  "compare": "python compare_runs.py results OUT",
+  "section3": "python section3_revision.py",
+  "verify_independent_run": "python verify_independent_run.py results ../docs/verification-2026-11-15/rerun ../docs/verification-2026-11-15/comparison.json"
+ },
+ "runtime_seconds": {
+  "base": 88.9,
+  "exact": 0.4,
+  "tasks": 28.6,
+  "seeds": 678.4,
+  "null": 2770.4,
+  "split": 2495.8
+ },
+ "leakage_checks": {
+  "decision_and_heldout_trial_ids_disjoint": true,
+  "decision_feature_recomputed_from_ids_matches": true,
+  "refit_is_deterministic": true
+ },
+ "scripts_sha256": {
+  "skillgate_checks.py": "ee39d6a1d39e81ade1bd98842b6768947312115a7f8769918d0ea5f0898b3d70",
+  "make_figures.py": "555e22ca5fae645936ea74dad76da8673d1cddbcf9cde106a8a39a250ccfc106",
+  "verify_paper_numbers.py": "345659d84bd98c927659832a809a492024dfe9bcafe0795ca32be6dfc60b9e95",
+  "check_inputs.py": "cf97c5cbadb557715d8c08148e3e7bd72e0370c4f333bdb7679c75f1532d33e5",
+  "compare_runs.py": "9fff66f8721d81ae480033d940c47c75a8d63ea9410764bc1b333eee82227313"
+ },
+ "results_sha256": {
+  "base.json": "fbcb7f7ac9e2ce49e09876d98c1ba553222f181175b6c556105824c8b1293c31",
+  "exact.json": "de366d1d89de31488c50f3207ba9d8474b487531a8e6986da03540c1afdc7f1d",
+  "null.json": "1f97113610c17d32957b682a209945697102b8974cfc74a37616963f3824a354",
+  "seeds.json": "014cad338ad15915c6d9a11d748f06b377751885b99b53d2b0284894da56e64b",
+  "split.json": "08acf519e264df654a68442fc2bfe77e86a8ea98ec14869ab066cd25c348298c",
+  "split_records_forest_policies.csv.gz": "f2c7a968f10b800e36877ecbb72a5a3a4934cb101db0b9c8c2938eb9410a9465",
+  "task_tests.csv": "9a5dca3697122105dfeea552afffd0da86cbbeab164c9d6955a4b39d4ac9a177",
+  "tasks.json": "84ebd6e5b54fd67fba0b81da33bdb142f2a3e3522c1c34a65c432b995c2be36d"
+ },
+ "comparison_with_version_2": {
+  "base.json": {
+   "identical_result_leaves": 237,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 7
+  },
+  "exact.json": {
+   "identical_result_leaves": 32,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 6
+  },
+  "tasks.json": {
+   "identical_result_leaves": 1364,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 7
+  },
+  "seeds.json": {
+   "identical_result_leaves": 269,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 7
+  },
+  "null.json": {
+   "identical_result_leaves": 1551,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 7
+  },
+  "split.json": {
+   "identical_result_leaves": 1221,
+   "differing_result_leaves": 0,
+   "leaves_present_in_one_run_only": 0,
+   "differing_run_description_leaves": 7
+  },
+  "task_tests.csv": {
+   "rows": 83,
+   "differing_rows": 0
+  },
+  "split_records_forest_policies.csv.gz": {
+   "rows": 72120,
+   "differing_rows": 0
+  },
+  "result": "identical",
+  "note": "Version 2 ran on a Windows checkout (CRLF line endings), version 3 on the files as committed (LF). Run-description leaves are the recorded input hashes and run times. The version-2 files are not part of this repository."
+ },
+ "note_on_scripts": "scripts_sha256 are the hashes of the scripts that produced the result files. In this repository skillgate_checks.py differs from that version by one comment; make_figures.py and verify_paper_numbers.py were changed to use the three-case Section III classification of results/section3_revision.json and write no result files; section3_revision.py was added. Their current hashes are under scripts_sha256_in_repository. On 2026-11-15 the parts base, exact, tasks 100000 and split 1 were rerun with the repository scripts on a clean Linux clone and reproduced the recorded results (compare_runs.py: identical). Subsequent author-collaboration verification adds mandatory primary-input checks and two task-attached mean checks; verify_independent_run.py records environment differences, numerical tolerance and partial-split scope explicitly. Earlier build manifests retain their original hashes.",
+ "paper_number_check": "134 task-attached/formatted checks pass against paper/main_full.tex and paper/main.tex (manuscript of 2026-11-20) after mandatory check_inputs.py; DAPT and prefix-cache means are recomputed from paired cells. The 70-check run against the earlier manuscript is recorded in docs/verification-2026-11-15/.",
+ "figures_check": "fig_gate_eval.pdf regenerated from these result files renders pixel-identical at 200 dpi to the figure in the paper; fig_task_lift.pdf is drawn by make_figures.py from the same result files with the three-case classification",
+ "scripts_sha256_in_repository": {
+  "skillgate_checks.py": "692f7866304c99a646d4ec15a4eb75d0198491da45625174dbd81c5a0bd814a4",
+  "make_figures.py": "26e61652192751606ec2e81a7f5d232fd523d9ce329ea2cb85066cefa884c99a",
+  "verify_paper_numbers.py": "edb5479cbbcff1f74261dd803830f0a2e1e844bc6b6f0b057712c86d15233b07",
+  "check_inputs.py": "cf97c5cbadb557715d8c08148e3e7bd72e0370c4f333bdb7679c75f1532d33e5",
+  "compare_runs.py": "9fff66f8721d81ae480033d940c47c75a8d63ea9410764bc1b333eee82227313",
+  "section3_revision.py": "16d8879005fbba89660b5a8ebe15081d3bc92dcf00bc92d3f0511c74fa9f6841",
+  "verify_independent_run.py": "441994767ca934b7507f2f3652ca46032d2d7d50add640f048904d9c6ad77526"
+ },
+ "independent_windows_verification_2026_11_15": {
+  "report": "docs/verification-2026-11-15/README.md",
+  "execution": "docs/verification-2026-11-15/rerun/execution.json",
+  "comparison": "docs/verification-2026-11-15/comparison.json",
+  "parts": [
+   "base",
+   "exact",
+   "tasks 100000",
+   "split 1"
+  ],
+  "scope": "83 task rows and 1202 records in shared split 0 match exactly; not a rerun of 60 forest splits, seeds or null. Two task-summary floating tails differ within 1e-10; environment differs."
+ }
+}

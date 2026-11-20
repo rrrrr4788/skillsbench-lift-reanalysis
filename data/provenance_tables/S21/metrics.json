@@ -1,0 +1,304 @@
+{
+  "module_id": "S21",
+  "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd",
+  "provenance_tier": "RAW_REPO_DETERMINISTIC_COMPUTATION",
+  "script_version": {
+    "script_name": "verify_formula_cache.py",
+    "script_sha256": "5282cf47e16343e70734b17e688348f139030f4856d58e2242a17ce36525663e",
+    "git_commit": "unknown",
+    "version_tag": "unknown:5282cf47e163"
+  },
+  "config": {
+    "python_version": "3.10.8",
+    "openpyxl_version": "3.1.5",
+    "round_digits": 3,
+    "fc_exponential_base": 2,
+    "step1_grid": "C11:L20",
+    "step2_grid": "B24:K27",
+    "step3_grid": "C32:D41"
+  },
+  "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+  "metrics_count": 14,
+  "metrics": {
+    "S21.input_xlsx_bytes": {
+      "metric_id": "S21.input_xlsx_bytes",
+      "module_id": "S21",
+      "value": 117651,
+      "formatted_value": "117,651",
+      "format_spec": ",d",
+      "unit": "bytes",
+      "scope": "protein_expression.xlsx",
+      "denominator": "NA",
+      "rule": "stat().st_size",
+      "evidence_file": "run_manifest.json",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.n_total_formula_cells": {
+      "metric_id": "S21.n_total_formula_cells",
+      "module_id": "S21",
+      "value": 143,
+      "formatted_value": "143",
+      "format_spec": "d",
+      "unit": "cells",
+      "scope": "Task worksheet formula cells (C11:L20 + B24:K27 + C32:D41)",
+      "denominator": "NA",
+      "rule": "83 + 40 + 20",
+      "evidence_file": "formula_cells_audit_143.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.formulas_identical_pct": {
+      "metric_id": "S21.formulas_identical_pct",
+      "module_id": "S21",
+      "value": 100,
+      "formatted_value": "100",
+      "format_spec": "d",
+      "unit": "pct",
+      "scope": "Condition A vs Condition B <f> formula identity",
+      "denominator": 143,
+      "rule": "all(<f>_A == <f>_B) * 100",
+      "evidence_file": "formula_cells_audit_143.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.step1_grid_total_cells": {
+      "metric_id": "S21.step1_grid_total_cells",
+      "module_id": "S21",
+      "value": 100,
+      "formatted_value": "100",
+      "format_spec": "d",
+      "unit": "cells",
+      "scope": "Task!C11:L20 (10 proteins x 10 samples)",
+      "denominator": "NA",
+      "rule": "10 * 10",
+      "evidence_file": "step1_grid_100_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.step1_populated_formula_cells": {
+      "metric_id": "S21.step1_populated_formula_cells",
+      "module_id": "S21",
+      "value": 83,
+      "formatted_value": "83",
+      "format_spec": "d",
+      "unit": "cells",
+      "scope": "Non-missing observations in Task!C11:L20",
+      "denominator": 100,
+      "rule": "count(status == FORMULA_POPULATED)",
+      "evidence_file": "step1_grid_100_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.step1_missing_source_cells": {
+      "metric_id": "S21.step1_missing_source_cells",
+      "module_id": "S21",
+      "value": 17,
+      "formatted_value": "17",
+      "format_spec": "d",
+      "unit": "cells",
+      "scope": "Missing observations in Task!C11:L20 left blank",
+      "denominator": 100,
+      "rule": "count(status == MISSING_IN_SOURCE_DATA)",
+      "evidence_file": "step1_grid_100_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cache_roundtrip_abs_diff": {
+      "metric_id": "S21.cache_roundtrip_abs_diff",
+      "module_id": "S21",
+      "value": 0.0,
+      "formatted_value": "0.0",
+      "format_spec": ".1f",
+      "unit": "abs_diff",
+      "scope": "143 formula cells XML <v> roundtrip",
+      "denominator": 143,
+      "rule": "max(|v_readback - v_written|)",
+      "evidence_file": "formula_cells_audit_143.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.independent_formula_eval_vs_cache_abs_diff": {
+      "metric_id": "S21.independent_formula_eval_vs_cache_abs_diff",
+      "module_id": "S21",
+      "value": 0.0,
+      "formatted_value": "0.0",
+      "format_spec": ".1f",
+      "unit": "abs_diff",
+      "scope": "143 formula cells independent parser/evaluator vs XML <v>",
+      "denominator": 143,
+      "rule": "max(|v_cache - eval(<f>)|)",
+      "evidence_file": "formula_cells_audit_143.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.total_verifier_tests": {
+      "metric_id": "S21.total_verifier_tests",
+      "module_id": "S21",
+      "value": 6,
+      "formatted_value": "6",
+      "format_spec": "d",
+      "unit": "tests",
+      "scope": "verifier/test_outputs.py pytest assertions",
+      "denominator": "NA",
+      "rule": "len(test_names)",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cond_A_step1_numeric_read_count": {
+      "metric_id": "S21.cond_A_step1_numeric_read_count",
+      "module_id": "S21",
+      "value": 0,
+      "formatted_value": "0",
+      "format_spec": "d",
+      "unit": "cells",
+      "scope": "Condition A under openpyxl(data_only=True)",
+      "denominator": 100,
+      "rule": "count(Task!C11:L20 is not None)",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cond_A_passed_tests": {
+      "metric_id": "S21.cond_A_passed_tests",
+      "module_id": "S21",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "d",
+      "unit": "tests",
+      "scope": "Condition A (empty <v></v> cache)",
+      "denominator": 6,
+      "rule": "official verifier passed count",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cond_A_official_reward": {
+      "metric_id": "S21.cond_A_official_reward",
+      "module_id": "S21",
+      "value": 0.0,
+      "formatted_value": "0.0",
+      "format_spec": ".1f",
+      "unit": "reward",
+      "scope": "Condition A official binary reward",
+      "denominator": 1,
+      "rule": "1.0 if all 6 pass else 0.0",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cond_B_passed_tests": {
+      "metric_id": "S21.cond_B_passed_tests",
+      "module_id": "S21",
+      "value": 6,
+      "formatted_value": "6",
+      "format_spec": "d",
+      "unit": "tests",
+      "scope": "Condition B (populated <v> cache)",
+      "denominator": 6,
+      "rule": "official verifier passed count",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    },
+    "S21.cond_B_official_reward": {
+      "metric_id": "S21.cond_B_official_reward",
+      "module_id": "S21",
+      "value": 1.0,
+      "formatted_value": "1.0",
+      "format_spec": ".1f",
+      "unit": "reward",
+      "scope": "Condition B official binary reward",
+      "denominator": 1,
+      "rule": "1.0 if all 6 pass else 0.0",
+      "evidence_file": "verifier_test_results_12.csv",
+      "notes": "",
+      "source_hashes": {
+        "protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+        "protein_verifier_test_outputs.py": "d32dceed6160107692742fb7082a955e19414bc1fe6d6ba1ffdad356575381d7"
+      },
+      "script_version": "unknown:5282cf47e163",
+      "config_hash": "1a0e74dd3a5c2d23d2e5d7eddc56f24b7dcc009a8924e7a5561fbb4f1e126a1a",
+      "run_id": "S21-20261111T095135Z-5282cf47-1a0e74dd"
+    }
+  }
+}

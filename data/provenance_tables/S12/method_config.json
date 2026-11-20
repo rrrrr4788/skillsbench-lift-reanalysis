@@ -1,0 +1,150 @@
+{
+  "feature_dimensions": {
+    "total_features": 17,
+    "static_features": 15,
+    "prior_features": 2,
+    "structure_subvector_dim": 10,
+    "hygiene_flags_subvector_dim": 3,
+    "lexical_alignment_subvector_dim": 2,
+    "prior_subvector_dim": 2,
+    "binary_indicator_domain": [
+      0,
+      1
+    ]
+  },
+  "token_proxy_conventions": {
+    "chars_per_token_divisor": 4,
+    "bytes_per_token_divisor": 4,
+    "kib_bytes_divisor": 1024,
+    "inst_tokens_min_floor": 25.0,
+    "oracle_tokens_min_floor": 25.0,
+    "max_skill_file_scan_bytes": 500000,
+    "max_oracle_or_verifier_scan_bytes": 300000
+  },
+  "hygiene_score_formula": {
+    "base_score": 100.0,
+    "min_score": 0.0,
+    "max_score": 100.0,
+    "deduction_synthetic_stub": 45.0,
+    "deduction_license_skill": 35.0,
+    "deduction_oracle_conflict": 40.0,
+    "deduction_unmatched_pdf_forms": 20.0,
+    "deduction_unmatched_xlsx": 15.0,
+    "bloat_ratio_threshold": 40.0,
+    "bloat_ratio_slope": 0.25,
+    "bloat_ratio_max_deduction": 25.0,
+    "ref_files_threshold": 4,
+    "ref_files_slope": 2.5,
+    "ref_files_max_deduction": 15.0,
+    "lex_prec_threshold": 0.08,
+    "lex_prec_deduction": 10.0
+  },
+  "skillprune_rules": {
+    "cat5_min_bytes": 4000,
+    "cat5_max_lex_prec": 0.015,
+    "cat5_max_lex_recall": 0.08,
+    "synthetic_stub_skills": [
+      "senior-data-scientist",
+      "senior-security",
+      "senior-data-engineer",
+      "senior-java"
+    ],
+    "license_skills": [
+      "licenses"
+    ],
+    "oracle_conflict_skills": [
+      [
+        "exam-block-sequencing",
+        "ordered-window-sequencing-mip"
+      ],
+      [
+        "exam-block-sequencing",
+        "mip-solver-and-solution-audit"
+      ],
+      [
+        "mars-clouds-clustering",
+        "custom-distance-metrics"
+      ],
+      [
+        "r2r-mpc-control",
+        "finite-horizon-lqr"
+      ],
+      [
+        "r2r-mpc-control",
+        "mpc-horizon-tuning"
+      ],
+      [
+        "r2r-mpc-control",
+        "integral-action-design"
+      ]
+    ],
+    "undisclosed_verifier_tasks": [
+      "protein-expression-analysis",
+      "flood-risk-analysis",
+      "earthquake-plate-calculation",
+      "weighted-gdp-calc",
+      "sec-financial-report"
+    ]
+  },
+  "skillgate_models_and_cv": {
+    "cv_folds_cell": 10,
+    "cv_folds_task_group": 10,
+    "loco_configs_count": 28,
+    "full_rf_n_estimators": 25,
+    "full_rf_max_depth": 5,
+    "full_rf_min_samples_leaf": 8,
+    "loco_rf_n_estimators": 18,
+    "loco_rf_max_depth": 5,
+    "loco_rf_min_samples_leaf": 8,
+    "ablation_rf_n_estimators": 20,
+    "ablation_rf_max_depth": 4,
+    "ablation_rf_min_samples_leaf": 8,
+    "seed_cv_split": 42,
+    "seed_rf_delta": 42,
+    "seed_rf_neg": 101,
+    "seed_rf_static": 77,
+    "seed_rf_prior_delta": 88,
+    "seed_rf_prior_neg": 99,
+    "bootstrap_ci_level_pct": 95,
+    "bootstrap_cell_resamples": 2000,
+    "bootstrap_cell_seed": 123,
+    "bootstrap_task_cluster_resamples": 10000,
+    "bootstrap_task_cluster_seed": 42
+  },
+  "gating_policy_thresholds": {
+    "risk_averse_tau_gain": 0.0,
+    "risk_averse_tau_risk": 0.25,
+    "max_gain_tau_gain": 0.02,
+    "max_gain_tau_risk": 1.0,
+    "zero_prior_static_tau_gain": 0.04,
+    "static_hygiene_max_ratio": 25.0,
+    "level_cutoff_p0_threshold": 0.8,
+    "level_cutoff_p0_mid_split": 0.3,
+    "sensitivity_sweep_tau_risk_grid": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "sensitivity_sweep_conservative_tau_risk": 0.15,
+    "sensitivity_sweep_balanced_tau_risk": 0.25,
+    "sensitivity_sweep_gain_priority_tau_risk": 0.5
+  },
+  "auxiliary_executed_thresholds_and_formulas": {
+    "lexical_overlap_denom_min_floor": 1,
+    "net_negative_task_delta_threshold_pp": 0,
+    "high_lift_task_delta_threshold_pp": 35,
+    "community_duplicate_group_min_size": 2,
+    "community_short_description_word_threshold": 8,
+    "mars_weighted_distance_weight_sum": 2,
+    "mars_weighted_distance_exponent": 2,
+    "protein_xlsx_round_decimal_places": 3,
+    "protein_xlsx_fold_change_base": 2
+  }
+}

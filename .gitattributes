@@ -1,0 +1,5 @@
+# Check every file out byte for byte as committed, on every platform.
+# Without this, Git for Windows (core.autocrlf=true) rewrites LF as CRLF in the
+# working tree, and the SHA-256 of a working-tree file no longer matches the
+# committed one recorded in reanalysis/MANIFEST.json and in the provenance tables.
+* -text

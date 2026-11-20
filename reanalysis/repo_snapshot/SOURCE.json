@@ -1,0 +1,57 @@
+{
+ "repository": "https://github.com/rrrrr4788/agent-skills-hurt",
+ "commit": "6b11d0beaff1707a193465e088aff519e0e2a730",
+ "tag": "v1.0.0-rc1",
+ "note": "The seven files below are copied byte for byte from the commit above (LF line endings). sha256_crlf_checkout is the hash of the same text with CRLF line endings, as a Windows checkout with core.autocrlf=true stores it; the version-2 result files recorded those hashes.",
+ "files": {
+  "scripts/train_gate_oof.py": {
+   "role": "model_code",
+   "git_blob": "d08b7c260881f9086a73b17d581d5377e840dc4e",
+   "bytes": 30248,
+   "sha256_as_committed": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de",
+   "sha256_crlf_checkout": "8a03cfb195c8452bdfe1870a089a1f85266a1c5e5bec40606bbab83624ab12f7"
+  },
+  "scripts/provenance_common.py": {
+   "role": "imported by the model code",
+   "git_blob": "ec3bbc1e3d8c6c6559ebd0758314eca9af94e0db",
+   "bytes": 15499,
+   "sha256_as_committed": "7ae0b1c428e9f464979f4dfcbe05d7fdcae62a50f3e9de5cc84c983bd6b46474",
+   "sha256_crlf_checkout": "e3f9e38bdb278bbe25854e8acfd56b680d26bce48f0e4d9ba700b8005df0b6c5"
+  },
+  "data/provenance_tables/S02/normalized_trials.csv": {
+   "role": "normalized_trials",
+   "git_blob": "4987aa9465541922f96dd67b9d891c384f23c5a2",
+   "bytes": 2455381,
+   "sha256_as_committed": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
+   "sha256_crlf_checkout": "782c03774c94c0cfda88b7be7788aed6cc00a179fb070c048cb11c32a9fe2a9b"
+  },
+  "data/provenance_tables/S02/paired_cells.csv": {
+   "role": "paired_cells",
+   "git_blob": "c1b6cd3b6512051096e72814e49f1db2c336298f",
+   "bytes": 363061,
+   "sha256_as_committed": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
+   "sha256_crlf_checkout": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd"
+  },
+  "data/provenance_tables/S05/cell_features_1421.csv": {
+   "role": "cell_features",
+   "git_blob": "21b0cde5ea76a10d7883ad1a86243a1332ce74d7",
+   "bytes": 345878,
+   "sha256_as_committed": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
+   "sha256_crlf_checkout": "45a12e00e5ec34ac50f232e51ec7b2af83d7e43f240c10416f363e352b7f9331"
+  },
+  "data/provenance_tables/S12/method_config.json": {
+   "role": "method_config",
+   "git_blob": "eaf81ac4f09148ab1fe54664eae39a2c6162071a",
+   "bytes": 4071,
+   "sha256_as_committed": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
+   "sha256_crlf_checkout": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
+  },
+  "data/provenance_tables/S18/task_partition_87.csv": {
+   "role": "task_partition",
+   "git_blob": "f3fb9ebd78e2415dfcb72b4141f7b3f1224a7bf7",
+   "bytes": 6553,
+   "sha256_as_committed": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+   "sha256_crlf_checkout": "51c41fa9b8dadaf630c9928c6c1afaf1273c5514a3b55afe624d4672355f029d"
+  }
+ }
+}

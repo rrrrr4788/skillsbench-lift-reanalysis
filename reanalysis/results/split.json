@@ -1,0 +1,1546 @@
+{
+ "part": "split",
+ "n_cells": 1421,
+ "n": 60,
+ "seeds": {
+  "null": 20261112,
+  "split": 20261113,
+  "tasks": 20261114,
+  "bootstrap": 42
+ },
+ "environment": {
+  "python": "3.11.18",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.41"
+ },
+ "inputs_sha256": {
+  "normalized_trials": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
+  "paired_cells": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
+  "cell_features": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
+  "task_partition": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+  "method_config": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
+  "model_code": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de"
+ },
+ "thresholds_from_method_config": {
+  "level_cutoff_p0_mid_split": 0.3,
+  "level_cutoff_p0_threshold": 0.8,
+  "max_gain_tau_gain": 0.02,
+  "max_gain_tau_risk": 1.0,
+  "risk_averse_tau_gain": 0.0,
+  "risk_averse_tau_risk": 0.25,
+  "sensitivity_sweep_balanced_tau_risk": 0.25,
+  "sensitivity_sweep_conservative_tau_risk": 0.15,
+  "sensitivity_sweep_gain_priority_tau_risk": 0.5,
+  "static_hygiene_max_ratio": 25.0,
+  "zero_prior_static_tau_gain": 0.04
+ },
+ "fast_fitter_check": {
+  "auc_full": 0.8782279713405298,
+  "auc_prior": 0.8373513620810253
+ },
+ "eligibility": {
+  "rule": "at least two trials in each condition, so that one can be held out",
+  "eligible_cells": 1202,
+  "excluded_cells": 219
+ },
+ "all_trials_replay_as_in_paper": {
+  "always_without": -18.70891569606212,
+  "level_cutoff_080": 2.676234054353855,
+  "oracle_best_of_two": 5.185843039378814,
+  "skillgate_maxgain": 2.7841652800887404,
+  "skillgate_riskaverse": 2.1199112590127562,
+  "prior_only_rf": 0.05880476982806431
+ },
+ "all_trials_auc": {
+  "trivial_wo_gt0": 0.8163653663177926,
+  "trivial_wo_value": 0.80519971518768,
+  "full_cellcv": 0.8646511364137592,
+  "wo>0_only_full_cellcv": 0.6314723947431631,
+  "prior_cellcv": 0.8209715124668402,
+  "wo>0_only_prior_cellcv": 0.5125416051882099,
+  "wo>0_only_trivial_wo_value": 0.4695981882441753
+ },
+ "all_trials_sign_counts": {
+  "neg": 151,
+  "pos": 473
+ },
+ "leakage_checks": {
+  "decision_and_heldout_trial_ids_disjoint": true,
+  "decision_feature_recomputed_from_ids_matches": true,
+  "refit_is_deterministic": true
+ },
+ "forest_policies_over_splits": {
+  "decision_auc.full_cellcv": {
+   "mean": 0.8764356809137818,
+   "sd": 0.009946977013641806,
+   "mc_se_of_mean": 0.0012841492106314232,
+   "p2.5": 0.8574107325097565,
+   "p97.5": 0.8932095434692251,
+   "min": 0.8570153032392234,
+   "max": 0.9010435640558591,
+   "n": 60
+  },
+  "decision_auc.prior_cellcv": {
+   "mean": 0.8338687145722681,
+   "sd": 0.01019180427352708,
+   "mc_se_of_mean": 0.001315756273972532,
+   "p2.5": 0.8105389663720549,
+   "p97.5": 0.8466993513738591,
+   "min": 0.8056646642020949,
+   "max": 0.8586753731343284,
+   "n": 60
+  },
+  "decision_auc.trivial_woA_gt0": {
+   "mean": 0.8323779378085423,
+   "sd": 0.002406199994540589,
+   "mc_se_of_mean": 0.0003106390835500026,
+   "p2.5": 0.8280583873957368,
+   "p97.5": 0.8373878686178048,
+   "min": 0.8273480662983426,
+   "max": 0.838139534883721,
+   "n": 60
+  },
+  "decision_auc.trivial_woA_value": {
+   "mean": 0.8280508369471329,
+   "sd": 0.005939906183306025,
+   "mc_se_of_mean": 0.0007668385908659565,
+   "p2.5": 0.8162177827187849,
+   "p97.5": 0.8385859869937288,
+   "min": 0.8157770309590316,
+   "max": 0.8409839720563828,
+   "n": 60
+  },
+  "decision_trial_replay_gain.always_without": {
+   "mean": -18.78058721575153,
+   "sd": 0.46098889736835413,
+   "mc_se_of_mean": 0.05951341074313852,
+   "p2.5": -19.546737728785356,
+   "p97.5": -17.876095049916806,
+   "min": -19.785524126455908,
+   "max": -17.78373544093178,
+   "n": 60
+  },
+  "decision_trial_replay_gain.level_cutoff_080": {
+   "mean": 3.7402024403771494,
+   "sd": 0.2311139587539272,
+   "mc_se_of_mean": 0.029836683777667596,
+   "p2.5": 3.398622088186356,
+   "p97.5": 4.204866888519135,
+   "min": 3.367720465890183,
+   "max": 4.222379367720466,
+   "n": 60
+  },
+  "decision_trial_replay_gain.oracle_best_of_two": {
+   "mean": 5.761531475318914,
+   "sd": 0.25748214775884165,
+   "mc_se_of_mean": 0.0332408023405237,
+   "p2.5": 5.362519758735441,
+   "p97.5": 6.3314475873544085,
+   "min": 5.311647254575708,
+   "max": 6.42712146422629,
+   "n": 60
+  },
+  "decision_trial_replay_gain.prior_only_rf": {
+   "mean": 2.6492713533000556,
+   "sd": 0.37322545786628863,
+   "mc_se_of_mean": 0.04818319942322579,
+   "p2.5": 2.0472108985024957,
+   "p97.5": 3.3614382279534105,
+   "min": 1.9992512479201328,
+   "max": 3.6024126455906824,
+   "n": 60
+  },
+  "decision_trial_replay_gain.skillgate_maxgain": {
+   "mean": 3.9674792013311144,
+   "sd": 0.30449859134335455,
+   "mc_se_of_mean": 0.039310599107214336,
+   "p2.5": 3.520513727121464,
+   "p97.5": 4.536416389351081,
+   "min": 3.425457570715474,
+   "max": 4.594259567387687,
+   "n": 60
+  },
+  "decision_trial_replay_gain.skillgate_riskaverse": {
+   "mean": 3.673713255684969,
+   "sd": 0.3178479237159334,
+   "mc_se_of_mean": 0.04103399050594718,
+   "p2.5": 3.103273710482529,
+   "p97.5": 4.239637063227953,
+   "min": 3.0047004991680537,
+   "max": 4.486064891846922,
+   "n": 60
+  },
+  "heldout_auc.full_cellcv": {
+   "mean": 0.7042660587591046,
+   "sd": 0.023368097005178407,
+   "mc_se_of_mean": 0.0030168083511205126,
+   "p2.5": 0.6641812210915662,
+   "p97.5": 0.7479074074038518,
+   "min": 0.6568470529887169,
+   "max": 0.7608310729355032,
+   "n": 60
+  },
+  "heldout_auc.prior_cellcv": {
+   "mean": 0.6931906971684966,
+   "sd": 0.020390056676048117,
+   "mc_se_of_mean": 0.002632344997818657,
+   "p2.5": 0.6556294950044121,
+   "p97.5": 0.724784633895784,
+   "min": 0.6445833380299153,
+   "max": 0.7431811332127788,
+   "n": 60
+  },
+  "heldout_auc.trivial_woA_gt0": {
+   "mean": 0.6736958667438641,
+   "sd": 0.018590778034769797,
+   "mc_se_of_mean": 0.0024000591240567358,
+   "p2.5": 0.6385257478810235,
+   "p97.5": 0.7087334562813773,
+   "min": 0.6304456327985739,
+   "max": 0.7161411241711875,
+   "n": 60
+  },
+  "heldout_auc.trivial_woA_value": {
+   "mean": 0.6639291289278183,
+   "sd": 0.01935825292610125,
+   "mc_se_of_mean": 0.002499139706482038,
+   "p2.5": 0.6299188671840414,
+   "p97.5": 0.70498219538194,
+   "min": 0.6223484848484848,
+   "max": 0.707210968506778,
+   "n": 60
+  },
+  "heldout_auc_woA>0.full_cellcv": {
+   "mean": 0.5918273150826973,
+   "sd": 0.03437534947419688,
+   "mc_se_of_mean": 0.004437838534454147,
+   "p2.5": 0.5340311559906322,
+   "p97.5": 0.6548735446441144,
+   "min": 0.5306872324961641,
+   "max": 0.6588065256988992,
+   "n": 60
+  },
+  "heldout_auc_woA>0.prior_cellcv": {
+   "mean": 0.5717523890232886,
+   "sd": 0.02997285704636025,
+   "mc_se_of_mean": 0.003869479205960296,
+   "p2.5": 0.5166642072926905,
+   "p97.5": 0.6382811633300052,
+   "min": 0.5020915032679738,
+   "max": 0.6504388981028275,
+   "n": 60
+  },
+  "heldout_auc_woA>0.trivial_woA_gt0": {
+   "mean": 0.5,
+   "sd": 0.0,
+   "mc_se_of_mean": 0.0,
+   "p2.5": 0.5,
+   "p97.5": 0.5,
+   "min": 0.5,
+   "max": 0.5,
+   "n": 60
+  },
+  "heldout_auc_woA>0.trivial_woA_value": {
+   "mean": 0.46399329532211886,
+   "sd": 0.02358109394688344,
+   "mc_se_of_mean": 0.003044306138054403,
+   "p2.5": 0.4185602317207654,
+   "p97.5": 0.506597937364425,
+   "min": 0.4141857642607268,
+   "max": 0.5082525951557093,
+   "n": 60
+  },
+  "heldout_gain.always_without": {
+   "mean": -18.57292429284526,
+   "sd": 0.8412866496141568,
+   "mc_se_of_mean": 0.10860963944474211,
+   "p2.5": -20.320357737104825,
+   "p97.5": -17.109893926788686,
+   "min": -20.395673876871882,
+   "max": -16.648252911813643,
+   "n": 60
+  },
+  "heldout_gain.level_cutoff_080": {
+   "mean": 0.0892678868552413,
+   "sd": 0.3922658350966785,
+   "mc_se_of_mean": 0.050641301553852686,
+   "p2.5": -0.6901809484193011,
+   "p97.5": 0.8011730449251248,
+   "min": -0.939018302828619,
+   "max": 0.9403494176372713,
+   "n": 60
+  },
+  "heldout_gain.oracle_best_of_two": {
+   "mean": -1.5724556295063785,
+   "sd": 0.6438440531267514,
+   "mc_se_of_mean": 0.08311990984381971,
+   "p2.5": -2.89233153078203,
+   "p97.5": -0.4250831946755411,
+   "min": -3.1279534109816973,
+   "max": -0.1750415973377704,
+   "n": 60
+  },
+  "heldout_gain.prior_only_rf": {
+   "mean": -1.2005948419301167,
+   "sd": 0.8420909431979563,
+   "mc_se_of_mean": 0.10871347329992602,
+   "p2.5": -2.9437250415973377,
+   "p97.5": 0.3424729617304491,
+   "min": -3.1707986688851912,
+   "max": 0.429450915141431,
+   "n": 60
+  },
+  "heldout_gain.skillgate_maxgain": {
+   "mean": -0.00989323349972268,
+   "sd": 0.49980857320385647,
+   "mc_se_of_mean": 0.06452500934367422,
+   "p2.5": -0.8566243760399336,
+   "p97.5": 0.86488768718802,
+   "min": -1.8359400998336106,
+   "max": 0.9179700499168053,
+   "n": 60
+  },
+  "heldout_gain.skillgate_riskaverse": {
+   "mean": -0.3317096505823628,
+   "sd": 0.5693785772689602,
+   "mc_se_of_mean": 0.07350645824833187,
+   "p2.5": -1.7255657237936772,
+   "p97.5": 0.42768510815307814,
+   "min": -2.3683860232945095,
+   "max": 0.6942595673876872,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.always_without": {
+   "mean": 100.0,
+   "sd": 0.0,
+   "mc_se_of_mean": 0.0,
+   "p2.5": 100.0,
+   "p97.5": 100.0,
+   "min": 100.0,
+   "max": 100.0,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.level_cutoff_080": {
+   "mean": 36.65236473362335,
+   "sd": 3.571159847816654,
+   "mc_se_of_mean": 0.46103475390795046,
+   "p2.5": 30.186274509803926,
+   "p97.5": 43.53344412131283,
+   "min": 28.08988764044944,
+   "max": 44.827586206896555,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.oracle_best_of_two": {
+   "mean": 73.68851178486075,
+   "sd": 3.8780387861272514,
+   "mc_se_of_mean": 0.5006526544872424,
+   "p2.5": 66.50311526479751,
+   "p97.5": 80.88818398096748,
+   "min": 65.55555555555556,
+   "max": 84.33734939759037,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.prior_only_rf": {
+   "mean": 62.327817143655956,
+   "sd": 6.650507816912595,
+   "mc_se_of_mean": 0.858576867290824,
+   "p2.5": 50.0,
+   "p97.5": 73.8751130052951,
+   "min": 48.31460674157303,
+   "max": 76.0,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.skillgate_maxgain": {
+   "mean": 47.45950322505051,
+   "sd": 5.2145689607706,
+   "mc_se_of_mean": 0.6731979580904883,
+   "p2.5": 37.0625,
+   "p97.5": 56.89811563670411,
+   "min": 36.274509803921575,
+   "max": 59.25925925925925,
+   "n": 60
+  },
+  "heldout_neg_removed_pct.skillgate_riskaverse": {
+   "mean": 56.37985323626371,
+   "sd": 4.727587820973073,
+   "mc_se_of_mean": 0.6103289632787241,
+   "p2.5": 46.88112745098039,
+   "p97.5": 66.51394808213871,
+   "min": 43.87755102040817,
+   "max": 67.70833333333333,
+   "n": 60
+  }
+ },
+ "forest_policies_per_split": [
+  {
+   "split": 0,
+   "heldout_gain.always_without": -18.27728785357737,
+   "decision_trial_replay_gain.always_without": -19.09014143094842,
+   "heldout_gain.level_cutoff_080": 0.6685524126455908,
+   "decision_trial_replay_gain.level_cutoff_080": 3.460191347753743,
+   "heldout_gain.oracle_best_of_two": -0.8565723793677205,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.441763727121464,
+   "heldout_gain.skillgate_maxgain": 0.48419301164725465,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.559359400998336,
+   "heldout_gain.skillgate_riskaverse": 0.4132279534109818,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.4811564059900157,
+   "heldout_gain.prior_only_rf": -0.5113976705490848,
+   "decision_trial_replay_gain.prior_only_rf": 2.215432612312812
+  },
+  {
+   "split": 1,
+   "heldout_gain.always_without": -19.346256239600663,
+   "decision_trial_replay_gain.always_without": -18.212479201331114,
+   "heldout_gain.level_cutoff_080": 0.145757071547421,
+   "decision_trial_replay_gain.level_cutoff_080": 3.824625623960066,
+   "heldout_gain.oracle_best_of_two": -1.7787853577371049,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.093261231281198,
+   "heldout_gain.skillgate_maxgain": -0.2696339434276206,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.358943427620632,
+   "heldout_gain.skillgate_riskaverse": -0.8890183028286189,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.6277038269550745,
+   "heldout_gain.prior_only_rf": -2.6173876871880197,
+   "decision_trial_replay_gain.prior_only_rf": 2.827412645590682
+  },
+  {
+   "split": 2,
+   "heldout_gain.always_without": -18.432029950083194,
+   "decision_trial_replay_gain.always_without": -19.067554076539103,
+   "heldout_gain.level_cutoff_080": 0.6173044925124792,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5244176372712146,
+   "heldout_gain.oracle_best_of_two": -0.894009983361065,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.688810316139768,
+   "heldout_gain.skillgate_maxgain": 0.7762063227953413,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.9831530782029954,
+   "heldout_gain.skillgate_riskaverse": 0.2714642262895174,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.899292845257904,
+   "heldout_gain.prior_only_rf": -0.363810316139767,
+   "decision_trial_replay_gain.prior_only_rf": 2.2084858569051584
+  },
+  {
+   "split": 3,
+   "heldout_gain.always_without": -16.648252911813643,
+   "decision_trial_replay_gain.always_without": -19.785524126455908,
+   "heldout_gain.level_cutoff_080": 0.31464226289517466,
+   "decision_trial_replay_gain.level_cutoff_080": 3.4704658901830285,
+   "heldout_gain.oracle_best_of_two": -0.3326123128119801,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.624459234608985,
+   "heldout_gain.skillgate_maxgain": 0.19608985024958406,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.7485440931780363,
+   "heldout_gain.skillgate_riskaverse": -0.21996672212978371,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.606447587354409,
+   "heldout_gain.prior_only_rf": -0.6529118136439267,
+   "decision_trial_replay_gain.prior_only_rf": 2.210316139767055
+  },
+  {
+   "split": 4,
+   "heldout_gain.always_without": -18.615890183028284,
+   "decision_trial_replay_gain.always_without": -18.7682612312812,
+   "heldout_gain.level_cutoff_080": 0.0778702163061564,
+   "decision_trial_replay_gain.level_cutoff_080": 3.8761647254575706,
+   "heldout_gain.oracle_best_of_two": -1.5187188019966722,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.893552412645589,
+   "heldout_gain.skillgate_maxgain": -0.3458402662229617,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8610648918469215,
+   "heldout_gain.skillgate_riskaverse": -0.6210482529118135,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.8433444259567393,
+   "heldout_gain.prior_only_rf": -1.7813643926788685,
+   "decision_trial_replay_gain.prior_only_rf": 2.3204658901830286
+  },
+  {
+   "split": 5,
+   "heldout_gain.always_without": -18.37279534109817,
+   "decision_trial_replay_gain.always_without": -18.67150582362729,
+   "heldout_gain.level_cutoff_080": -0.42712146422628955,
+   "decision_trial_replay_gain.level_cutoff_080": 4.0905158069883525,
+   "heldout_gain.oracle_best_of_two": -1.8705490848585693,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.25544925124792,
+   "heldout_gain.skillgate_maxgain": -0.8249584026622298,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.491181364392678,
+   "heldout_gain.skillgate_riskaverse": -1.644675540765391,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.895757071547421,
+   "heldout_gain.prior_only_rf": -2.002495840266223,
+   "decision_trial_replay_gain.prior_only_rf": 3.2475041597337766
+  },
+  {
+   "split": 6,
+   "heldout_gain.always_without": -18.637271214642265,
+   "decision_trial_replay_gain.always_without": -18.46851081530782,
+   "heldout_gain.level_cutoff_080": -0.15232945091514138,
+   "decision_trial_replay_gain.level_cutoff_080": 3.787312811980033,
+   "heldout_gain.oracle_best_of_two": -1.3696339434276208,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.735482529118136,
+   "heldout_gain.skillgate_maxgain": -0.08735440931780364,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.061231281198004,
+   "heldout_gain.skillgate_riskaverse": -0.15207986688851918,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.879658901830283,
+   "heldout_gain.prior_only_rf": -0.3264559068219635,
+   "decision_trial_replay_gain.prior_only_rf": 2.718178036605657
+  },
+  {
+   "split": 7,
+   "heldout_gain.always_without": -17.751580698835273,
+   "decision_trial_replay_gain.always_without": -19.452662229617307,
+   "heldout_gain.level_cutoff_080": 0.4065723793677204,
+   "decision_trial_replay_gain.level_cutoff_080": 3.6764559068219635,
+   "heldout_gain.oracle_best_of_two": -0.1750415973377704,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.434276206322795,
+   "heldout_gain.skillgate_maxgain": 0.6408485856905158,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.734858569051581,
+   "heldout_gain.skillgate_riskaverse": -0.13727121464226283,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.0047004991680537,
+   "heldout_gain.prior_only_rf": -0.27920133111480866,
+   "decision_trial_replay_gain.prior_only_rf": 2.6861896838602326
+  },
+  {
+   "split": 8,
+   "heldout_gain.always_without": -20.3846921797005,
+   "decision_trial_replay_gain.always_without": -17.82300332778702,
+   "heldout_gain.level_cutoff_080": -0.37587354409317814,
+   "decision_trial_replay_gain.level_cutoff_080": 3.8004991680532445,
+   "heldout_gain.oracle_best_of_two": -3.1279534109816973,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.854658901830282,
+   "heldout_gain.skillgate_maxgain": -0.8852745424292846,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.052329450915142,
+   "heldout_gain.skillgate_riskaverse": -1.0951747088186354,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.9203826955074876,
+   "heldout_gain.prior_only_rf": -2.382529118136439,
+   "decision_trial_replay_gain.prior_only_rf": 2.6589850249584024
+  },
+  {
+   "split": 9,
+   "heldout_gain.always_without": -18.632778702163062,
+   "decision_trial_replay_gain.always_without": -18.898169717138103,
+   "heldout_gain.level_cutoff_080": 0.3315307820299501,
+   "decision_trial_replay_gain.level_cutoff_080": 3.6346505823627293,
+   "heldout_gain.oracle_best_of_two": -1.2193843594009983,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.435940099833611,
+   "heldout_gain.skillgate_maxgain": -0.2171381031613977,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.7069467554076545,
+   "heldout_gain.skillgate_riskaverse": -0.6392678868552413,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.560773710482529,
+   "heldout_gain.prior_only_rf": -1.618136439267887,
+   "decision_trial_replay_gain.prior_only_rf": 2.96518302828619
+  },
+  {
+   "split": 10,
+   "heldout_gain.always_without": -17.189517470881864,
+   "decision_trial_replay_gain.always_without": -19.546672212978365,
+   "heldout_gain.level_cutoff_080": 0.01772046589018311,
+   "decision_trial_replay_gain.level_cutoff_080": 3.7239184692179697,
+   "heldout_gain.oracle_best_of_two": -0.9450083194675543,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.702204658901831,
+   "heldout_gain.skillgate_maxgain": 0.10291181364392683,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.879742096505824,
+   "heldout_gain.skillgate_riskaverse": -0.07703826955074869,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.8358153078202992,
+   "heldout_gain.prior_only_rf": -1.5985856905158067,
+   "decision_trial_replay_gain.prior_only_rf": 2.617595673876872
+  },
+  {
+   "split": 11,
+   "heldout_gain.always_without": -19.015224625623965,
+   "decision_trial_replay_gain.always_without": -18.536813643926788,
+   "heldout_gain.level_cutoff_080": -0.2970049916805324,
+   "decision_trial_replay_gain.level_cutoff_080": 3.69126455906822,
+   "heldout_gain.oracle_best_of_two": -1.4480865224625623,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.618677204658902,
+   "heldout_gain.skillgate_maxgain": -0.4924292845257904,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.62283693843594,
+   "heldout_gain.skillgate_riskaverse": -0.5926788685524126,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.916014975041597,
+   "heldout_gain.prior_only_rf": -2.132529118136439,
+   "decision_trial_replay_gain.prior_only_rf": 2.61089850249584
+  },
+  {
+   "split": 12,
+   "heldout_gain.always_without": -20.10024958402662,
+   "decision_trial_replay_gain.always_without": -18.048710482529117,
+   "heldout_gain.level_cutoff_080": 0.42146422628951746,
+   "decision_trial_replay_gain.level_cutoff_080": 3.8601913477537435,
+   "heldout_gain.oracle_best_of_two": -1.8604825291181366,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.656114808652247,
+   "heldout_gain.skillgate_maxgain": 0.22196339434276202,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.165931780366057,
+   "heldout_gain.skillgate_riskaverse": -0.3538269550748752,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.559276206322795,
+   "heldout_gain.prior_only_rf": -0.46397670549084863,
+   "decision_trial_replay_gain.prior_only_rf": 2.3882279534109814
+  },
+  {
+   "split": 13,
+   "heldout_gain.always_without": -18.702495840266224,
+   "decision_trial_replay_gain.always_without": -18.54812811980033,
+   "heldout_gain.level_cutoff_080": -0.18153078202995004,
+   "decision_trial_replay_gain.level_cutoff_080": 3.6970881863560736,
+   "heldout_gain.oracle_best_of_two": -1.6476705490848584,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.664850249584026,
+   "heldout_gain.skillgate_maxgain": -0.28660565723793674,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.857445923460898,
+   "heldout_gain.skillgate_riskaverse": -0.31198003327787016,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.8790765391014976,
+   "heldout_gain.prior_only_rf": -1.2674708818635607,
+   "decision_trial_replay_gain.prior_only_rf": 2.6309068219633946
+  },
+  {
+   "split": 14,
+   "heldout_gain.always_without": -20.144093178036606,
+   "decision_trial_replay_gain.always_without": -18.02529118136439,
+   "heldout_gain.level_cutoff_080": 0.2841930116472546,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5606905158069884,
+   "heldout_gain.oracle_best_of_two": -2.7568219633943425,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.004159733777039,
+   "heldout_gain.skillgate_maxgain": -0.11597337770382704,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.789642262895175,
+   "heldout_gain.skillgate_riskaverse": -0.26589018302828626,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.866971713810316,
+   "heldout_gain.prior_only_rf": -2.1778702163061565,
+   "decision_trial_replay_gain.prior_only_rf": 2.4571131447587353
+  },
+  {
+   "split": 15,
+   "heldout_gain.always_without": -18.35282861896839,
+   "decision_trial_replay_gain.always_without": -18.920091514143095,
+   "heldout_gain.level_cutoff_080": 0.017304492512479255,
+   "decision_trial_replay_gain.level_cutoff_080": 4.0027038269550745,
+   "heldout_gain.oracle_best_of_two": -2.260732113144759,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.031239600665557,
+   "heldout_gain.skillgate_maxgain": -0.13951747088186353,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.379825291181364,
+   "heldout_gain.skillgate_riskaverse": -0.3882695507487521,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.245465890183028,
+   "heldout_gain.prior_only_rf": -1.2486688851913479,
+   "decision_trial_replay_gain.prior_only_rf": 2.697670549084859
+  },
+  {
+   "split": 16,
+   "heldout_gain.always_without": -18.46173044925125,
+   "decision_trial_replay_gain.always_without": -18.61102329450915,
+   "heldout_gain.level_cutoff_080": 0.1098169717138103,
+   "decision_trial_replay_gain.level_cutoff_080": 3.975124792013311,
+   "heldout_gain.oracle_best_of_two": -1.3650582362728785,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.828951747088186,
+   "heldout_gain.skillgate_maxgain": 0.22936772046589013,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.268302828618968,
+   "heldout_gain.skillgate_riskaverse": -0.4702995008319468,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.754575707154742,
+   "heldout_gain.prior_only_rf": -1.182362728785358,
+   "decision_trial_replay_gain.prior_only_rf": 2.518926788685524
+  },
+  {
+   "split": 17,
+   "heldout_gain.always_without": -19.3563227953411,
+   "decision_trial_replay_gain.always_without": -18.16210482529118,
+   "heldout_gain.level_cutoff_080": 0.0694675540765391,
+   "decision_trial_replay_gain.level_cutoff_080": 3.945299500831947,
+   "heldout_gain.oracle_best_of_two": -1.7737104825291183,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.956946755407653,
+   "heldout_gain.skillgate_maxgain": 0.042678868552412604,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.338976705490849,
+   "heldout_gain.skillgate_riskaverse": -0.40041597337770385,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.43698003327787,
+   "heldout_gain.prior_only_rf": -0.47271214642262904,
+   "decision_trial_replay_gain.prior_only_rf": 2.592803660565724
+  },
+  {
+   "split": 18,
+   "heldout_gain.always_without": -20.395673876871882,
+   "decision_trial_replay_gain.always_without": -17.93477537437604,
+   "heldout_gain.level_cutoff_080": 0.04708818635607327,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5433028286189683,
+   "heldout_gain.oracle_best_of_two": -2.9576539101497508,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.966805324459235,
+   "heldout_gain.skillgate_maxgain": -0.7710482529118137,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.1800332778702165,
+   "heldout_gain.skillgate_riskaverse": -1.164891846921797,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.151580698835275,
+   "heldout_gain.prior_only_rf": -3.157237936772047,
+   "decision_trial_replay_gain.prior_only_rf": 2.6440931780366057
+  },
+  {
+   "split": 19,
+   "heldout_gain.always_without": -17.355407653910152,
+   "decision_trial_replay_gain.always_without": -19.310981697171382,
+   "heldout_gain.level_cutoff_080": -0.1274542429284526,
+   "decision_trial_replay_gain.level_cutoff_080": 3.4322379367720464,
+   "heldout_gain.oracle_best_of_two": -0.9224625623960068,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.47616472545757,
+   "heldout_gain.skillgate_maxgain": -0.09725457570715476,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.425457570715474,
+   "heldout_gain.skillgate_riskaverse": -0.11530782029950087,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.1853577371048254,
+   "heldout_gain.prior_only_rf": -0.7460898502495841,
+   "decision_trial_replay_gain.prior_only_rf": 2.8810732113144755
+  },
+  {
+   "split": 20,
+   "heldout_gain.always_without": -18.229950083194677,
+   "decision_trial_replay_gain.always_without": -18.747004991680534,
+   "heldout_gain.level_cutoff_080": 0.3163061564059901,
+   "decision_trial_replay_gain.level_cutoff_080": 3.7740016638935105,
+   "heldout_gain.oracle_best_of_two": -1.7121464226289513,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.679658901830283,
+   "heldout_gain.skillgate_maxgain": 0.5254575707154742,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.6784109816971715,
+   "heldout_gain.skillgate_riskaverse": -0.027287853577371072,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.525790349417637,
+   "heldout_gain.prior_only_rf": -0.10782029950083204,
+   "decision_trial_replay_gain.prior_only_rf": 3.2742928452579037
+  },
+  {
+   "split": 21,
+   "heldout_gain.always_without": -18.785607321131447,
+   "decision_trial_replay_gain.always_without": -18.71222961730449,
+   "heldout_gain.level_cutoff_080": 0.35515806988352755,
+   "decision_trial_replay_gain.level_cutoff_080": 3.7227537437603995,
+   "heldout_gain.oracle_best_of_two": -1.3575707154742096,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.550415973377705,
+   "heldout_gain.skillgate_maxgain": 0.49559068219633945,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8851913477537443,
+   "heldout_gain.skillgate_riskaverse": 0.24126455906821961,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.5481281198003334,
+   "heldout_gain.prior_only_rf": -0.7706322795341098,
+   "decision_trial_replay_gain.prior_only_rf": 2.8595257903494176
+  },
+  {
+   "split": 22,
+   "heldout_gain.always_without": -17.38194675540765,
+   "decision_trial_replay_gain.always_without": -19.420424292845258,
+   "heldout_gain.level_cutoff_080": -0.23036605657237932,
+   "decision_trial_replay_gain.level_cutoff_080": 3.8340682196339433,
+   "heldout_gain.oracle_best_of_two": -1.162479201331115,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.900291181364394,
+   "heldout_gain.skillgate_maxgain": 0.3682196339434276,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.24671381031614,
+   "heldout_gain.skillgate_riskaverse": 0.33427620632279526,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.9170965058236273,
+   "heldout_gain.prior_only_rf": -1.138602329450915,
+   "decision_trial_replay_gain.prior_only_rf": 2.425748752079867
+  },
+  {
+   "split": 23,
+   "heldout_gain.always_without": -18.59983361064892,
+   "decision_trial_replay_gain.always_without": -18.817845257903492,
+   "heldout_gain.level_cutoff_080": 0.6545757071547421,
+   "decision_trial_replay_gain.level_cutoff_080": 3.790016638935108,
+   "heldout_gain.oracle_best_of_two": -0.8877703826955078,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.939600665557405,
+   "heldout_gain.skillgate_maxgain": 0.30873544093178035,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.937687188019967,
+   "heldout_gain.skillgate_riskaverse": -0.06697171381031612,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.498668885191348,
+   "heldout_gain.prior_only_rf": -1.5278702163061566,
+   "decision_trial_replay_gain.prior_only_rf": 2.4188851913477536
+  },
+  {
+   "split": 24,
+   "heldout_gain.always_without": -18.943094841930115,
+   "decision_trial_replay_gain.always_without": -18.69014143094842,
+   "heldout_gain.level_cutoff_080": -0.00249584026622289,
+   "decision_trial_replay_gain.level_cutoff_080": 3.536189683860233,
+   "heldout_gain.oracle_best_of_two": -1.716056572379368,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.803618968386023,
+   "heldout_gain.skillgate_maxgain": 0.21946755407653917,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.038435940099833,
+   "heldout_gain.skillgate_riskaverse": -0.017054908485856765,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.6389767054908484,
+   "heldout_gain.prior_only_rf": -1.183610648918469,
+   "decision_trial_replay_gain.prior_only_rf": 2.284109816971714
+  },
+  {
+   "split": 25,
+   "heldout_gain.always_without": -18.98477537437604,
+   "decision_trial_replay_gain.always_without": -18.51534941763727,
+   "heldout_gain.level_cutoff_080": 0.07371048252911815,
+   "decision_trial_replay_gain.level_cutoff_080": 4.003036605657238,
+   "heldout_gain.oracle_best_of_two": -1.9214642262895174,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.031281198003328,
+   "heldout_gain.skillgate_maxgain": 0.18585690515806996,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.125374376039933,
+   "heldout_gain.skillgate_riskaverse": 0.33044925124792024,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.979908485856905,
+   "heldout_gain.prior_only_rf": -1.601747088186356,
+   "decision_trial_replay_gain.prior_only_rf": 2.335232945091514
+  },
+  {
+   "split": 26,
+   "heldout_gain.always_without": -19.606821963394346,
+   "decision_trial_replay_gain.always_without": -18.1907237936772,
+   "heldout_gain.level_cutoff_080": 0.45216306156405994,
+   "decision_trial_replay_gain.level_cutoff_080": 3.4218801996672212,
+   "heldout_gain.oracle_best_of_two": -2.8201331114808648,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.658153078202995,
+   "heldout_gain.skillgate_maxgain": -0.25440931780366055,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.838643926788686,
+   "heldout_gain.skillgate_riskaverse": -0.4821963394342762,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.423086522462562,
+   "heldout_gain.prior_only_rf": -1.9831946755407657,
+   "decision_trial_replay_gain.prior_only_rf": 2.416846921797005
+  },
+  {
+   "split": 27,
+   "heldout_gain.always_without": -18.619301164725456,
+   "decision_trial_replay_gain.always_without": -18.93910149750416,
+   "heldout_gain.level_cutoff_080": 0.8361064891846922,
+   "decision_trial_replay_gain.level_cutoff_080": 3.467762063227954,
+   "heldout_gain.oracle_best_of_two": -1.0500000000000003,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.542346089850249,
+   "heldout_gain.skillgate_maxgain": 0.8663893510815309,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.762728785357737,
+   "heldout_gain.skillgate_riskaverse": -0.2742096505823627,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.5026206322795344,
+   "heldout_gain.prior_only_rf": -1.4224625623960065,
+   "decision_trial_replay_gain.prior_only_rf": 2.2426788685524124
+  },
+  {
+   "split": 28,
+   "heldout_gain.always_without": -20.24925124792013,
+   "decision_trial_replay_gain.always_without": -17.78373544093178,
+   "heldout_gain.level_cutoff_080": -0.6988352745424293,
+   "decision_trial_replay_gain.level_cutoff_080": 4.181239600665557,
+   "heldout_gain.oracle_best_of_two": -2.753660565723793,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.400207986688851,
+   "heldout_gain.skillgate_maxgain": -1.8359400998336106,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.536023294509151,
+   "heldout_gain.skillgate_riskaverse": -2.3683860232945095,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.03477537437604,
+   "heldout_gain.prior_only_rf": -3.1707986688851912,
+   "decision_trial_replay_gain.prior_only_rf": 3.3942179700499167
+  },
+  {
+   "split": 29,
+   "heldout_gain.always_without": -18.205074875207984,
+   "decision_trial_replay_gain.always_without": -19.130782029950083,
+   "heldout_gain.level_cutoff_080": 0.20382695507487522,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5696339434276214,
+   "heldout_gain.oracle_best_of_two": -1.6986688851913476,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.7131031613976715,
+   "heldout_gain.skillgate_maxgain": 0.1636439267886855,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8486688851913478,
+   "heldout_gain.skillgate_riskaverse": -0.34051580698835276,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.6433444259567382,
+   "heldout_gain.prior_only_rf": -1.711314475873544,
+   "decision_trial_replay_gain.prior_only_rf": 2.029783693843594
+  },
+  {
+   "split": 30,
+   "heldout_gain.always_without": -19.50973377703827,
+   "decision_trial_replay_gain.always_without": -18.38236272878536,
+   "heldout_gain.level_cutoff_080": -0.6717970049916805,
+   "decision_trial_replay_gain.level_cutoff_080": 4.205657237936772,
+   "heldout_gain.oracle_best_of_two": -2.470465890183028,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.42712146422629,
+   "heldout_gain.skillgate_maxgain": -0.716971713810316,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.33257071547421,
+   "heldout_gain.skillgate_riskaverse": -1.3402662229617304,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.02504159733777,
+   "heldout_gain.prior_only_rf": -2.707737104825291,
+   "decision_trial_replay_gain.prior_only_rf": 3.1892678868552404
+  },
+  {
+   "split": 31,
+   "heldout_gain.always_without": -18.91447587354409,
+   "decision_trial_replay_gain.always_without": -18.633069883527455,
+   "heldout_gain.level_cutoff_080": 0.6450083194675541,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5509983361064896,
+   "heldout_gain.oracle_best_of_two": -1.5651414309484195,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.5584858569051585,
+   "heldout_gain.skillgate_maxgain": 0.5635607321131447,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.0024958402662225,
+   "heldout_gain.skillgate_riskaverse": -0.2082362728785358,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.178660565723794,
+   "heldout_gain.prior_only_rf": -0.8965890183028284,
+   "decision_trial_replay_gain.prior_only_rf": 1.9992512479201328
+  },
+  {
+   "split": 32,
+   "heldout_gain.always_without": -17.03785357737105,
+   "decision_trial_replay_gain.always_without": -19.51218801996672,
+   "heldout_gain.level_cutoff_080": -0.035856905158069816,
+   "decision_trial_replay_gain.level_cutoff_080": 3.532071547420965,
+   "heldout_gain.oracle_best_of_two": -0.5272878535773711,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.449542429284526,
+   "heldout_gain.skillgate_maxgain": -0.2842762063227953,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.835440931780366,
+   "heldout_gain.skillgate_riskaverse": -0.21680532445923456,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.262146422628952,
+   "heldout_gain.prior_only_rf": -0.9003327787021632,
+   "decision_trial_replay_gain.prior_only_rf": 2.2352329450915143
+  },
+  {
+   "split": 33,
+   "heldout_gain.always_without": -17.242595673876874,
+   "decision_trial_replay_gain.always_without": -19.503826955074878,
+   "heldout_gain.level_cutoff_080": -0.2967554076539102,
+   "decision_trial_replay_gain.level_cutoff_080": 3.84896006655574,
+   "heldout_gain.oracle_best_of_two": -1.048585690515807,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.005158069883527,
+   "heldout_gain.skillgate_maxgain": -0.15457570715474211,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.482362728785358,
+   "heldout_gain.skillgate_riskaverse": -0.4348585690515806,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.486064891846922,
+   "heldout_gain.prior_only_rf": -2.1015806988352748,
+   "decision_trial_replay_gain.prior_only_rf": 2.7757487520798674
+  },
+  {
+   "split": 34,
+   "heldout_gain.always_without": -18.884193011647255,
+   "decision_trial_replay_gain.always_without": -18.559858569051578,
+   "heldout_gain.level_cutoff_080": -0.939018302828619,
+   "decision_trial_replay_gain.level_cutoff_080": 4.222379367720466,
+   "heldout_gain.oracle_best_of_two": -1.4144758735440934,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.996381031613977,
+   "heldout_gain.skillgate_maxgain": -0.5126455906821964,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.594259567387687,
+   "heldout_gain.skillgate_riskaverse": -0.45474209650582353,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.233194675540765,
+   "heldout_gain.prior_only_rf": -1.489767054908486,
+   "decision_trial_replay_gain.prior_only_rf": 3.3252079866888518
+  },
+  {
+   "split": 35,
+   "heldout_gain.always_without": -18.522628951747087,
+   "decision_trial_replay_gain.always_without": -18.92408485856905,
+   "heldout_gain.level_cutoff_080": 0.18710482529118144,
+   "decision_trial_replay_gain.level_cutoff_080": 3.659234608985025,
+   "heldout_gain.oracle_best_of_two": -2.0537437603993345,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.8279534109816975,
+   "heldout_gain.skillgate_maxgain": -0.1683028286189684,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8556572379367724,
+   "heldout_gain.skillgate_riskaverse": -0.8887687188019968,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.015890183028286,
+   "heldout_gain.prior_only_rf": -1.3414309484193012,
+   "decision_trial_replay_gain.prior_only_rf": 2.7448835274542427
+  },
+  {
+   "split": 36,
+   "heldout_gain.always_without": -18.81855241264559,
+   "decision_trial_replay_gain.always_without": -18.538643926788684,
+   "heldout_gain.level_cutoff_080": -0.6806156405990016,
+   "decision_trial_replay_gain.level_cutoff_080": 4.203993344425956,
+   "heldout_gain.oracle_best_of_two": -1.7673044925124795,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.12391846921797,
+   "heldout_gain.skillgate_maxgain": -0.4687188019966722,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.5091930116472545,
+   "heldout_gain.skillgate_riskaverse": -1.7987520798668888,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.8771630615640595,
+   "heldout_gain.prior_only_rf": -2.0853577371048257,
+   "decision_trial_replay_gain.prior_only_rf": 2.582196339434276
+  },
+  {
+   "split": 37,
+   "heldout_gain.always_without": -17.87728785357737,
+   "decision_trial_replay_gain.always_without": -19.096006655574044,
+   "heldout_gain.level_cutoff_080": -0.24542429284525794,
+   "decision_trial_replay_gain.level_cutoff_080": 3.757737104825291,
+   "heldout_gain.oracle_best_of_two": -1.4055740432612314,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.783485856905158,
+   "heldout_gain.skillgate_maxgain": -0.1399334442595673,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.187437603993344,
+   "heldout_gain.skillgate_riskaverse": 0.13960066555740447,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.001081530782029,
+   "heldout_gain.prior_only_rf": -1.2527454242928453,
+   "decision_trial_replay_gain.prior_only_rf": 2.594925124792013
+  },
+  {
+   "split": 38,
+   "heldout_gain.always_without": -17.864808652246257,
+   "decision_trial_replay_gain.always_without": -19.049584026622295,
+   "heldout_gain.level_cutoff_080": 0.9403494176372713,
+   "decision_trial_replay_gain.level_cutoff_080": 3.679783693843594,
+   "heldout_gain.oracle_best_of_two": -0.848585690515807,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.811064891846922,
+   "heldout_gain.skillgate_maxgain": 0.5962562396006655,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.5522046589018306,
+   "heldout_gain.skillgate_riskaverse": -0.045757071547420876,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.421131447587354,
+   "heldout_gain.prior_only_rf": 0.391514143094842,
+   "decision_trial_replay_gain.prior_only_rf": 3.0720881863560736
+  },
+  {
+   "split": 39,
+   "heldout_gain.always_without": -18.02079866888519,
+   "decision_trial_replay_gain.always_without": -19.0955074875208,
+   "heldout_gain.level_cutoff_080": 0.18968386023294512,
+   "decision_trial_replay_gain.level_cutoff_080": 3.601705490848586,
+   "heldout_gain.oracle_best_of_two": -1.1171381031613978,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.592512479201331,
+   "heldout_gain.skillgate_maxgain": -0.4633111480865225,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.7469217970049913,
+   "heldout_gain.skillgate_riskaverse": -0.05831946755407655,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.3751663893510817,
+   "heldout_gain.prior_only_rf": -0.852079866888519,
+   "decision_trial_replay_gain.prior_only_rf": 2.5202579034941763
+  },
+  {
+   "split": 40,
+   "heldout_gain.always_without": -18.048086522462565,
+   "decision_trial_replay_gain.always_without": -19.144259567387685,
+   "heldout_gain.level_cutoff_080": 0.15607321131447593,
+   "decision_trial_replay_gain.level_cutoff_080": 3.589559068219634,
+   "heldout_gain.oracle_best_of_two": -0.9841930116472546,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.526830282861897,
+   "heldout_gain.skillgate_maxgain": -0.2620632279534109,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.63365224625624,
+   "heldout_gain.skillgate_riskaverse": -0.17886855241264576,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.6524126455906822,
+   "heldout_gain.prior_only_rf": -1.204991680532446,
+   "decision_trial_replay_gain.prior_only_rf": 2.0887271214642267
+  },
+  {
+   "split": 41,
+   "heldout_gain.always_without": -18.166805324459233,
+   "decision_trial_replay_gain.always_without": -19.227454242928452,
+   "heldout_gain.level_cutoff_080": 0.38535773710482535,
+   "decision_trial_replay_gain.level_cutoff_080": 3.4949667221297833,
+   "heldout_gain.oracle_best_of_two": -1.6663893510815306,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.339975041597338,
+   "heldout_gain.skillgate_maxgain": 0.8632279534109817,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.6542429284525793,
+   "heldout_gain.skillgate_riskaverse": 0.12171381031613984,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.3271630615640606,
+   "heldout_gain.prior_only_rf": 0.1676372712146422,
+   "decision_trial_replay_gain.prior_only_rf": 2.9078202995008318
+  },
+  {
+   "split": 42,
+   "heldout_gain.always_without": -19.067221297836937,
+   "decision_trial_replay_gain.always_without": -18.52870216306156,
+   "heldout_gain.level_cutoff_080": 0.24284525790349418,
+   "decision_trial_replay_gain.level_cutoff_080": 3.377579034941764,
+   "heldout_gain.oracle_best_of_two": -1.4420965058236273,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.510149750415973,
+   "heldout_gain.skillgate_maxgain": -0.180865224625624,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.5143094841930114,
+   "heldout_gain.skillgate_riskaverse": 0.01422628951747083,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.539808652246257,
+   "heldout_gain.prior_only_rf": -2.2505823627287853,
+   "decision_trial_replay_gain.prior_only_rf": 2.0664725457570716
+  },
+  {
+   "split": 43,
+   "heldout_gain.always_without": -17.735357737104827,
+   "decision_trial_replay_gain.always_without": -19.25016638935108,
+   "heldout_gain.level_cutoff_080": -0.06173044925124789,
+   "decision_trial_replay_gain.level_cutoff_080": 3.9720465890183028,
+   "heldout_gain.oracle_best_of_two": -1.077703826955075,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.941846921797005,
+   "heldout_gain.skillgate_maxgain": -0.006156405990016625,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.0732113144758735,
+   "heldout_gain.skillgate_riskaverse": -0.21306156405990023,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.6932612312811983,
+   "heldout_gain.prior_only_rf": -1.5382695507487518,
+   "decision_trial_replay_gain.prior_only_rf": 2.6069051580698837
+  },
+  {
+   "split": 44,
+   "heldout_gain.always_without": -18.173960066555743,
+   "decision_trial_replay_gain.always_without": -18.789309484193012,
+   "heldout_gain.level_cutoff_080": 0.16805324459234616,
+   "decision_trial_replay_gain.level_cutoff_080": 3.442762063227954,
+   "heldout_gain.oracle_best_of_two": -1.4233777038269553,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.456031613976705,
+   "heldout_gain.skillgate_maxgain": 0.4900998336106489,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.825249584026622,
+   "heldout_gain.skillgate_riskaverse": 0.6942595673876872,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.347670549084859,
+   "heldout_gain.prior_only_rf": -0.07420965058236276,
+   "decision_trial_replay_gain.prior_only_rf": 2.554076539101498
+  },
+  {
+   "split": 45,
+   "heldout_gain.always_without": -18.994176372712147,
+   "decision_trial_replay_gain.always_without": -18.55973377703827,
+   "heldout_gain.level_cutoff_080": -0.36530782029950076,
+   "decision_trial_replay_gain.level_cutoff_080": 4.087770382695508,
+   "heldout_gain.oracle_best_of_two": -2.2306988352745427,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.062936772046588,
+   "heldout_gain.skillgate_maxgain": -0.2559068219633943,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.355324459234609,
+   "heldout_gain.skillgate_riskaverse": -0.8966722129783692,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.7701747088186357,
+   "heldout_gain.prior_only_rf": -1.614808652246256,
+   "decision_trial_replay_gain.prior_only_rf": 2.8032861896838606
+  },
+  {
+   "split": 46,
+   "heldout_gain.always_without": -18.46871880199667,
+   "decision_trial_replay_gain.always_without": -18.64896006655574,
+   "heldout_gain.level_cutoff_080": 0.7625623960066557,
+   "decision_trial_replay_gain.level_cutoff_080": 3.7817803660565725,
+   "heldout_gain.oracle_best_of_two": -1.2292845257903495,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.778743760399334,
+   "heldout_gain.skillgate_maxgain": 0.36247920133111483,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8647670549084854,
+   "heldout_gain.skillgate_riskaverse": -0.1950915141430949,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.4408069883527452,
+   "heldout_gain.prior_only_rf": -0.12021630615640601,
+   "decision_trial_replay_gain.prior_only_rf": 2.880033277870216
+  },
+  {
+   "split": 47,
+   "heldout_gain.always_without": -19.355657237936768,
+   "decision_trial_replay_gain.always_without": -18.51797004991681,
+   "heldout_gain.level_cutoff_080": -0.12961730449251235,
+   "decision_trial_replay_gain.level_cutoff_080": 3.520216306156406,
+   "heldout_gain.oracle_best_of_two": -1.781946755407654,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.5869384359401,
+   "heldout_gain.skillgate_maxgain": -0.21272878535773715,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.642845257903494,
+   "heldout_gain.skillgate_riskaverse": -0.3374376039933445,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.25973377703827,
+   "heldout_gain.prior_only_rf": -1.954991680532446,
+   "decision_trial_replay_gain.prior_only_rf": 2.255532445923461
+  },
+  {
+   "split": 48,
+   "heldout_gain.always_without": -18.157321131447585,
+   "decision_trial_replay_gain.always_without": -19.00540765391015,
+   "heldout_gain.level_cutoff_080": 0.2966722129783695,
+   "decision_trial_replay_gain.level_cutoff_080": 3.550249584026622,
+   "heldout_gain.oracle_best_of_two": -0.7273710482529119,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.59563227953411,
+   "heldout_gain.skillgate_maxgain": 0.9179700499168053,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.8174708818635614,
+   "heldout_gain.skillgate_riskaverse": 0.20915141430948428,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.2700499168053248,
+   "heldout_gain.prior_only_rf": -0.8053244592346094,
+   "decision_trial_replay_gain.prior_only_rf": 2.1485024958402663
+  },
+  {
+   "split": 49,
+   "heldout_gain.always_without": -19.04026622296173,
+   "decision_trial_replay_gain.always_without": -18.298044925124792,
+   "heldout_gain.level_cutoff_080": -0.1566555740432612,
+   "decision_trial_replay_gain.level_cutoff_080": 4.149875207986689,
+   "heldout_gain.oracle_best_of_two": -1.9550748752079867,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.104201331114808,
+   "heldout_gain.skillgate_maxgain": -0.18294509151414307,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.536772046589018,
+   "heldout_gain.skillgate_riskaverse": 0.25906821963394333,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.7016638935108155,
+   "heldout_gain.prior_only_rf": -0.5123128119800333,
+   "decision_trial_replay_gain.prior_only_rf": 3.6024126455906824
+  },
+  {
+   "split": 50,
+   "heldout_gain.always_without": -18.93485856905158,
+   "decision_trial_replay_gain.always_without": -18.581114808652245,
+   "heldout_gain.level_cutoff_080": 0.17770382695507492,
+   "decision_trial_replay_gain.level_cutoff_080": 4.0922212978369386,
+   "heldout_gain.oracle_best_of_two": -2.6281198003327786,
+   "decision_trial_replay_gain.oracle_best_of_two": 6.155823627287854,
+   "heldout_gain.skillgate_maxgain": 0.6877703826955075,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.214309484193011,
+   "heldout_gain.skillgate_riskaverse": -0.04650582362728787,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.193094841930116,
+   "heldout_gain.prior_only_rf": -1.8606489184692183,
+   "decision_trial_replay_gain.prior_only_rf": 2.6859400998336103
+  },
+  {
+   "split": 51,
+   "heldout_gain.always_without": -19.467720465890185,
+   "decision_trial_replay_gain.always_without": -18.41114808652246,
+   "heldout_gain.level_cutoff_080": 0.14301164725457566,
+   "decision_trial_replay_gain.level_cutoff_080": 3.627038269550748,
+   "heldout_gain.oracle_best_of_two": -2.218386023294509,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.683444259567388,
+   "heldout_gain.skillgate_maxgain": -0.059650582362728834,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.925707154742096,
+   "heldout_gain.skillgate_riskaverse": -0.28510815307820303,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.7576539101497506,
+   "heldout_gain.prior_only_rf": -1.2155574043261235,
+   "decision_trial_replay_gain.prior_only_rf": 2.4929284525790347
+  },
+  {
+   "split": 52,
+   "heldout_gain.always_without": -18.672379367720467,
+   "decision_trial_replay_gain.always_without": -18.666139767054908,
+   "heldout_gain.level_cutoff_080": -0.09442595673876865,
+   "decision_trial_replay_gain.level_cutoff_080": 3.640557404326123,
+   "heldout_gain.oracle_best_of_two": -1.8045757071547424,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.604658901830282,
+   "heldout_gain.skillgate_maxgain": 0.2663893510815308,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.621838602329451,
+   "heldout_gain.skillgate_riskaverse": -0.4273710482529117,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.2809900166389347,
+   "heldout_gain.prior_only_rf": -1.0859400998336104,
+   "decision_trial_replay_gain.prior_only_rf": 3.050207986688852
+  },
+  {
+   "split": 53,
+   "heldout_gain.always_without": -18.73444259567388,
+   "decision_trial_replay_gain.always_without": -18.59118136439268,
+   "heldout_gain.level_cutoff_080": 0.36988352745424297,
+   "decision_trial_replay_gain.level_cutoff_080": 3.8116888519134773,
+   "heldout_gain.oracle_best_of_two": -1.7234608985024955,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.807196339434276,
+   "heldout_gain.skillgate_maxgain": 0.18976705490848583,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.732154742096506,
+   "heldout_gain.skillgate_riskaverse": -0.392595673876872,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.7039933444259563,
+   "heldout_gain.prior_only_rf": -0.8057404326123129,
+   "decision_trial_replay_gain.prior_only_rf": 2.9353577371048254
+  },
+  {
+   "split": 54,
+   "heldout_gain.always_without": -17.208901830282862,
+   "decision_trial_replay_gain.always_without": -19.415640599001662,
+   "heldout_gain.level_cutoff_080": -0.06530782029950084,
+   "decision_trial_replay_gain.level_cutoff_080": 3.801206322795341,
+   "heldout_gain.oracle_best_of_two": -1.3054076539101498,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.808028286189684,
+   "heldout_gain.skillgate_maxgain": -0.4952579034941763,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.90220465890183,
+   "heldout_gain.skillgate_riskaverse": -0.3366056572379368,
+   "decision_trial_replay_gain.skillgate_riskaverse": 4.02171381031614,
+   "heldout_gain.prior_only_rf": -0.6166389351081532,
+   "decision_trial_replay_gain.prior_only_rf": 2.903327787021631
+  },
+  {
+   "split": 55,
+   "heldout_gain.always_without": -17.732029950083195,
+   "decision_trial_replay_gain.always_without": -19.273460898502496,
+   "heldout_gain.level_cutoff_080": 0.39409317803660565,
+   "decision_trial_replay_gain.level_cutoff_080": 3.367720465890183,
+   "heldout_gain.oracle_best_of_two": -1.0236272878535775,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.311647254575708,
+   "heldout_gain.skillgate_maxgain": 0.1917637271214642,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.527371048252912,
+   "heldout_gain.skillgate_riskaverse": 0.0801996672212978,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.0350665557404324,
+   "heldout_gain.prior_only_rf": -0.18128119800332795,
+   "decision_trial_replay_gain.prior_only_rf": 2.7338186356073213
+  },
+  {
+   "split": 56,
+   "heldout_gain.always_without": -19.501580698835276,
+   "decision_trial_replay_gain.always_without": -18.474126455906823,
+   "heldout_gain.level_cutoff_080": -0.5910149750415973,
+   "decision_trial_replay_gain.level_cutoff_080": 3.946256239600665,
+   "heldout_gain.oracle_best_of_two": -2.4915973377703824,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.755449251247921,
+   "heldout_gain.skillgate_maxgain": -0.620881863560732,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.988352745424293,
+   "heldout_gain.skillgate_riskaverse": -1.3707986688851914,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.599750415973378,
+   "heldout_gain.prior_only_rf": -1.2959234608985024,
+   "decision_trial_replay_gain.prior_only_rf": 3.24455074875208
+  },
+  {
+   "split": 57,
+   "heldout_gain.always_without": -18.57745424292845,
+   "decision_trial_replay_gain.always_without": -18.70540765391015,
+   "heldout_gain.level_cutoff_080": 0.5154742096505823,
+   "decision_trial_replay_gain.level_cutoff_080": 3.775207986688852,
+   "heldout_gain.oracle_best_of_two": -1.2493344425956738,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.693011647254576,
+   "heldout_gain.skillgate_maxgain": 0.1527454242928453,
+   "decision_trial_replay_gain.skillgate_maxgain": 4.2388519134775375,
+   "heldout_gain.skillgate_riskaverse": 0.44076539101497497,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.843760399334442,
+   "heldout_gain.prior_only_rf": 0.28826955074875205,
+   "decision_trial_replay_gain.prior_only_rf": 2.893801996672213
+  },
+  {
+   "split": 58,
+   "heldout_gain.always_without": -18.437271214642266,
+   "decision_trial_replay_gain.always_without": -19.075332778702165,
+   "heldout_gain.level_cutoff_080": 0.13053244592346097,
+   "decision_trial_replay_gain.level_cutoff_080": 3.5023294509151413,
+   "heldout_gain.oracle_best_of_two": -1.756821963394343,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.423835274542429,
+   "heldout_gain.skillgate_maxgain": -0.17229617304492512,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.5403078202995015,
+   "heldout_gain.skillgate_riskaverse": -0.5660565723793677,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.2645174708818643,
+   "heldout_gain.prior_only_rf": -0.9462562396006655,
+   "decision_trial_replay_gain.prior_only_rf": 2.152495840266223
+  },
+  {
+   "split": 59,
+   "heldout_gain.always_without": -17.43028286189684,
+   "decision_trial_replay_gain.always_without": -19.546797004991678,
+   "heldout_gain.level_cutoff_080": 0.057071547420965055,
+   "decision_trial_replay_gain.level_cutoff_080": 3.7408901830282866,
+   "heldout_gain.oracle_best_of_two": -1.2486688851913479,
+   "decision_trial_replay_gain.oracle_best_of_two": 5.3874376039933445,
+   "heldout_gain.skillgate_maxgain": 0.2776206322795341,
+   "decision_trial_replay_gain.skillgate_maxgain": 3.9775790349417637,
+   "heldout_gain.skillgate_riskaverse": 0.35615640599001663,
+   "decision_trial_replay_gain.skillgate_riskaverse": 3.5812396006655574,
+   "heldout_gain.prior_only_rf": 0.429450915141431,
+   "decision_trial_replay_gain.prior_only_rf": 3.132237936772046
+  }
+ ],
+ "forest_policies_heldout_gain": {
+  "always_without": {
+   "mean_pp": -18.572924292845258,
+   "ci95_task_bootstrap": [
+    -24.651288134319387,
+    -12.642290821288194
+   ],
+   "mc_se_over_splits": 0.10860963944474211
+  },
+  "level_cutoff_080": {
+   "mean_pp": 0.08926788685524124,
+   "ci95_task_bootstrap": [
+    -0.6893881587487019,
+    0.8867157434610382
+   ],
+   "mc_se_over_splits": 0.050641301553852686
+  },
+  "oracle_best_of_two": {
+   "mean_pp": -1.5724556295063783,
+   "ci95_task_bootstrap": [
+    -3.0024803766220822,
+    -0.13932348161917102
+   ],
+   "mc_se_over_splits": 0.08311990984381971
+  },
+  "skillgate_maxgain": {
+   "mean_pp": -0.009893233499722529,
+   "ci95_task_bootstrap": [
+    -0.8520852127891602,
+    0.8716181378932516
+   ],
+   "mc_se_over_splits": 0.06452500934367422
+  },
+  "skillgate_riskaverse": {
+   "mean_pp": -0.3317096505823629,
+   "ci95_task_bootstrap": [
+    -1.2641275324734258,
+    0.6460777024268125
+   ],
+   "mc_se_over_splits": 0.07350645824833187
+  },
+  "prior_only_rf": {
+   "mean_pp": -1.2005948419301165,
+   "ci95_task_bootstrap": [
+    -2.4745194356721907,
+    0.08546246024707947
+   ],
+   "mc_se_over_splits": 0.10871347329992602
+  }
+ },
+ "interval_definition": "per-cell held-out gain is averaged over the random splits first; whole tasks are then resampled 10,000 times with all their cells; forests are not refit inside the bootstrap",
+ "records_file": "split_records_forest_policies.csv.gz",
+ "model_free_over_2000_splits": {
+  "decision_trial_replay_gain.always_without": {
+   "mean": -18.71074517470882,
+   "sd": 0.5130688490269067,
+   "mc_se_of_mean": 0.011472568235617403,
+   "p2.5": -19.737623752079866,
+   "p97.5": -17.68234816971714,
+   "min": -20.455116472545757,
+   "max": -17.10212146422629,
+   "n": 2000
+  },
+  "decision_trial_replay_gain.level_cutoff_080": {
+   "mean": 3.749275769550749,
+   "sd": 0.2700635724497203,
+   "mc_se_of_mean": 0.006038805062440139,
+   "p2.5": 3.2330927620632277,
+   "p97.5": 4.302466722129784,
+   "min": 2.9212562396006656,
+   "max": 4.67603993344426,
+   "n": 2000
+  },
+  "decision_trial_replay_gain.oracle_best_of_two": {
+   "mean": 5.76749141014975,
+   "sd": 0.29362688364550193,
+   "mc_se_of_mean": 0.006565696718527635,
+   "p2.5": 5.202510399334442,
+   "p97.5": 6.333941347753743,
+   "min": 4.864975041597337,
+   "max": 6.681530782029951,
+   "n": 2000
+  },
+  "heldout_auc.trivial_woA_value": {
+   "mean": 0.6643473046003069,
+   "sd": 0.019333752633013183,
+   "mc_se_of_mean": 0.0004323158514758302,
+   "p2.5": 0.628065241675259,
+   "p97.5": 0.7022498521122456,
+   "min": 0.6083107497741644,
+   "max": 0.7428898083623694,
+   "n": 2000
+  },
+  "heldout_gain.always_without": {
+   "mean": -18.70770395174709,
+   "sd": 0.9193047917744417,
+   "mc_se_of_mean": 0.02055628006448941,
+   "p2.5": -20.52359400998336,
+   "p97.5": -16.911957154742094,
+   "min": -21.647171381031615,
+   "max": -15.48361064891847,
+   "n": 2000
+  },
+  "heldout_gain.level_cutoff_080": {
+   "mean": 0.11565960898502499,
+   "sd": 0.4483034073481577,
+   "mc_se_of_mean": 0.010024368933752593,
+   "p2.5": -0.8028639767054908,
+   "p97.5": 0.9787874376039934,
+   "min": -1.2393510815307822,
+   "max": 1.5359400998336108,
+   "n": 2000
+  },
+  "heldout_gain.oracle_best_of_two": {
+   "mean": -1.6064367304492515,
+   "sd": 0.760188490437,
+   "mc_se_of_mean": 0.016998331403300808,
+   "p2.5": -3.142202579034942,
+   "p97.5": -0.20566139767054997,
+   "min": -4.351331114808652,
+   "max": 0.8994176372712147,
+   "n": 2000
+  }
+ },
+ "model_free_heldout_gain": {
+  "always_without": {
+   "mean_pp": -18.70770395174709,
+   "ci95_task_bootstrap": [
+    -24.773326842060428,
+    -12.775264972904598
+   ],
+   "mc_se_over_splits": 0.02055628006448941
+  },
+  "level_cutoff_080": {
+   "mean_pp": 0.11565960898502593,
+   "ci95_task_bootstrap": [
+    -0.6723933038411899,
+    0.927150242487657
+   ],
+   "mc_se_over_splits": 0.010024368933752593
+  },
+  "oracle_best_of_two": {
+   "mean_pp": -1.6064367304492506,
+   "ci95_task_bootstrap": [
+    -3.014499734910102,
+    -0.15770374381582752
+   ],
+   "mc_se_over_splits": 0.016998331403300808
+  }
+ },
+ "same_set_decision_vs_heldout": {
+  "loss_on_decision_trials": {
+   "cells_per_split": 123.3105,
+   "decision_trial_delta_pp": {
+    "estimate": -56.22006783688332,
+    "ci95": [
+     -62.138184712130005,
+     -49.90537592804813
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_delta_pp": {
+    "estimate": -9.929781324380325,
+    "ci95": [
+     -16.801658429145487,
+     -2.6619445637072667
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_negative_pct": {
+    "estimate": 25.938585927394662,
+    "ci95": [
+     19.830148208461235,
+     31.807305171520852
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_positive_pct": {
+    "estimate": 17.56946894222309,
+    "ci95": [
+     13.371928770079732,
+     22.31428061198038
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   }
+  },
+  "baseline_ge_0.8": {
+   "cells_per_split": 279.4685,
+   "decision_trial_delta_pp": {
+    "estimate": -16.12571533106594,
+    "ci95": [
+     -21.355850044321574,
+     -12.04475796357179
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_delta_pp": {
+    "estimate": -0.49745445372198027,
+    "ci95": [
+     -3.9891689651486257,
+     3.0901712444309797
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_negative_pct": {
+    "estimate": 12.305680246610978,
+    "ci95": [
+     9.201224761236649,
+     15.89582603234962
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_positive_pct": {
+    "estimate": 12.890719347618784,
+    "ci95": [
+     9.671812932884327,
+     16.86787872242541
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   }
+  },
+  "all_eligible": {
+   "cells_per_split": 1202.0,
+   "decision_trial_delta_pp": {
+    "estimate": 18.710745174708816,
+    "ci95": [
+     12.771009941168478,
+     24.806621172896314
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_delta_pp": {
+    "estimate": 18.70770395174709,
+    "ci95": [
+     12.775264972904594,
+     24.77332684206042
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_negative_pct": {
+    "estimate": 7.62720465890183,
+    "ci95": [
+     5.9972934115296574,
+     9.313207030771034
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   },
+   "heldout_share_positive_pct": {
+    "estimate": 27.524292845257904,
+    "ci95": [
+     22.173754288558957,
+     33.02917474073197
+    ],
+    "resamples_used": 10000,
+    "tasks": 82
+   }
+  }
+ },
+ "seconds": 2495.8
+}

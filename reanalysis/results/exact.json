@@ -1,0 +1,55 @@
+{
+ "part": "exact",
+ "n_cells": 1421,
+ "n": 0,
+ "seeds": {
+  "null": 20261112,
+  "split": 20261113,
+  "tasks": 20261114,
+  "bootstrap": 42
+ },
+ "environment": {
+  "python": "3.11.18",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.41"
+ },
+ "inputs_sha256": {
+  "normalized_trials": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
+  "paired_cells": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
+  "cell_features": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
+  "task_partition": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+  "method_config": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
+  "model_code": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de"
+ },
+ "thresholds_from_method_config": {
+  "level_cutoff_p0_mid_split": 0.3,
+  "level_cutoff_p0_threshold": 0.8,
+  "max_gain_tau_gain": 0.02,
+  "max_gain_tau_risk": 1.0,
+  "risk_averse_tau_gain": 0.0,
+  "risk_averse_tau_risk": 0.25,
+  "sensitivity_sweep_balanced_tau_risk": 0.25,
+  "sensitivity_sweep_conservative_tau_risk": 0.15,
+  "sensitivity_sweep_gain_priority_tau_risk": 0.5,
+  "static_hygiene_max_ratio": 25.0,
+  "zero_prior_static_tau_gain": 0.04
+ },
+ "expected_cells_under_within_cell_label_permutation": {
+  "negative": {
+   "mean": 327.7166666666667,
+   "sd": 13.011650762126823,
+   "q2.5": 302,
+   "q97.5": 353
+  },
+  "positive": {
+   "mean": 332.51666666666665,
+   "sd": 13.011650762126823,
+   "q2.5": 307,
+   "q97.5": 358
+  },
+  "observed_negative": 169,
+  "observed_positive": 547,
+  "cells_where_negative_is_impossible_under_permutation": 657
+ },
+ "seconds": 0.4
+}

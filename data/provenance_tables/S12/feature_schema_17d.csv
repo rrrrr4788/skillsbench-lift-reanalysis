@@ -1,0 +1,18 @@
+index,feature_name,subgroup,is_static,unit,formula_or_source
+0,wo_rew,prior_2d,0,reward_0_to_1,Cell without-skills mean reward p0
+1,is_openhands,prior_2d,0,binary_flag,1 if harness contains 'openhands' else 0
+2,n_skills,structure_10d,1,count,Number of attached skill subdirectories in task
+3,prose_tokens,structure_10d,1,tokens_char_div_4,SKILL.md non-fenced-code characters / 4
+4,code_tokens,structure_10d,1,tokens_char_div_4,SKILL.md fenced code block characters / 4
+5,ref_tokens,structure_10d,1,tokens_char_div_4,Auxiliary reference doc (.md/.txt/.rst/.json/.yaml/.yml) characters / 4
+6,script_tokens,structure_10d,1,tokens_char_div_4,Helper script (.py/.sh/.js/.ts/.R/.pl) characters / 4
+7,n_ref_files,structure_10d,1,count,Count of auxiliary reference files in skill subdirectories
+8,n_script_files,structure_10d,1,count,Count of helper script files in skill subdirectories
+9,bundle_to_inst_ratio,structure_10d,1,ratio,"T_total / max(25.0, T_inst) where T = chars / 4"
+10,code_ratio,structure_10d,1,ratio_0_to_1,"(code_chars + script_chars) / max(1, total_chars)"
+11,ref_ratio,structure_10d,1,ratio_0_to_1,"ref_chars / max(1, total_chars)"
+12,has_synthetic_stub,hygiene_flags_3d,1,binary_flag,"1 if synthetic stub, license skill, or oracle conflict else 0 (I_pathology)"
+13,unmatched_pdf_forms,hygiene_flags_3d,1,binary_flag,1 if pdf skill attached and prompt lacks form+fill else 0
+14,unmatched_xlsx,hygiene_flags_3d,1,binary_flag,1 if xlsx skill attached and prompt/verifier lacks formula/vlookup/recalc/data_only=True else 0
+15,lex_recall,lexical_align_2d,1,ratio_0_to_1,"|W(I) cap W(S)| / max(1, |W(I)|)"
+16,lex_prec,lexical_align_2d,1,ratio_0_to_1,"|W(I) cap W(S)| / max(1, |W(S)|)"

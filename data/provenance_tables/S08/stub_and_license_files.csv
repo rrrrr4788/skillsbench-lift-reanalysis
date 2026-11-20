@@ -1,0 +1,58 @@
+task,skill_dir,relative_path,extension,size_bytes,size_kib,subcategory,file_role,has_literal_marker,matched_markers
+earthquake-phase-association,licenses,earthquake-phase-association/environment/skills/licenses/obspy.LICENSE,.license,43836,42.81,license_dir,license_text_file,0,
+earthquake-phase-association,licenses,earthquake-phase-association/environment/skills/licenses/seisbench.LICENSE,.license,0,0.00,license_dir,license_text_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/HOW_TO_USE.md,.md,2392,2.34,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/SKILL.md,.md,20782,20.29,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/assets/.gitkeep,,0,0.00,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/java-performance-tuning,,1022,1.00,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/java-performance-tuning.md,.md,9643,9.42,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/jpa-hibernate-guide,,1018,0.99,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/jpa-hibernate-guide.md,.md,12942,12.64,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/microservices-patterns,,1021,1.00,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/microservices-patterns.md,.md,11456,11.19,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/spring-boot-best-practices,,1025,1.00,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/spring-boot-best-practices.md,.md,15852,15.48,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/spring-security-reference,,1024,1.00,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/references/spring-security-reference.md,.md,14837,14.49,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/api_endpoint_generator,,3402,3.32,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/api_endpoint_generator.py,.py,6697,6.54,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/dependency_analyzer,,3386,3.31,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/dependency_analyzer.py,.py,12130,11.85,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/entity_generator,,3368,3.29,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/entity_generator.py,.py,25657,25.06,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/performance_profiler,,3392,3.31,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/performance_profiler.py,.py,12206,11.92,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/security_config_generator,,3420,3.34,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/security_config_generator.py,.py,14418,14.08,senior_stub_dir,companion_template_file,0,
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/spring_project_scaffolder,,3420,3.34,senior_stub_dir,literal_marker_file,1,skill_builder.py;TODO: Implement actual functionality
+fix-druid-loophole-cve,senior-java,fix-druid-loophole-cve/environment/skills/senior-java/scripts/spring_project_scaffolder.py,.py,38578,37.67,senior_stub_dir,companion_template_file,0,
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/SKILL.md,.md,4739,4.63,senior_stub_dir,companion_template_file,0,
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/references/cryptography_implementation.md,.md,1725,1.68,senior_stub_dir,literal_marker_file,1,Pattern 1: Best Practice Implementation
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/references/penetration_testing_guide.md,.md,1723,1.68,senior_stub_dir,literal_marker_file,1,Pattern 1: Best Practice Implementation
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/references/security_architecture_patterns.md,.md,1728,1.69,senior_stub_dir,literal_marker_file,1,Pattern 1: Best Practice Implementation
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/scripts/pentest_automator.py,.py,2958,2.89,senior_stub_dir,companion_template_file,0,
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/scripts/security_auditor.py,.py,2953,2.88,senior_stub_dir,companion_template_file,0,
+fix-erlang-ssh-cve,senior-security,fix-erlang-ssh-cve/environment/skills/senior-security/scripts/threat_modeler.py,.py,2943,2.87,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/HOW_TO_USE.md,.md,2575,2.51,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/SKILL.md,.md,24270,23.70,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/assets/.gitkeep,,0,0.00,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/assets/data-quality-checklist.md,.md,0,0.00,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/assets/pipeline-design-template.md,.md,0,0.00,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/references/frameworks.md,.md,44031,43.00,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/references/templates.md,.md,69500,67.87,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/references/tools.md,.md,40644,39.69,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/data_quality_validator.py,.py,3631,3.55,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/etl_performance_optimizer.py,.py,3646,3.56,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/kafka_config_generator.py,.py,42238,41.25,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/pipeline_orchestrator.py,.py,3629,3.54,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/stream_processor.py,.py,62287,60.83,senior_stub_dir,companion_template_file,0,
+flink-query,senior-data-engineer,flink-query/environment/skills/senior-data-engineer/scripts/streaming_quality_validator.py,.py,41053,40.09,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/SKILL.md,.md,5856,5.72,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/references/experiment_design_frameworks.md,.md,1515,1.48,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/references/feature_engineering_patterns.md,.md,1515,1.48,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/references/statistical_methods_advanced.md,.md,1515,1.48,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/scripts/experiment_designer.py,.py,2583,2.52,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/scripts/feature_engineering_pipeline.py,.py,2626,2.56,senior_stub_dir,companion_template_file,0,
+powerlifting-coef-calc,senior-data-scientist,powerlifting-coef-calc/environment/skills/senior-data-scientist/scripts/model_evaluation_suite.py,.py,2596,2.54,senior_stub_dir,companion_template_file,0,
+seismic-phase-picking,licenses,seismic-phase-picking/environment/skills/licenses/obspy.LICENSE,.license,43836,42.81,license_dir,license_text_file,0,
+seismic-phase-picking,licenses,seismic-phase-picking/environment/skills/licenses/seisbench.LICENSE,.license,0,0.00,license_dir,license_text_file,0,

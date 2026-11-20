@@ -1,0 +1,32 @@
+{
+  "epsg4087": {
+    "farthest_id": "hv74103036",
+    "raw_distance_km": 3878.265897262947,
+    "submitted_distance_2dec_km": 3878.27,
+    "abs_error_vs_expected_unrounded_km": 0.004102737053017336,
+    "abs_error_vs_expected_2dec_km": 0.0,
+    "passed_tests": 8,
+    "total_tests": 8,
+    "official_reward": 1.0
+  },
+  "spherical_gc": {
+    "farthest_id": "hv74103036",
+    "raw_distance_km": 3552.9790474813976,
+    "submitted_distance_2dec_km": 3552.98,
+    "abs_error_vs_expected_unrounded_km": 325.29095251860235,
+    "abs_error_vs_expected_2dec_km": 325.28999999999996,
+    "passed_tests": 7,
+    "total_tests": 8,
+    "official_reward": 0.0
+  },
+  "epsg3857": {
+    "farthest_id": "hv74103036",
+    "raw_distance_km": 4152.558104284179,
+    "submitted_distance_2dec_km": 4152.56,
+    "abs_error_vs_expected_unrounded_km": 274.28810428417864,
+    "abs_error_vs_expected_2dec_km": 274.2900000000004,
+    "passed_tests": 7,
+    "total_tests": 8,
+    "official_reward": 0.0
+  }
+}

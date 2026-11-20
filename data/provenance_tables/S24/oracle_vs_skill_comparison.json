@@ -1,0 +1,43 @@
+{
+  "skill_formulation": "3D ordered-window PySCIPOpt MIP (ordered-window-sequencing-mip/SKILL.md)",
+  "oracle_formulation": {
+    "solver_status": "heuristic_direct_permutation_search",
+    "solver_best_bound": null,
+    "objective": 3966,
+    "mip_variables_built": 0,
+    "solve_sh_explicit_rejection_line": 17,
+    "solve_sh_explicit_rejection_quote": "# Local-only direct permutation oracle. No PySCIPOpt, no model.lp, no external schedules."
+  },
+  "analytical_mip_scale": [
+    {
+      "scope": "distinct_block_triplets_only (|{i,j,k}| == 3)",
+      "n_blocks": 24,
+      "n_slots": 24,
+      "n_triple_windows": 22,
+      "n_triplets": 11130,
+      "assign_vars_x_formula": "24 * 24",
+      "assign_vars_x": 576,
+      "window_vars_w_formula": "11130 * 22",
+      "window_vars_w": 244860,
+      "total_xw_binary_vars_formula": "576 + 244860",
+      "total_xw_binary_vars": 245436,
+      "triplet_lin_constraints_formula": "4 * 244860",
+      "triplet_lin_constraints": 979440
+    },
+    {
+      "scope": "all_nonzero_csv_triplets (all rows in triplet_counts.csv)",
+      "n_blocks": 24,
+      "n_slots": 24,
+      "n_triple_windows": 22,
+      "n_triplets": 12415,
+      "assign_vars_x_formula": "24 * 24",
+      "assign_vars_x": 576,
+      "window_vars_w_formula": "12415 * 22",
+      "window_vars_w": 273130,
+      "total_xw_binary_vars_formula": "576 + 273130",
+      "total_xw_binary_vars": 273706,
+      "triplet_lin_constraints_formula": "4 * 273130",
+      "triplet_lin_constraints": 1092520
+    }
+  ]
+}

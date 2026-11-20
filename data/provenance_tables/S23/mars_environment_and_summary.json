@@ -1,0 +1,51 @@
+{
+  "environment": {
+    "os_platform": "Windows-10-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "cpu_count_logical": 16,
+    "python_version": "3.10.8",
+    "numpy_version": "1.24.3",
+    "scipy_version": "1.15.2",
+    "pandas_version": "1.5.3"
+  },
+  "telemetry_and_historical_boundaries": {
+    "cpu_utilization_telemetry_recorded": false,
+    "historical_single_run_logs_available": false,
+    "evidentiary_boundary_note": "CPU utilization/load telemetry was not recorded during either the unlogged historical run or this benchmark batch; host-load causality cannot be claimed as proven. Furthermore, median(skill)/median(oracle) and median(skill_i/oracle_i) are distinct estimators and must be reported with explicit definitions rather than conflated."
+  },
+  "dataset": {
+    "citsci_bytes": 46247360,
+    "citsci_mb_decimal": 46.24736,
+    "expert_bytes": 3091179,
+    "expert_mb_decimal": 3.091179,
+    "n_unique_base_images": 369,
+    "n_non_empty_images": 369,
+    "n_citsci_annotations": 25856,
+    "n_expert_annotations": 1940,
+    "coord_spatial_dim": 2,
+    "numpy_broadcast_tensor_ndim": 3
+  },
+  "hyperparameter_grid": {
+    "n_min_samples": 7,
+    "n_epsilon": 11,
+    "n_shape_weight": 11,
+    "n_grid_total": 847
+  },
+  "live_benchmark_summary": {
+    "n_warmup": 1,
+    "n_timed_repeats": 7,
+    "oracle_median_sec": 0.027136,
+    "oracle_mean_sec": 0.028081571428571428,
+    "skill_median_sec": 1.66952,
+    "skill_mean_sec": 1.6734752857142856,
+    "ratio_of_medians_x": 61.524174528301884,
+    "pairwise_slowdown_median_x": 62.374963148584904,
+    "pairwise_slowdown_mean_x": 60.179193827025486,
+    "pairwise_slowdown_min_x": 48.55330882352941,
+    "pairwise_slowdown_max_x": 65.98252595781629,
+    "max_abs_matrix_diff": 9.094947017729282e-13,
+    "extrap_847_oracle_median_sec": 22.984192,
+    "extrap_847_skill_median_sec": 1414.0834399999999,
+    "extrap_847_skill_median_min": 23.568057333333332
+  }
+}

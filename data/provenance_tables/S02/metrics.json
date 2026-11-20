@@ -1,0 +1,822 @@
+{
+  "module_id": "S02",
+  "run_id": "S02-20261111T094909Z-3726266a-822ffd4b",
+  "provenance_tier": "FROZEN_HISTORICAL_SNAPSHOT_COMPUTATION",
+  "script_version": {
+    "script_name": "pair_trials.py",
+    "script_sha256": "3726266af63273941ee242a0f7e819a8171756686f4417708097749af384026a",
+    "git_commit": "unknown",
+    "version_tag": "unknown:3726266af632"
+  },
+  "config": {
+    "delta_zero_tolerance": 1e-09,
+    "valid_reward_interval": [
+      0.0,
+      1.0
+    ],
+    "require_both_modes_for_pairing": true,
+    "require_repo_task_alignment_for_standard_set": true
+  },
+  "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+  "metrics_count": 38,
+  "metrics": {
+    "S02.tasks_in_repo_filter_count": {
+      "metric_id": "S02.tasks_in_repo_filter_count",
+      "module_id": "S02",
+      "value": 87,
+      "formatted_value": "87",
+      "format_spec": "d",
+      "unit": "tasks",
+      "scope": "repository task directories in skillsbench_repo/tasks",
+      "denominator": "NA",
+      "rule": "len(repo_tasks)",
+      "evidence_file": "task_observation_coverage_87.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.tasks_with_paired_cells_count": {
+      "metric_id": "S02.tasks_with_paired_cells_count",
+      "module_id": "S02",
+      "value": 83,
+      "formatted_value": "83",
+      "format_spec": "d",
+      "unit": "tasks",
+      "scope": "evaluated non-empty tasks with >=1 paired cell in S02",
+      "denominator": 87,
+      "rule": "count(has_paired_cells_all == True)",
+      "evidence_file": "task_observation_coverage_87.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.tasks_without_paired_cells_count": {
+      "metric_id": "S02.tasks_without_paired_cells_count",
+      "module_id": "S02",
+      "value": 4,
+      "formatted_value": "4",
+      "format_spec": "d",
+      "unit": "tasks",
+      "scope": "repository tasks with 0 paired cells in S02",
+      "denominator": 87,
+      "rule": "count(has_paired_cells_all == False)",
+      "evidence_file": "task_observation_coverage_87.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_tasks_with_paired_cells_count": {
+      "metric_id": "S02.v11_tasks_with_paired_cells_count",
+      "module_id": "S02",
+      "value": 72,
+      "formatted_value": "72",
+      "format_spec": "d",
+      "unit": "tasks",
+      "scope": "evaluated non-empty tasks with >=1 v1.1 paired cell",
+      "denominator": 87,
+      "rule": "count(has_paired_cells_v11 == True)",
+      "evidence_file": "task_observation_coverage_87.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.config.valid_reward_min": {
+      "metric_id": "S02.config.valid_reward_min",
+      "module_id": "S02",
+      "value": 0,
+      "formatted_value": "0",
+      "format_spec": "d",
+      "unit": "reward_bound",
+      "scope": "executed config valid_reward_interval lower bound",
+      "denominator": "NA",
+      "rule": "config['valid_reward_interval'][0]",
+      "evidence_file": "run_manifest.json",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.config.valid_reward_max": {
+      "metric_id": "S02.config.valid_reward_max",
+      "module_id": "S02",
+      "value": 1,
+      "formatted_value": "1",
+      "format_spec": "d",
+      "unit": "reward_bound",
+      "scope": "executed config valid_reward_interval upper bound",
+      "denominator": "NA",
+      "rule": "config['valid_reward_interval'][1]",
+      "evidence_file": "run_manifest.json",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.raw_v10_rows": {
+      "metric_id": "S02.raw_v10_rows",
+      "module_id": "S02",
+      "value": 2830,
+      "formatted_value": "2,830",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "paper_v1_manifest.json trials",
+      "denominator": "NA",
+      "rule": "len(paper_v1_manifest['trials'])",
+      "evidence_file": "normalized_trials.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.raw_v11_rows": {
+      "metric_id": "S02.raw_v11_rows",
+      "module_id": "S02",
+      "value": 6590,
+      "formatted_value": "6,590",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "selected_trials.csv rows",
+      "denominator": "NA",
+      "rule": "len(selected_trials.csv)",
+      "evidence_file": "normalized_trials.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.raw_total_rows": {
+      "metric_id": "S02.raw_total_rows",
+      "module_id": "S02",
+      "value": 9420,
+      "formatted_value": "9,420",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "v1.0 + v1.1 combined raw trial records",
+      "denominator": "NA",
+      "rule": "S02.raw_v10_rows + S02.raw_v11_rows",
+      "evidence_file": "normalized_trials.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.valid_paired_trial_rows": {
+      "metric_id": "S02.valid_paired_trial_rows",
+      "module_id": "S02",
+      "value": 7554,
+      "formatted_value": "7,554",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "87 repo tasks + valid numeric reward + paired modes",
+      "denominator": 9420,
+      "rule": "count(included_in_standard == True)",
+      "evidence_file": "normalized_trials.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.excluded_total_rows": {
+      "metric_id": "S02.excluded_total_rows",
+      "module_id": "S02",
+      "value": 1866,
+      "formatted_value": "1,866",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "excluded raw trial rows",
+      "denominator": 9420,
+      "rule": "count(included_in_standard == False)",
+      "evidence_file": "excluded_rows.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.excluded_task_not_in_repo_rows": {
+      "metric_id": "S02.excluded_task_not_in_repo_rows",
+      "module_id": "S02",
+      "value": 77,
+      "formatted_value": "77",
+      "format_spec": "d",
+      "unit": "rows",
+      "scope": "v1.1 rows on taxonomy-tree-merge (absent from tasks/)",
+      "denominator": 1866,
+      "rule": "count(exclusion_reason == 'TASK_NOT_IN_REPO')",
+      "evidence_file": "excluded_rows.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.excluded_missing_reward_in_repo_rows": {
+      "metric_id": "S02.excluded_missing_reward_in_repo_rows",
+      "module_id": "S02",
+      "value": 1029,
+      "formatted_value": "1,029",
+      "format_spec": ",d",
+      "unit": "rows",
+      "scope": "87-task rows with empty or non-finite reward",
+      "denominator": 1866,
+      "rule": "count(exclusion_reason == 'MISSING_OR_NONFINITE_REWARD')",
+      "evidence_file": "excluded_rows.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.excluded_unpaired_mode_in_repo_rows": {
+      "metric_id": "S02.excluded_unpaired_mode_in_repo_rows",
+      "module_id": "S02",
+      "value": 760,
+      "formatted_value": "760",
+      "format_spec": "d",
+      "unit": "rows",
+      "scope": "87-task valid-reward rows in single-mode cells",
+      "denominator": 1866,
+      "rule": "count(exclusion_reason == 'UNPAIRED_MODE_IN_CELL')",
+      "evidence_file": "excluded_rows.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.raw_configs_total": {
+      "metric_id": "S02.raw_configs_total",
+      "module_id": "S02",
+      "value": 29,
+      "formatted_value": "29",
+      "format_spec": "d",
+      "unit": "configs",
+      "scope": "all distinct (version, harness, model) tuples in raw files",
+      "denominator": "NA",
+      "rule": "len(configs_summary.csv)",
+      "evidence_file": "configs_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_configs_total": {
+      "metric_id": "S02.paired_configs_total",
+      "module_id": "S02",
+      "value": 28,
+      "formatted_value": "28",
+      "format_spec": "d",
+      "unit": "configs",
+      "scope": "distinct (version, harness, model) configs with >=1 paired cell",
+      "denominator": 29,
+      "rule": "count(has_paired_cells == True)",
+      "evidence_file": "configs_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_configs_v10": {
+      "metric_id": "S02.paired_configs_v10",
+      "module_id": "S02",
+      "value": 7,
+      "formatted_value": "7",
+      "format_spec": "d",
+      "unit": "configs",
+      "scope": "v1.0 configs with >=1 paired cell",
+      "denominator": 28,
+      "rule": "count(version=='v1.0' and has_paired_cells)",
+      "evidence_file": "configs_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_configs_v11": {
+      "metric_id": "S02.paired_configs_v11",
+      "module_id": "S02",
+      "value": 21,
+      "formatted_value": "21",
+      "format_spec": "d",
+      "unit": "configs",
+      "scope": "v1.1 configs with >=1 paired cell",
+      "denominator": 28,
+      "rule": "count(version=='v1.1' and has_paired_cells)",
+      "evidence_file": "configs_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_cells_total": {
+      "metric_id": "S02.paired_cells_total",
+      "module_id": "S02",
+      "value": 1421,
+      "formatted_value": "1,421",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.0 + v1.1 87-task paired (config, task) cells",
+      "denominator": "NA",
+      "rule": "len(paired_cells.csv)",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_cells_v10": {
+      "metric_id": "S02.paired_cells_v10",
+      "module_id": "S02",
+      "value": 471,
+      "formatted_value": "471",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.0 87-task paired cells",
+      "denominator": 1421,
+      "rule": "count(version == 'v1.0')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.paired_cells_v11": {
+      "metric_id": "S02.paired_cells_v11",
+      "module_id": "S02",
+      "value": 950,
+      "formatted_value": "950",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.1 87-task paired cells",
+      "denominator": 1421,
+      "rule": "count(version == 'v1.1')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.positive_cells_count": {
+      "metric_id": "S02.positive_cells_count",
+      "module_id": "S02",
+      "value": 547,
+      "formatted_value": "547",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "paired cells with Delta > +1e-9",
+      "denominator": 1421,
+      "rule": "count(transfer_class == 'positive')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.positive_cells_pct": {
+      "metric_id": "S02.positive_cells_pct",
+      "module_id": "S02",
+      "value": 38.49401829697396,
+      "formatted_value": "38.5",
+      "format_spec": ".1f",
+      "unit": "%",
+      "scope": "share of paired cells with Delta > 0",
+      "denominator": 1421,
+      "rule": "S02.positive_cells_count / S02.paired_cells_total * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.zero_cells_count": {
+      "metric_id": "S02.zero_cells_count",
+      "module_id": "S02",
+      "value": 705,
+      "formatted_value": "705",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "paired cells with |Delta| <= 1e-9",
+      "denominator": 1421,
+      "rule": "count(transfer_class == 'zero')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.zero_cells_pct": {
+      "metric_id": "S02.zero_cells_pct",
+      "module_id": "S02",
+      "value": 49.61294862772696,
+      "formatted_value": "49.6",
+      "format_spec": ".1f",
+      "unit": "%",
+      "scope": "share of paired cells with Delta == 0",
+      "denominator": 1421,
+      "rule": "S02.zero_cells_count / S02.paired_cells_total * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.negative_cells_count": {
+      "metric_id": "S02.negative_cells_count",
+      "module_id": "S02",
+      "value": 169,
+      "formatted_value": "169",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "paired cells with Delta < -1e-9",
+      "denominator": 1421,
+      "rule": "count(transfer_class == 'negative')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.negative_cells_pct_1dec": {
+      "metric_id": "S02.negative_cells_pct_1dec",
+      "module_id": "S02",
+      "value": 11.893033075299085,
+      "formatted_value": "11.9",
+      "format_spec": ".1f",
+      "unit": "%",
+      "scope": "share of paired cells with Delta < 0 (1-decimal display)",
+      "denominator": 1421,
+      "rule": "S02.negative_cells_count / S02.paired_cells_total * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.negative_cells_pct_2dec": {
+      "metric_id": "S02.negative_cells_pct_2dec",
+      "module_id": "S02",
+      "value": 11.893033075299085,
+      "formatted_value": "11.89",
+      "format_spec": ".2f",
+      "unit": "%",
+      "scope": "share of paired cells with Delta < 0 (2-decimal display)",
+      "denominator": 1421,
+      "rule": "S02.negative_cells_count / S02.paired_cells_total * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.non_positive_cells_count": {
+      "metric_id": "S02.non_positive_cells_count",
+      "module_id": "S02",
+      "value": 874,
+      "formatted_value": "874",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "paired cells with Delta <= 0 (zero + negative)",
+      "denominator": 1421,
+      "rule": "S02.zero_cells_count + S02.negative_cells_count",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.non_positive_cells_pct": {
+      "metric_id": "S02.non_positive_cells_pct",
+      "module_id": "S02",
+      "value": 61.50598170302604,
+      "formatted_value": "61.5",
+      "format_spec": ".1f",
+      "unit": "%",
+      "scope": "share of paired cells with Delta <= 0",
+      "denominator": 1421,
+      "rule": "S02.non_positive_cells_count / S02.paired_cells_total * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_87task_negative_cells_count": {
+      "metric_id": "S02.v11_87task_negative_cells_count",
+      "module_id": "S02",
+      "value": 122,
+      "formatted_value": "122",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.1 87-task paired cells with Delta < 0",
+      "denominator": 950,
+      "rule": "count(version == 'v1.1' and transfer_class == 'negative')",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_87task_negative_cells_pct": {
+      "metric_id": "S02.v11_87task_negative_cells_pct",
+      "module_id": "S02",
+      "value": 12.842105263157894,
+      "formatted_value": "12.84",
+      "format_spec": ".2f",
+      "unit": "%",
+      "scope": "share of v1.1 87-task paired cells with Delta < 0",
+      "denominator": 950,
+      "rule": "S02.v11_87task_negative_cells_count / S02.paired_cells_v11 * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_unfiltered_paired_cells_count": {
+      "metric_id": "S02.v11_unfiltered_paired_cells_count",
+      "module_id": "S02",
+      "value": 962,
+      "formatted_value": "962",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.1 paired cells before excluding taxonomy-tree-merge",
+      "denominator": "NA",
+      "rule": "len(paired_cells_v11_unfiltered.csv)",
+      "evidence_file": "paired_cells_v11_unfiltered.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_unfiltered_negative_cells_count": {
+      "metric_id": "S02.v11_unfiltered_negative_cells_count",
+      "module_id": "S02",
+      "value": 126,
+      "formatted_value": "126",
+      "format_spec": ",d",
+      "unit": "cells",
+      "scope": "v1.1 negative-transfer cells before excluding taxonomy-tree-merge",
+      "denominator": 962,
+      "rule": "count(transfer_class == 'negative' in v1.1 unfiltered)",
+      "evidence_file": "paired_cells_v11_unfiltered.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.v11_unfiltered_negative_cells_pct": {
+      "metric_id": "S02.v11_unfiltered_negative_cells_pct",
+      "module_id": "S02",
+      "value": 13.097713097713099,
+      "formatted_value": "13.10",
+      "format_spec": ".2f",
+      "unit": "%",
+      "scope": "v1.1 negative-transfer rate before excluding taxonomy-tree-merge",
+      "denominator": 962,
+      "rule": "S02.v11_unfiltered_negative_cells_count / S02.v11_unfiltered_paired_cells_count * 100",
+      "evidence_file": "paired_cells_v11_unfiltered.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.macro_wo_mean_pct": {
+      "metric_id": "S02.macro_wo_mean_pct",
+      "module_id": "S02",
+      "value": 30.06093126905935,
+      "formatted_value": "30.06",
+      "format_spec": ".2f",
+      "unit": "%",
+      "scope": "cell-weighted mean reward without skills across 1,421 cells",
+      "denominator": 1421,
+      "rule": "mean(wo_mean_unrounded) * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.macro_w_mean_pct": {
+      "metric_id": "S02.macro_w_mean_pct",
+      "module_id": "S02",
+      "value": 48.752732817264835,
+      "formatted_value": "48.75",
+      "format_spec": ".2f",
+      "unit": "%",
+      "scope": "cell-weighted mean reward with skills across 1,421 cells",
+      "denominator": 1421,
+      "rule": "mean(w_mean_unrounded) * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    },
+    "S02.macro_delta_mean_pp": {
+      "metric_id": "S02.macro_delta_mean_pp",
+      "module_id": "S02",
+      "value": 18.69180154820549,
+      "formatted_value": "+18.69",
+      "format_spec": "+.2f",
+      "unit": "pp",
+      "scope": "cell-weighted mean skill lift across 1,421 cells",
+      "denominator": 1421,
+      "rule": "mean(delta_unrounded) * 100",
+      "evidence_file": "paired_cells.csv",
+      "notes": "",
+      "source_hashes": {
+        "paper_v1_manifest.json": "a15d94ecdcfa63c6079cfd59f83228ec292213abb321b9ab4b25d9a0e7692808",
+        "selected_trials.csv": "ff3a879270d01d74a14d2fcbe021557b6639d5dd8f1f5b5d0edd7aaf783442ef",
+        "S01.tasks_inventory.csv": "408ea5d9b4ead90b950669abec9a4acf1d29bf8ceb22904d0cff1a5591a72c8c"
+      },
+      "script_version": "unknown:3726266af632",
+      "config_hash": "822ffd4b7bdf0ed6e5b79f6de36c37931567a092179ad897f18732c2a170d502",
+      "run_id": "S02-20261111T094909Z-3726266a-822ffd4b"
+    }
+  }
+}

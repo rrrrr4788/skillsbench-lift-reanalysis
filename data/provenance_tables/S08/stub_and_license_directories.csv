@@ -1,0 +1,7 @@
+task,skill_dir,subcategory,n_files,n_literal_marker_files,n_companion_files,total_bytes,total_kib_1dec,total_kb_decimal_1dec
+earthquake-phase-association,licenses,license_dir,2,0,0,43836,42.8,43.8
+fix-druid-loophole-cve,senior-java,senior_stub_dir,25,6,19,223088,217.9,223.1
+fix-erlang-ssh-cve,senior-security,senior_stub_dir,7,3,4,18769,18.3,18.8
+flink-query,senior-data-engineer,senior_stub_dir,14,0,14,337504,329.6,337.5
+powerlifting-coef-calc,senior-data-scientist,senior_stub_dir,7,0,7,18206,17.8,18.2
+seismic-phase-picking,licenses,license_dir,2,0,0,43836,42.8,43.8

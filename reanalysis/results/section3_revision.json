@@ -1,0 +1,87 @@
+{
+  "input_sha256": {
+    "data/provenance_tables/S02/paired_cells.csv": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
+    "data/provenance_tables/S02/normalized_trials.csv": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f"
+  },
+  "weighting": "equal weight per paired configuration-task cell; not equal weight per task",
+  "classification": {
+    "earthquake-plate-calculation": "controlled verifier comparison",
+    "protein-expression-analysis": "controlled verifier comparison",
+    "flood-risk-analysis": "source-level operational-definition gap"
+  },
+  "unconfirmed": [
+    "weighted-gdp-calc",
+    "sec-financial-report"
+  ],
+  "historical_five": {
+    "tasks": 5,
+    "cells": 99,
+    "baseline_pct": 5.555555555555555,
+    "with_pct": 74.07407407407408,
+    "lift_pp": 68.51851851851852,
+    "cells_pct": 6.9669247009148485,
+    "share_of_summed_lift_pct": 25.53864901174211,
+    "lift_without_them_pp": 14.960451336359052,
+    "loss_cells": 0
+  },
+  "current_three": {
+    "tasks": 3,
+    "cells": 63,
+    "baseline_pct": 5.026455026455026,
+    "with_pct": 79.62962962962963,
+    "lift_pp": 74.60317460317461,
+    "cells_pct": 4.433497536945813,
+    "share_of_summed_lift_pct": 17.695083590445392,
+    "lift_without_them_pp": 16.09797496318115,
+    "loss_cells": 0,
+    "per_task": {
+      "earthquake-plate-calculation": {
+        "tasks": 1,
+        "cells": 24,
+        "baseline_pct": 4.861111111111112,
+        "with_pct": 77.08333333333334,
+        "lift_pp": 72.22222222222221,
+        "cells_pct": 1.688951442646024,
+        "share_of_summed_lift_pct": 6.525846430518869,
+        "lift_without_them_pp": 17.772166547363398,
+        "loss_cells": 0
+      },
+      "protein-expression-analysis": {
+        "tasks": 1,
+        "cells": 18,
+        "baseline_pct": 9.25925925925926,
+        "with_pct": 85.18518518518519,
+        "lift_pp": 75.92592592592592,
+        "cells_pct": 1.266713581984518,
+        "share_of_summed_lift_pct": 5.145378916370645,
+        "lift_without_them_pp": 17.957507721549064,
+        "loss_cells": 0
+      },
+      "flood-risk-analysis": {
+        "tasks": 1,
+        "cells": 21,
+        "baseline_pct": 1.5873015873015872,
+        "with_pct": 77.77777777777779,
+        "lift_pp": 76.19047619047619,
+        "cells_pct": 1.477832512315271,
+        "share_of_summed_lift_pct": 6.023858243555878,
+        "lift_without_them_pp": 17.82932142857143,
+        "loss_cells": 0
+      }
+    }
+  },
+  "change": {
+    "tasks": -2,
+    "cells": -36,
+    "baseline_pct": -0.5291005291005293,
+    "with_pct": 5.555555555555557,
+    "lift_pp": 6.084656084656089,
+    "cells_pct": -2.5334271639690353,
+    "share_of_summed_lift_pct": -7.8435654212967165,
+    "lift_without_them_pp": 1.1375236268220998,
+    "loss_cells": 0
+  },
+  "all_cells": 1421,
+  "all_lift_pp": 18.69180154820549,
+  "independently_checked_cells": 1421
+}

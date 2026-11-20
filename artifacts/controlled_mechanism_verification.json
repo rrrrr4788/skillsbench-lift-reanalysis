@@ -1,0 +1,162 @@
+{
+  "protein-expression-analysis": {
+    "verification_type": "Part_A_End_to_End_Official_Verifier_Single_Factor_Formula_Cache",
+    "real_input_file": "tasks/protein-expression-analysis/environment/data/protein_expression.xlsx",
+    "real_input_bytes": 117651,
+    "control_sample_columns_in_data": "D:H",
+    "treated_sample_columns_in_data": "I:M",
+    "official_verifier": "tasks/protein-expression-analysis/verifier/test_outputs.py",
+    "formulas_identical_across_conditions": true,
+    "n_total_formula_cells_verified": 143,
+    "cache_roundtrip_abs_diff": 0.0,
+    "independent_formula_eval_vs_cache_abs_diff": 0.0,
+    "max_formula_vs_cache_abs_diff": 0.0,
+    "n_populated_step1_cells": 83,
+    "condition_A_uncached_formulas": {
+      "passed_tests": 3,
+      "total_tests": 6,
+      "failed_tests": {
+        "test_step1_expression_values_filled": "Only 0/100 cells filled",
+        "test_step2_statistics_calculated": "Statistics not properly calculated",
+        "test_step3_fold_changes_calculated": "Fold changes not calculated"
+      },
+      "formula_cells_step1_data_only_false": 83,
+      "non_null_step1_data_only_true": 0,
+      "non_null_step2_data_only_true": 0,
+      "non_null_fc_colC_data_only_true": 0,
+      "non_null_log2fc_colD_data_only_true": 0,
+      "official_verifier_reward": 0.0
+    },
+    "condition_B_cached_formulas": {
+      "passed_tests": 6,
+      "total_tests": 6,
+      "failed_tests": {},
+      "formula_cells_step1_data_only_false": 83,
+      "non_null_step1_data_only_true": 83,
+      "non_null_step2_data_only_true": 40,
+      "non_null_fc_colC_data_only_true": 10,
+      "non_null_log2fc_colD_data_only_true": 10,
+      "official_verifier_reward": 1.0
+    },
+    "historical_benchmark": {
+      "all_configs_wo_pct": 9.26,
+      "all_configs_w_pct": 85.19,
+      "all_configs_delta_pp": 75.93,
+      "v11_delta_pp": 78.79
+    }
+  },
+  "earthquake-plate-calculation": {
+    "verification_type": "Part_A_End_to_End_Search_and_Official_Verifier_Projection_Sensitivity",
+    "real_input_files": [
+      "tasks/earthquake-plate-calculation/environment/earthquakes_2024.json",
+      "tasks/earthquake-plate-calculation/environment/PB2002_plates.json",
+      "tasks/earthquake-plate-calculation/environment/PB2002_boundaries.json"
+    ],
+    "n_global_earthquakes": 1504,
+    "n_pacific_plate_earthquakes_searched": 107,
+    "n_pa_boundary_segments_searched": 1392,
+    "official_verifier": "tasks/earthquake-plate-calculation/verifier/test_outputs.py",
+    "verifier_target_km": 3878.27,
+    "verifier_tolerance_km": 0.01,
+    "method_A_epsg4087_skill_secret": {
+      "farthest_id_found": "hv74103036",
+      "distance_km": 3878.27,
+      "abs_error_vs_verifier_3878_27_km": 0.0,
+      "tolerance_multiple": 0.0,
+      "passed_tests": 8,
+      "total_tests": 8,
+      "failed_tests": {},
+      "official_verifier_reward": 1.0
+    },
+    "method_B_exact_spherical_great_circle": {
+      "farthest_id_found": "hv74103036",
+      "distance_km": 3552.98,
+      "abs_error_vs_verifier_3878_27_km": 325.29,
+      "tolerance_multiple": 32529.0,
+      "passed_tests": 7,
+      "total_tests": 8,
+      "failed_tests": {
+        "test_distance_within_tolerance": "3552.98 != 3878.27 within 0.01 delta (325.28999999999996 difference) : Expected 3878.27 ± 0.01 km, got 3552.98 km"
+      },
+      "official_verifier_reward": 0.0
+    },
+    "method_C_epsg3857_web_mercator": {
+      "farthest_id_found": "hv74103036",
+      "distance_km": 4152.56,
+      "abs_error_vs_verifier_3878_27_km": 274.29,
+      "tolerance_multiple": 27429.0,
+      "passed_tests": 7,
+      "total_tests": 8,
+      "failed_tests": {
+        "test_distance_within_tolerance": "4152.56 != 3878.27 within 0.01 delta (274.2900000000004 difference) : Expected 3878.27 ± 0.01 km, got 4152.56 km"
+      },
+      "official_verifier_reward": 0.0
+    },
+    "historical_benchmark": {
+      "all_configs_wo_pct": 4.86,
+      "all_configs_w_pct": 77.08,
+      "all_configs_delta_pp": 72.22,
+      "v11_delta_pp": 74.51
+    }
+  },
+  "mars-clouds-clustering": {
+    "verification_type": "Part_B_Real_Dataset_Distance_Computation_Benchmark_and_Grid_Extrapolation",
+    "real_input_files": [
+      "tasks/mars-clouds-clustering/environment/data/citsci_train.csv",
+      "tasks/mars-clouds-clustering/environment/data/expert_train.csv"
+    ],
+    "citsci_bytes": 46247360,
+    "n_unique_images": 369,
+    "n_non_empty_images": 369,
+    "n_citsci_annotations": 25856,
+    "n_expert_annotations": 1940,
+    "distance_metric": "Weighted 2D Euclidean distance d(a,b) = sqrt((w*dx)^2 + ((2-w)*dy)^2) on [x, y] (oracle/solve.py Lines 19-23 vs. custom-distance-metrics/SKILL.md Lines 30-36)",
+    "oracle_numpy_single_pass_sec": 0.0318,
+    "skill_callable_single_pass_sec": 2.5223,
+    "single_pass_slowdown_factor": 79.3,
+    "max_numerical_difference": 9.09e-13,
+    "hyperparameter_grid_size": 847,
+    "extrapolated_847_grid_oracle_distance_sec": 26.9,
+    "extrapolated_847_grid_skill_distance_sec": 2136.4,
+    "extrapolated_847_grid_skill_distance_min": 35.6,
+    "extrapolation_note": "Linear extrapolation of pairwise distance matrix evaluation across the 847 (7x11x11) grid combinations; excludes DBSCAN clustering and post-processing overhead.",
+    "historical_benchmark": {
+      "all_configs_wo_pct": 80.0,
+      "all_configs_w_pct": 75.0,
+      "all_configs_delta_pp": -5.0,
+      "v11_delta_pp": -28.21
+    }
+  },
+  "exam-block-sequencing": {
+    "verification_type": "Part_B_Real_Instance_Analytical_MIP_Subproblem_Scale_and_Oracle_Comparison",
+    "real_input_files": [
+      "tasks/exam-block-sequencing/environment/data/instance.json",
+      "tasks/exam-block-sequencing/environment/data/pair_counts.csv",
+      "tasks/exam-block-sequencing/environment/data/triplet_counts.csv",
+      "tasks/exam-block-sequencing/verifier/oracle_metrics.json"
+    ],
+    "n_blocks": 24,
+    "n_slots": 24,
+    "n_triple_windows": 22,
+    "n_nonzero_ordered_pairs": 548,
+    "n_csv_ordered_triplets_total": 12415,
+    "n_csv_ordered_triplets_distinct_blocks": 11130,
+    "assignment_binary_vars_x": 576,
+    "distinct_block_triplet_window_vars_w": 244860,
+    "distinct_block_total_xw_binary_vars": 245436,
+    "distinct_block_triplet_linearization_constraints_4x": 979440,
+    "all_csv_triplet_window_vars_w": 273130,
+    "all_csv_total_xw_binary_vars": 273706,
+    "all_csv_triplet_linearization_constraints_4x": 1092520,
+    "official_oracle_solver_status": "heuristic_direct_permutation_search",
+    "official_oracle_best_bound": null,
+    "official_oracle_objective": 3966,
+    "official_oracle_mip_vars": 0,
+    "historical_benchmark": {
+      "all_configs_wo_pct": 53.03,
+      "all_configs_w_pct": 39.39,
+      "all_configs_delta_pp": -13.64,
+      "v11_delta_pp": -13.64
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "module_id": "S15",
+  "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4",
+  "provenance_tier": "FROZEN_SNAPSHOT_PLUS_AUDITED_TAXONOMY_COMPUTATION",
+  "script_version": {
+    "script_name": "audit_trajectory_labels.py",
+    "script_sha256": "bf1af4d1c7c3c41f3b6e4e1383499956ef322acf654f8109ba1060355918a126",
+    "git_commit": "unknown",
+    "version_tag": "unknown:bf1af4d1c7c3"
+  },
+  "config": {
+    "incomplete_prefixes": [
+      "incomplete_",
+      "premature_",
+      "unfinished_"
+    ],
+    "tool_schema_categories": [
+      "invalid_tool_call_by_agent",
+      "invalid_file_editor_tool_call_schema"
+    ]
+  },
+  "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+  "metrics_count": 36,
+  "metrics": {
+    "S15.total_audit_records": {
+      "metric_id": "S15.total_audit_records",
+      "module_id": "S15",
+      "value": 3011,
+      "formatted_value": "3,011",
+      "format_spec": "",
+      "unit": "records",
+      "scope": "pr7 (2,333) + failure (678)",
+      "denominator": "3,011",
+      "rule": "2333 + 678 = 3011",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.pr7_reviewed_rows": {
+      "metric_id": "S15.pr7_reviewed_rows",
+      "module_id": "S15",
+      "value": 2333,
+      "formatted_value": "2,333",
+      "format_spec": "",
+      "unit": "records",
+      "scope": "pr7_audit_aggregate.json",
+      "denominator": "3,011",
+      "rule": "2,333 records",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.failure_reviewed_rows": {
+      "metric_id": "S15.failure_reviewed_rows",
+      "module_id": "S15",
+      "value": 678,
+      "formatted_value": "678",
+      "format_spec": "",
+      "unit": "records",
+      "scope": "failure_audit_aggregate.json",
+      "denominator": "3,011",
+      "rule": "678 records",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.overlap_trial_keys_count": {
+      "metric_id": "S15.overlap_trial_keys_count",
+      "module_id": "S15",
+      "value": 0,
+      "formatted_value": "0",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "Overlap between pr7 and failure_audit trial keys",
+      "denominator": "3,011",
+      "rule": "len(pr7_keys & fail_keys)",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.no_skill_leakage_runs": {
+      "metric_id": "S15.no_skill_leakage_runs",
+      "module_id": "S15",
+      "value": 58,
+      "formatted_value": "58",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "unhealthy_skill_loading_or_no_skill_leakage",
+      "denominator": "2,333",
+      "rule": "58 without-skills runs",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.no_skill_leakage_mean_reward_pct": {
+      "metric_id": "S15.no_skill_leakage_mean_reward_pct",
+      "module_id": "S15",
+      "value": 26.700000000000003,
+      "formatted_value": "26.7",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "Mean reward across 58 skill-leaked runs",
+      "denominator": "58 runs",
+      "rule": "26.7% (26.70%)",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.no_skill_leakage_full_pass_count": {
+      "metric_id": "S15.no_skill_leakage_full_pass_count",
+      "module_id": "S15",
+      "value": 13,
+      "formatted_value": "13",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "Full pass (reward==1.0) among 58 skill-leaked runs",
+      "denominator": "58",
+      "rule": "13 runs",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.no_skill_leakage_full_pass_pct": {
+      "metric_id": "S15.no_skill_leakage_full_pass_pct",
+      "module_id": "S15",
+      "value": 22.413793103448278,
+      "formatted_value": "22.41",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "13 / 58 full pass rate",
+      "denominator": "58",
+      "rule": "22.41%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_total_runs": {
+      "metric_id": "S15.verifier_leakage_total_runs",
+      "module_id": "S15",
+      "value": 7,
+      "formatted_value": "7",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "unhealthy_reward_hacking_or_verifier_leakage",
+      "denominator": "2,333",
+      "rule": "7 runs (6 without + 1 with)",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_wo_runs": {
+      "metric_id": "S15.verifier_leakage_wo_runs",
+      "module_id": "S15",
+      "value": 6,
+      "formatted_value": "6",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "without-skills verifier leakage runs",
+      "denominator": "7",
+      "rule": "6 runs",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_wo_mean_pct": {
+      "metric_id": "S15.verifier_leakage_wo_mean_pct",
+      "module_id": "S15",
+      "value": 50.0,
+      "formatted_value": "50.00",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "Mean reward on 6 without-skills verifier leakage runs",
+      "denominator": "6 runs",
+      "rule": "3 / 6 = 50.00%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_wo_full_pass_count": {
+      "metric_id": "S15.verifier_leakage_wo_full_pass_count",
+      "module_id": "S15",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "Full pass on 6 without-skills verifier leakage runs",
+      "denominator": "6",
+      "rule": "3 runs",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_w_runs": {
+      "metric_id": "S15.verifier_leakage_w_runs",
+      "module_id": "S15",
+      "value": 1,
+      "formatted_value": "1",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "with-skills verifier leakage runs",
+      "denominator": "7",
+      "rule": "1 run",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_w_mean_pct": {
+      "metric_id": "S15.verifier_leakage_w_mean_pct",
+      "module_id": "S15",
+      "value": 0.0,
+      "formatted_value": "0.00",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "Reward on 1 with-skills verifier leakage run",
+      "denominator": "1 run",
+      "rule": "0.00%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_all_full_pass_count": {
+      "metric_id": "S15.verifier_leakage_all_full_pass_count",
+      "module_id": "S15",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "",
+      "unit": "runs",
+      "scope": "Full pass across all 7 verifier leakage runs",
+      "denominator": "7",
+      "rule": "3 runs",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.verifier_leakage_all_mean_pct": {
+      "metric_id": "S15.verifier_leakage_all_mean_pct",
+      "module_id": "S15",
+      "value": 42.857142857142854,
+      "formatted_value": "42.86",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "Mean reward / pass rate across all 7 verifier leakage runs",
+      "denominator": "7",
+      "rule": "3 / 7 = 42.86%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cap_fail_count": {
+      "metric_id": "S15.cap_fail_count",
+      "module_id": "S15",
+      "value": 622,
+      "formatted_value": "622",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "model_capability_failure",
+      "denominator": "678",
+      "rule": "622 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.infra_fail_count": {
+      "metric_id": "S15.infra_fail_count",
+      "module_id": "S15",
+      "value": 48,
+      "formatted_value": "48",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "infra_or_environment_failure",
+      "denominator": "678",
+      "rule": "48 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.unclear_fail_count": {
+      "metric_id": "S15.unclear_fail_count",
+      "module_id": "S15",
+      "value": 8,
+      "formatted_value": "8",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "unclear_needs_human_followup",
+      "denominator": "678",
+      "rule": "8 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.fail_mode_zero_count": {
+      "metric_id": "S15.fail_mode_zero_count",
+      "module_id": "S15",
+      "value": 562,
+      "formatted_value": "562",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "healthy_fail_reward_0",
+      "denominator": "622",
+      "rule": "562 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.fail_mode_zero_pct": {
+      "metric_id": "S15.fail_mode_zero_pct",
+      "module_id": "S15",
+      "value": 90.35369774919614,
+      "formatted_value": "90.35",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "562 / 622 healthy_fail_reward_0 share",
+      "denominator": "622",
+      "rule": "90.35%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.fail_mode_zero_reward_val": {
+      "metric_id": "S15.fail_mode_zero_reward_val",
+      "module_id": "S15",
+      "value": 0.0,
+      "formatted_value": "0.0",
+      "format_spec": "",
+      "unit": "reward",
+      "scope": "Reward value for healthy_fail_reward_0",
+      "denominator": "1.0",
+      "rule": "reward == 0.0",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.fail_mode_partial_count": {
+      "metric_id": "S15.fail_mode_partial_count",
+      "module_id": "S15",
+      "value": 60,
+      "formatted_value": "60",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "partial_reward_fail",
+      "denominator": "622",
+      "rule": "60 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.fail_mode_partial_pct": {
+      "metric_id": "S15.fail_mode_partial_pct",
+      "module_id": "S15",
+      "value": 9.646302250803858,
+      "formatted_value": "9.65",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "60 / 622 partial_reward_fail share",
+      "denominator": "622",
+      "rule": "9.65%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.partial_reward_lower_bound": {
+      "metric_id": "S15.partial_reward_lower_bound",
+      "module_id": "S15",
+      "value": 0,
+      "formatted_value": "0",
+      "format_spec": "",
+      "unit": "reward",
+      "scope": "0 < reward < 1 lower bound",
+      "denominator": "1",
+      "rule": "0 < reward < 1",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.partial_reward_upper_bound": {
+      "metric_id": "S15.partial_reward_upper_bound",
+      "module_id": "S15",
+      "value": 1,
+      "formatted_value": "1",
+      "format_spec": "",
+      "unit": "reward",
+      "scope": "0 < reward < 1 upper bound",
+      "denominator": "1",
+      "rule": "0 < reward < 1",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.incomplete_prefixes_count": {
+      "metric_id": "S15.incomplete_prefixes_count",
+      "module_id": "S15",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "",
+      "unit": "prefixes",
+      "scope": "incomplete_*, premature_*, unfinished_*",
+      "denominator": "3",
+      "rule": "3 prefixes",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_incomplete_count": {
+      "metric_id": "S15.cat_incomplete_count",
+      "module_id": "S15",
+      "value": 35,
+      "formatted_value": "35",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "Trajectories with incomplete/premature/unfinished prefix",
+      "denominator": "622",
+      "rule": "35 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_incomplete_pct": {
+      "metric_id": "S15.cat_incomplete_pct",
+      "module_id": "S15",
+      "value": 5.627009646302251,
+      "formatted_value": "5.63",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "35 / 622 incomplete prefix share",
+      "denominator": "622",
+      "rule": "5.63%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_non_incomplete_count": {
+      "metric_id": "S15.cat_non_incomplete_count",
+      "module_id": "S15",
+      "value": 587,
+      "formatted_value": "587",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "Non-incomplete prefix complement",
+      "denominator": "622",
+      "rule": "587 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_non_incomplete_pct": {
+      "metric_id": "S15.cat_non_incomplete_pct",
+      "module_id": "S15",
+      "value": 94.37299035369774,
+      "formatted_value": "94.37",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "587 / 622 non-incomplete complement share",
+      "denominator": "622",
+      "rule": "94.37%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_tool_error_total_count": {
+      "metric_id": "S15.cat_tool_error_total_count",
+      "module_id": "S15",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "Tool call / schema error trajectories in complement",
+      "denominator": "587",
+      "rule": "3 trajectories (1 + 2)",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_invalid_tool_call_count": {
+      "metric_id": "S15.cat_invalid_tool_call_count",
+      "module_id": "S15",
+      "value": 1,
+      "formatted_value": "1",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "invalid_tool_call_by_agent",
+      "denominator": "3",
+      "rule": "1 trajectory",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_invalid_schema_count": {
+      "metric_id": "S15.cat_invalid_schema_count",
+      "module_id": "S15",
+      "value": 2,
+      "formatted_value": "2",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "invalid_file_editor_tool_call_schema",
+      "denominator": "3",
+      "rule": "2 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_completed_deliverable_count": {
+      "metric_id": "S15.cat_completed_deliverable_count",
+      "module_id": "S15",
+      "value": 584,
+      "formatted_value": "584",
+      "format_spec": "",
+      "unit": "trajectories",
+      "scope": "Completed deliverable assertion/content mismatches (587 - 3)",
+      "denominator": "622",
+      "rule": "584 trajectories",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    },
+    "S15.cat_completed_deliverable_pct": {
+      "metric_id": "S15.cat_completed_deliverable_pct",
+      "module_id": "S15",
+      "value": 93.89067524115757,
+      "formatted_value": "93.89",
+      "format_spec": "",
+      "unit": "%",
+      "scope": "584 / 622 completed deliverable assertion mismatch share",
+      "denominator": "622",
+      "rule": "93.89%",
+      "evidence_file": "failure_taxonomy_summary.csv",
+      "notes": "",
+      "source_hashes": {
+        "pr7_audit_aggregate.json": "5931f69090c9c505d285247c6176c717bfcc225f9c3d89d7c13b8a70879dd2ea",
+        "failure_audit_aggregate.json": "20e2b02246cc951562cc142fb22e5b6b96819d1f6577bb732769d350c5f19e82"
+      },
+      "script_version": "unknown:bf1af4d1c7c3",
+      "config_hash": "7db122d4bed5bf30f934c3637363163ffa110c3f64ba5e8abe0e87b178478196",
+      "run_id": "S15-20261111T094922Z-bf1af4d1-7db122d4"
+    }
+  }
+}

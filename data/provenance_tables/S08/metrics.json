@@ -1,0 +1,696 @@
+{
+  "module_id": "S08",
+  "run_id": "S08-20261111T094910Z-5935579a-8f27feaf",
+  "provenance_tier": "RAW_REPO_DETERMINISTIC_COMPUTATION",
+  "script_version": {
+    "script_name": "audit_stub_and_license_files.py",
+    "script_sha256": "5935579aa5cf0874670cb759630459c4e4094b4e3cfe53b73204c841269f970d",
+    "git_commit": "unknown",
+    "version_tag": "unknown:5935579aa5cf"
+  },
+  "config": {
+    "literal_markers": [
+      "skill_builder.py",
+      "TODO: Implement actual functionality",
+      "Pattern 1: Best Practice Implementation"
+    ],
+    "senior_skill_dirs": [
+      "senior-data-engineer",
+      "senior-data-scientist",
+      "senior-java",
+      "senior-security"
+    ],
+    "license_skill_dirs": [
+      "licenses"
+    ]
+  },
+  "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+  "metrics_count": 35,
+  "metrics": {
+    "S08.contaminated_tasks_count": {
+      "metric_id": "S08.contaminated_tasks_count",
+      "module_id": "S08",
+      "value": 6,
+      "formatted_value": "6",
+      "format_spec": "",
+      "unit": "tasks",
+      "scope": "Tasks with senior-* or licenses/ dirs",
+      "denominator": "87",
+      "rule": "4 senior-* tasks + 2 licenses/ tasks = 6",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.combined_files_count": {
+      "metric_id": "S08.combined_files_count",
+      "module_id": "S08",
+      "value": 57,
+      "formatted_value": "57",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Total files in senior-* + licenses/",
+      "denominator": "910",
+      "rule": "53 + 4 = 57 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.combined_bytes_total": {
+      "metric_id": "S08.combined_bytes_total",
+      "module_id": "S08",
+      "value": 685239,
+      "formatted_value": "685,239",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "Total bytes in senior-* + licenses/",
+      "denominator": "9,073,398",
+      "rule": "597567 + 87672 = 685239 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.combined_kib_total": {
+      "metric_id": "S08.combined_kib_total",
+      "module_id": "S08",
+      "value": 669.1787109375,
+      "formatted_value": "669.2",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "Total KiB (binary 1024) in senior-* + licenses/",
+      "denominator": "8,860.7",
+      "rule": "685239 / 1024 = 669.2 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.combined_kb_decimal_total": {
+      "metric_id": "S08.combined_kb_decimal_total",
+      "module_id": "S08",
+      "value": 685.239,
+      "formatted_value": "685.2",
+      "format_spec": "",
+      "unit": "KB",
+      "scope": "Total KB (decimal 1000) in senior-* + licenses/",
+      "denominator": "9,073.4",
+      "rule": "685239 / 1000 = 685.2 KB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_dirs_count": {
+      "metric_id": "S08.senior_dirs_count",
+      "module_id": "S08",
+      "value": 4,
+      "formatted_value": "4",
+      "format_spec": "",
+      "unit": "dirs",
+      "scope": "4 senior-* directories",
+      "denominator": "234",
+      "rule": "senior-data-scientist, senior-security, senior-data-engineer, senior-java",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_files_total": {
+      "metric_id": "S08.senior_files_total",
+      "module_id": "S08",
+      "value": 53,
+      "formatted_value": "53",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Files in 4 senior-* directories",
+      "denominator": "57",
+      "rule": "7 + 7 + 14 + 25 = 53",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_literal_marker_files": {
+      "metric_id": "S08.senior_literal_marker_files",
+      "module_id": "S08",
+      "value": 9,
+      "formatted_value": "9",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Files with literal stub markers",
+      "denominator": "53",
+      "rule": "6 in senior-java/scripts + 3 in senior-security/references = 9",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_literal_py_files": {
+      "metric_id": "S08.senior_literal_py_files",
+      "module_id": "S08",
+      "value": 6,
+      "formatted_value": "6",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Python scripts in scripts/ with literal skill_builder.py / TODO markers (note: paper prose wrote 3 py + 6 md)",
+      "denominator": "9",
+      "rule": "6 extensionless Python scripts in senior-java/scripts/",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_literal_md_files": {
+      "metric_id": "S08.senior_literal_md_files",
+      "module_id": "S08",
+      "value": 3,
+      "formatted_value": "3",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Markdown reference docs with literal 'Pattern 1: Best Practice Implementation' (note: 6 total Pattern 1 .md docs across powerlifting + erlang)",
+      "denominator": "9",
+      "rule": "3 .md files in senior-security/references/",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_companion_files": {
+      "metric_id": "S08.senior_companion_files",
+      "module_id": "S08",
+      "value": 44,
+      "formatted_value": "44",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Companion template files in senior-* directories",
+      "denominator": "53",
+      "rule": "53 - 9 = 44",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_bytes_total": {
+      "metric_id": "S08.senior_bytes_total",
+      "module_id": "S08",
+      "value": 597567,
+      "formatted_value": "597,567",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "Bytes across 4 senior-* directories",
+      "denominator": "685,239",
+      "rule": "18206 + 18769 + 337504 + 223088 = 597567 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.senior_kib_total": {
+      "metric_id": "S08.senior_kib_total",
+      "module_id": "S08",
+      "value": 583.5615234375,
+      "formatted_value": "583.6",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "KiB across 4 senior-* directories",
+      "denominator": "669.2",
+      "rule": "597567 / 1024 = 583.6 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.powerlifting_senior_ds_files": {
+      "metric_id": "S08.powerlifting_senior_ds_files",
+      "module_id": "S08",
+      "value": 7,
+      "formatted_value": "7",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "powerlifting-coef-calc/senior-data-scientist",
+      "denominator": "53",
+      "rule": "7 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.powerlifting_senior_ds_bytes": {
+      "metric_id": "S08.powerlifting_senior_ds_bytes",
+      "module_id": "S08",
+      "value": 18206,
+      "formatted_value": "18,206",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "powerlifting-coef-calc/senior-data-scientist",
+      "denominator": "597,567",
+      "rule": "18,206 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.powerlifting_senior_ds_kib": {
+      "metric_id": "S08.powerlifting_senior_ds_kib",
+      "module_id": "S08",
+      "value": 17.779296875,
+      "formatted_value": "17.8",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "powerlifting-coef-calc/senior-data-scientist",
+      "denominator": "583.6",
+      "rule": "17.8 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.erlang_senior_sec_files": {
+      "metric_id": "S08.erlang_senior_sec_files",
+      "module_id": "S08",
+      "value": 7,
+      "formatted_value": "7",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "fix-erlang-ssh-cve/senior-security",
+      "denominator": "53",
+      "rule": "7 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.erlang_senior_sec_bytes": {
+      "metric_id": "S08.erlang_senior_sec_bytes",
+      "module_id": "S08",
+      "value": 18769,
+      "formatted_value": "18,769",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "fix-erlang-ssh-cve/senior-security",
+      "denominator": "597,567",
+      "rule": "18,769 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.erlang_senior_sec_kib": {
+      "metric_id": "S08.erlang_senior_sec_kib",
+      "module_id": "S08",
+      "value": 18.3291015625,
+      "formatted_value": "18.3",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "fix-erlang-ssh-cve/senior-security",
+      "denominator": "583.6",
+      "rule": "18.3 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.flink_senior_de_files": {
+      "metric_id": "S08.flink_senior_de_files",
+      "module_id": "S08",
+      "value": 14,
+      "formatted_value": "14",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "flink-query/senior-data-engineer",
+      "denominator": "53",
+      "rule": "14 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.flink_senior_de_bytes": {
+      "metric_id": "S08.flink_senior_de_bytes",
+      "module_id": "S08",
+      "value": 337504,
+      "formatted_value": "337,504",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "flink-query/senior-data-engineer",
+      "denominator": "597,567",
+      "rule": "337,504 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.flink_senior_de_kib": {
+      "metric_id": "S08.flink_senior_de_kib",
+      "module_id": "S08",
+      "value": 329.59375,
+      "formatted_value": "329.6",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "flink-query/senior-data-engineer",
+      "denominator": "583.6",
+      "rule": "329.6 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.druid_senior_java_files": {
+      "metric_id": "S08.druid_senior_java_files",
+      "module_id": "S08",
+      "value": 25,
+      "formatted_value": "25",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "fix-druid-loophole-cve/senior-java",
+      "denominator": "53",
+      "rule": "25 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.druid_senior_java_bytes": {
+      "metric_id": "S08.druid_senior_java_bytes",
+      "module_id": "S08",
+      "value": 223088,
+      "formatted_value": "223,088",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "fix-druid-loophole-cve/senior-java",
+      "denominator": "597,567",
+      "rule": "223,088 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.druid_senior_java_kib": {
+      "metric_id": "S08.druid_senior_java_kib",
+      "module_id": "S08",
+      "value": 217.859375,
+      "formatted_value": "217.9",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "fix-druid-loophole-cve/senior-java",
+      "denominator": "583.6",
+      "rule": "217.9 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.license_dirs_count": {
+      "metric_id": "S08.license_dirs_count",
+      "module_id": "S08",
+      "value": 2,
+      "formatted_value": "2",
+      "format_spec": "",
+      "unit": "dirs",
+      "scope": "2 licenses/ directories",
+      "denominator": "234",
+      "rule": "seismic-phase-picking + earthquake-phase-association",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.license_files_total": {
+      "metric_id": "S08.license_files_total",
+      "module_id": "S08",
+      "value": 4,
+      "formatted_value": "4",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "Files in 2 licenses/ directories",
+      "denominator": "57",
+      "rule": "2 + 2 = 4 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.license_bytes_total": {
+      "metric_id": "S08.license_bytes_total",
+      "module_id": "S08",
+      "value": 87672,
+      "formatted_value": "87,672",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "Bytes in 2 licenses/ directories",
+      "denominator": "685,239",
+      "rule": "43836 + 43836 = 87672 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.license_kib_total": {
+      "metric_id": "S08.license_kib_total",
+      "module_id": "S08",
+      "value": 85.6171875,
+      "formatted_value": "85.6",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "KiB in 2 licenses/ directories",
+      "denominator": "669.2",
+      "rule": "87672 / 1024 = 85.6 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.seismic_license_files": {
+      "metric_id": "S08.seismic_license_files",
+      "module_id": "S08",
+      "value": 2,
+      "formatted_value": "2",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "seismic-phase-picking/licenses",
+      "denominator": "4",
+      "rule": "2 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.seismic_license_bytes": {
+      "metric_id": "S08.seismic_license_bytes",
+      "module_id": "S08",
+      "value": 43836,
+      "formatted_value": "43,836",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "seismic-phase-picking/licenses",
+      "denominator": "87,672",
+      "rule": "43,836 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.seismic_license_kib": {
+      "metric_id": "S08.seismic_license_kib",
+      "module_id": "S08",
+      "value": 42.80859375,
+      "formatted_value": "42.8",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "seismic-phase-picking/licenses",
+      "denominator": "85.6",
+      "rule": "42.8 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.eq_assoc_license_files": {
+      "metric_id": "S08.eq_assoc_license_files",
+      "module_id": "S08",
+      "value": 2,
+      "formatted_value": "2",
+      "format_spec": "",
+      "unit": "files",
+      "scope": "earthquake-phase-association/licenses",
+      "denominator": "4",
+      "rule": "2 files",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.eq_assoc_license_bytes": {
+      "metric_id": "S08.eq_assoc_license_bytes",
+      "module_id": "S08",
+      "value": 43836,
+      "formatted_value": "43,836",
+      "format_spec": "",
+      "unit": "bytes",
+      "scope": "earthquake-phase-association/licenses",
+      "denominator": "87,672",
+      "rule": "43,836 B",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    },
+    "S08.eq_assoc_license_kib": {
+      "metric_id": "S08.eq_assoc_license_kib",
+      "module_id": "S08",
+      "value": 42.80859375,
+      "formatted_value": "42.8",
+      "format_spec": "",
+      "unit": "KiB",
+      "scope": "earthquake-phase-association/licenses",
+      "denominator": "85.6",
+      "rule": "42.8 KiB",
+      "evidence_file": "stub_and_license_directories.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d"
+      },
+      "script_version": "unknown:5935579aa5cf",
+      "config_hash": "8f27feaf0b7e70d5cef53090d9504709e713277d11b713c1e7221be1bf38c4ed",
+      "run_id": "S08-20261111T094910Z-5935579a-8f27feaf"
+    }
+  }
+}

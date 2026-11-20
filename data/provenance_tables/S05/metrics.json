@@ -1,0 +1,108 @@
+{
+  "module_id": "S05",
+  "run_id": "S05-20261111T094911Z-164d1274-ffebb472",
+  "provenance_tier": "FROZEN_HISTORICAL_SNAPSHOT_COMPUTATION",
+  "script_version": {
+    "script_name": "extract_static_features.py",
+    "script_sha256": "164d1274ee66eae4230b8ad563a0cd28aaea0da023a961f40502f86c37f94e16",
+    "git_commit": "unknown",
+    "version_tag": "unknown:164d1274ee66"
+  },
+  "config": {
+    "stopwords_count": 35,
+    "hygiene_score_formula": {
+      "base_score": 100.0,
+      "min_score": 0.0,
+      "max_score": 100.0,
+      "deduction_synthetic_stub": 45.0,
+      "deduction_license_skill": 35.0,
+      "deduction_oracle_conflict": 40.0,
+      "deduction_unmatched_pdf_forms": 20.0,
+      "deduction_unmatched_xlsx": 15.0,
+      "bloat_ratio_threshold": 40.0,
+      "bloat_ratio_slope": 0.25,
+      "bloat_ratio_max_deduction": 25.0,
+      "ref_files_threshold": 4,
+      "ref_files_slope": 2.5,
+      "ref_files_max_deduction": 15.0,
+      "lex_prec_threshold": 0.08,
+      "lex_prec_deduction": 10.0
+    },
+    "token_proxy_conventions": {
+      "chars_per_token_divisor": 4,
+      "bytes_per_token_divisor": 4,
+      "kib_bytes_divisor": 1024,
+      "inst_tokens_min_floor": 25.0,
+      "oracle_tokens_min_floor": 25.0,
+      "max_skill_file_scan_bytes": 500000,
+      "max_oracle_or_verifier_scan_bytes": 300000
+    }
+  },
+  "config_hash": "ffebb472f445892c993d32f93f1565bc2b41dac897ef5fd9eb329831c0532402",
+  "metrics_count": 3,
+  "metrics": {
+    "S05.tasks_extracted_count": {
+      "metric_id": "S05.tasks_extracted_count",
+      "module_id": "S05",
+      "value": 87,
+      "formatted_value": "87",
+      "format_spec": "",
+      "unit": "tasks",
+      "scope": "All 87 repo tasks",
+      "denominator": "87",
+      "rule": "len(task_rows)",
+      "evidence_file": "task_static_features_87.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
+        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
+      },
+      "script_version": "unknown:164d1274ee66",
+      "config_hash": "ffebb472f445892c993d32f93f1565bc2b41dac897ef5fd9eb329831c0532402",
+      "run_id": "S05-20261111T094911Z-164d1274-ffebb472"
+    },
+    "S05.skills_extracted_count": {
+      "metric_id": "S05.skills_extracted_count",
+      "module_id": "S05",
+      "value": 234,
+      "formatted_value": "234",
+      "format_spec": "",
+      "unit": "skills",
+      "scope": "All 234 skill subdirectories",
+      "denominator": "234",
+      "rule": "len(skill_rows)",
+      "evidence_file": "skill_static_features_234.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
+        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
+      },
+      "script_version": "unknown:164d1274ee66",
+      "config_hash": "ffebb472f445892c993d32f93f1565bc2b41dac897ef5fd9eb329831c0532402",
+      "run_id": "S05-20261111T094911Z-164d1274-ffebb472"
+    },
+    "S05.cells_extracted_count": {
+      "metric_id": "S05.cells_extracted_count",
+      "module_id": "S05",
+      "value": 1421,
+      "formatted_value": "1,421",
+      "format_spec": "",
+      "unit": "cells",
+      "scope": "All 1,421 paired cells",
+      "denominator": "1,421",
+      "rule": "len(cell_feature_rows)",
+      "evidence_file": "cell_features_1421.csv",
+      "notes": "",
+      "source_hashes": {
+        "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
+        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
+      },
+      "script_version": "unknown:164d1274ee66",
+      "config_hash": "ffebb472f445892c993d32f93f1565bc2b41dac897ef5fd9eb329831c0532402",
+      "run_id": "S05-20261111T094911Z-164d1274-ffebb472"
+    }
+  }
+}

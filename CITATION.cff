@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Research artifact for a draft manuscript; not yet submitted."
+title: "What Does Skill Lift Actually Measure? A Source-Code-Level Audit and Noise-Aware Reanalysis of SkillsBench"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Haozhe
+    affiliation: Trine University
+  - family-names: Long
+    given-names: Zhen
+    affiliation: National University of Singapore
+license: MIT
+repository-code: "https://github.com/rrrrr4788/skillsbench-lift-reanalysis"

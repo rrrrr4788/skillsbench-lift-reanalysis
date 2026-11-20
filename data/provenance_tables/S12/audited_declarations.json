@@ -1,0 +1,27 @@
+{
+  "sci_notation_base_10": {
+    "value": 10,
+    "declaration_type": "mathematical_notation_base",
+    "description": "Base 10 in scientific notation display (m x 10^e)"
+  },
+  "timeout_zero_reward_ref": {
+    "value": 0.0,
+    "declaration_type": "benchmark_convention_reference",
+    "description": "Reference zero reward (0.0) typically assigned on timed-out runs in selected_trials.csv"
+  },
+  "stub_template_label_index_1": {
+    "value": 1,
+    "declaration_type": "verbatim_quoted_template_marker",
+    "description": "Literal index '1' in quoted synthetic template strings ('Pattern 1', 'Scenario 1') inside senior-* SKILL.md"
+  },
+  "stub_template_label_index_2": {
+    "value": 2,
+    "declaration_type": "verbatim_quoted_template_marker",
+    "description": "Literal index '2' in quoted synthetic template string ('Scenario 2') inside senior-* references/*.md"
+  },
+  "stub_template_label_index_3": {
+    "value": 3,
+    "declaration_type": "verbatim_quoted_template_marker",
+    "description": "Literal index '3' in quoted synthetic template string ('Scenario 3') inside senior-* references/*.md"
+  }
+}
