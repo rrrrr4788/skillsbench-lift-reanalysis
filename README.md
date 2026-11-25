@@ -1,8 +1,8 @@
 # What Does Skill Lift Actually Measure?
 
-Research artifacts for the source audit and noise-aware reanalysis of SkillsBench by Haozhe Zhang and Zhen Long. This repository is being prepared for public release. The manuscript is a draft.
+Research artifacts for the source audit and noise-aware reanalysis of SkillsBench by Haozhe Zhang and Zhen Long.
 
-- [Short paper PDF](paper/main.pdf), [full paper PDF](paper/main_full.pdf), and [Overleaf source ZIP](paper/overleaf-source.zip).
+- [Short paper PDF](paper/main.pdf), [full paper PDF](paper/main_full.pdf), [Overleaf source ZIP](paper/overleaf-source.zip), and [arXiv submission ZIP](paper/arxiv-source.zip).
 - `data/provenance_tables/` contains the normalized trial and cell tables, model features, and selected audit evidence.
 - `reanalysis/results/` contains the frozen statistical outputs, the task tests, the held-out score records, and the reviewed three-task summary.
 - `artifacts/` and `docs/section3/` contain controlled-check records, proposed instruction patches, and source evidence. The patches are proposals for future agent experiments.
@@ -30,4 +30,4 @@ To regenerate the figures from the frozen results, run `python -B reanalysis/mak
 
 The statistical analysis starts from the included normalized tables. The controlled-check helper requires the external SkillsBench task files at the revision identified in [the source manifest](data/provenance_tables/A01/source_manifest.json). The catalog and leakage counts rely on upstream review exports. Those exports and raw trajectories are external dependencies.
 
-The [license](LICENSE) covers the project software under its original terms. Upstream materials retain their own terms and attribution. Before changing repository visibility, confirm redistribution permissions for the included derived data and evidence, and replace the manuscript's repository URL placeholder with its final address.
+The [license](LICENSE) covers the project software under its original terms. Upstream materials retain their own terms and attribution.
