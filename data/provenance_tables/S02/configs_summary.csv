@@ -6,25 +6,25 @@ v1.0|v1-harness|Claude Code Sonnet 4.5,v1.0,v1-harness,Claude Code Sonnet 4.5,39
 v1.0|v1-harness|Codex GPT-5.2,v1.0,v1-harness,Codex GPT-5.2,397,201,196,397,391,68,True
 v1.0|v1-harness|Gemini CLI Gemini 3 Flash,v1.0,v1-harness,Gemini CLI Gemini 3 Flash,424,205,219,424,415,70,True
 v1.0|v1-harness|Gemini CLI Gemini 3 Pro,v1.0,v1-harness,Gemini CLI Gemini 3 Pro,425,206,219,425,416,70,True
-v1.1|claude-code|claude-opus-4-7,v1.1,claude-code,claude-opus-4-7,438,219,219,417,417,72,True
-v1.1|codex|gpt-5.5,v1.1,codex,gpt-5.5,430,211,219,395,389,68,True
-v1.1|gemini-cli|gemini-3.1-pro,v1.1,gemini-cli,gemini-3.1-pro,437,219,218,397,397,72,True
-v1.1|openhands|claude-opus-4-7,v1.1,openhands,claude-opus-4-7,419,210,209,398,389,67,True
-v1.1|openhands|claude-sonnet-4-6,v1.1,openhands,claude-sonnet-4-6,350,179,171,219,200,59,True
-v1.1|openhands|deepseek-v4-flash,v1.1,openhands,deepseek-v4-flash,315,124,191,223,134,30,True
-v1.1|openhands|deepseek-v4-pro,v1.1,openhands,deepseek-v4-pro,408,219,189,358,335,64,True
+v1.1|claude-code|claude-opus-4-7,v1.1,claude-code,claude-opus-4-7,438,219,219,432,432,72,True
+v1.1|codex|gpt-5.5,v1.1,codex,gpt-5.5,430,211,219,424,418,70,True
+v1.1|gemini-cli|gemini-3.1-pro,v1.1,gemini-cli,gemini-3.1-pro,437,219,218,431,431,72,True
+v1.1|openhands|claude-opus-4-7,v1.1,openhands,claude-opus-4-7,419,210,209,413,407,68,True
+v1.1|openhands|claude-sonnet-4-6,v1.1,openhands,claude-sonnet-4-6,350,179,171,345,345,72,True
+v1.1|openhands|deepseek-v4-flash,v1.1,openhands,deepseek-v4-flash,315,124,191,312,262,50,True
+v1.1|openhands|deepseek-v4-pro,v1.1,openhands,deepseek-v4-pro,408,219,189,402,396,70,True
 v1.1|openhands|doubao-seed-2.0-lite,v1.1,openhands,doubao-seed-2.0-lite,127,33,94,126,66,11,True
 v1.1|openhands|doubao-seed-2.0-pro,v1.1,openhands,doubao-seed-2.0-pro,54,20,34,54,36,6,True
-v1.1|openhands|gemini-3.1-flash-lite,v1.1,openhands,gemini-3.1-flash-lite,438,219,219,305,296,66,True
-v1.1|openhands|gemini-3.1-pro,v1.1,openhands,gemini-3.1-pro,438,219,219,419,416,71,True
-v1.1|openhands|glm-5.1,v1.1,openhands,glm-5.1,341,134,207,261,190,41,True
-v1.1|openhands|gpt-5.4-mini,v1.1,openhands,gpt-5.4-mini,388,175,213,279,274,67,True
-v1.1|openhands|gpt-5.5,v1.1,openhands,gpt-5.5,421,210,211,395,388,66,True
-v1.1|openhands|grok-4.3,v1.1,openhands,grok-4.3,333,169,164,277,274,57,True
+v1.1|openhands|gemini-3.1-flash-lite,v1.1,openhands,gemini-3.1-flash-lite,438,219,219,432,432,72,True
+v1.1|openhands|gemini-3.1-pro,v1.1,openhands,gemini-3.1-pro,438,219,219,432,432,72,True
+v1.1|openhands|glm-5.1,v1.1,openhands,glm-5.1,341,134,207,339,281,49,True
+v1.1|openhands|gpt-5.4-mini,v1.1,openhands,gpt-5.4-mini,388,175,213,384,384,72,True
+v1.1|openhands|gpt-5.5,v1.1,openhands,gpt-5.5,421,210,211,415,412,69,True
+v1.1|openhands|grok-4.3,v1.1,openhands,grok-4.3,333,169,164,327,324,57,True
 v1.1|openhands|hy3-preview,v1.1,openhands,hy3-preview,119,29,90,118,58,10,True
-v1.1|openhands|kimi-k2.6,v1.1,openhands,kimi-k2.6,296,103,193,219,129,32,True
+v1.1|openhands|kimi-k2.6,v1.1,openhands,kimi-k2.6,296,103,193,294,238,47,True
 v1.1|openhands|mimo-v2.5,v1.1,openhands,mimo-v2.5,106,32,74,106,63,11,True
 v1.1|openhands|mimo-v2.5-pro,v1.1,openhands,mimo-v2.5-pro,110,22,88,109,44,8,True
-v1.1|openhands|minimax-m2.7,v1.1,openhands,minimax-m2.7,355,136,219,293,218,46,True
+v1.1|openhands|minimax-m2.7,v1.1,openhands,minimax-m2.7,355,136,219,352,298,54,True
 v1.1|openhands|qwen3.6-max-preview,v1.1,openhands,qwen3.6-max-preview,2,0,2,2,0,0,False
-v1.1|openhands|qwen3.6-plus,v1.1,openhands,qwen3.6-plus,265,133,132,114,81,26,True
+v1.1|openhands|qwen3.6-plus,v1.1,openhands,qwen3.6-plus,265,133,132,264,250,48,True

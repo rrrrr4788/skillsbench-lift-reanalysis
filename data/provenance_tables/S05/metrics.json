@@ -55,7 +55,7 @@
       "notes": "",
       "source_hashes": {
         "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
-        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s02_paired_cells": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
         "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
       },
       "script_version": "unknown:164d1274ee66",
@@ -76,7 +76,7 @@
       "notes": "",
       "source_hashes": {
         "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
-        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s02_paired_cells": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
         "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
       },
       "script_version": "unknown:164d1274ee66",
@@ -86,18 +86,18 @@
     "S05.cells_extracted_count": {
       "metric_id": "S05.cells_extracted_count",
       "module_id": "S05",
-      "value": 1421,
-      "formatted_value": "1,421",
+      "value": 1531,
+      "formatted_value": "1,531",
       "format_spec": "",
       "unit": "cells",
-      "scope": "All 1,421 paired cells",
-      "denominator": "1,421",
+      "scope": "All 1,531 paired cells",
+      "denominator": "1,531",
       "rule": "len(cell_feature_rows)",
-      "evidence_file": "cell_features_1421.csv",
+      "evidence_file": "cell_features.csv",
       "notes": "",
       "source_hashes": {
         "s01_skill_file_manifest": "9f8ea32da29584c3fca92c0a7ee8a7eebbb004e74f5e6cc71279d0d1ca92775d",
-        "s02_paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
+        "s02_paired_cells": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
         "s12_method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629"
       },
       "script_version": "unknown:164d1274ee66",

@@ -43,7 +43,7 @@ assert retained <= {r["task"] for r in tasks}
 x = list(range(len(tasks)))
 colors = []
 for r in tasks:
-    sig_gain = r["sig_two_sided_fdr10"] and r["lift_pp"] > 0
+    sig_gain = r["sig_two_sided_fdr10"] and r["lift_pp"] > 1e-9
     if r["task"] in retained:
         assert sig_gain, "the retained cases are expected to be significant"
         colors.append(ORANGE)
@@ -64,9 +64,9 @@ for side in ("top", "right"):
     ax.spines[side].set_visible(False)
 ax.grid(axis="y", color="#dddddd", linewidth=0.4)
 ax.set_axisbelow(True)
-n_neg = sum(r["lift_pp"] < 0 for r in tasks)
-n_sig_gain = sum(r["sig_two_sided_fdr10"] and r["lift_pp"] > 0 for r in tasks)
-n_sig_loss = sum(r["sig_two_sided_fdr10"] and r["lift_pp"] < 0 for r in tasks)
+n_neg = sum(r["lift_pp"] < -1e-9 for r in tasks)
+n_sig_gain = sum(r["sig_two_sided_fdr10"] and r["lift_pp"] > 1e-9 for r in tasks)
+n_sig_loss = sum(r["sig_two_sided_fdr10"] and r["lift_pp"] < -1e-9 for r in tasks)
 handles = [plt.Rectangle((0, 0), 1, 1, color=c) for c in (ORANGE, BLUE, GREY)]
 labels = [
     "Retained instruction–evaluation gaps (%d tasks)" % len(retained),

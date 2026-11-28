@@ -1,6 +1,6 @@
 {
  "part": "exact",
- "n_cells": 1421,
+ "n_cells": 1531,
  "n": 0,
  "seeds": {
   "null": 20261112,
@@ -9,17 +9,17 @@
   "bootstrap": 42
  },
  "environment": {
-  "python": "3.11.18",
-  "numpy": "2.4.6",
-  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.41"
+  "python": "3.10.8",
+  "numpy": "1.24.3",
+  "platform": "Windows-10-10.0.26300-SP0"
  },
  "inputs_sha256": {
-  "normalized_trials": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
-  "paired_cells": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
-  "cell_features": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
-  "task_partition": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+  "normalized_trials": "a59e586ed0676c19f71bbe8b1470105d4329d54f6a3d5cd35e15f5a630fe7e1f",
+  "paired_cells": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
+  "cell_features": "63d687e4af8590122eec0c800a5a6f1ee1f1c43f806fecca849fff820f8ac42c",
+  "task_partition": "41ec94a4214fd2de04ca83f5429027dae3b95ebf43b0fc3a99c0d1259f3a6a31",
   "method_config": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
-  "model_code": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de"
+  "model_code": "938352dcbd9627cb890c83c700df4cfe58c101281d60ffc8ecba369408c87e18"
  },
  "thresholds_from_method_config": {
   "level_cutoff_p0_mid_split": 0.3,
@@ -36,20 +36,20 @@
  },
  "expected_cells_under_within_cell_label_permutation": {
   "negative": {
-   "mean": 327.7166666666667,
-   "sd": 13.011650762126823,
-   "q2.5": 302,
-   "q97.5": 353
+   "mean": 367.8666666666667,
+   "sd": 13.895862693622156,
+   "q2.5": 341,
+   "q97.5": 395
   },
   "positive": {
-   "mean": 332.51666666666665,
-   "sd": 13.011650762126823,
-   "q2.5": 307,
-   "q97.5": 358
+   "mean": 364.9666666666667,
+   "sd": 13.895862693622156,
+   "q2.5": 338,
+   "q97.5": 392
   },
-  "observed_negative": 169,
-  "observed_positive": 547,
-  "cells_where_negative_is_impossible_under_permutation": 657
+  "observed_negative": 206,
+  "observed_positive": 598,
+  "cells_where_negative_is_impossible_under_permutation": 662
  },
- "seconds": 0.4
+ "seconds": 0.6
 }

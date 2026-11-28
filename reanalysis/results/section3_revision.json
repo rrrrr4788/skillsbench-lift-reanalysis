@@ -1,7 +1,7 @@
 {
   "input_sha256": {
-    "data/provenance_tables/S02/paired_cells.csv": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
-    "data/provenance_tables/S02/normalized_trials.csv": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f"
+    "data/provenance_tables/S02/paired_cells.csv": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
+    "data/provenance_tables/S02/normalized_trials.csv": "a59e586ed0676c19f71bbe8b1470105d4329d54f6a3d5cd35e15f5a630fe7e1f"
   },
   "weighting": "equal weight per paired configuration-task cell; not equal weight per task",
   "classification": {
@@ -15,57 +15,57 @@
   ],
   "historical_five": {
     "tasks": 5,
-    "cells": 99,
-    "baseline_pct": 5.555555555555555,
-    "with_pct": 74.07407407407408,
-    "lift_pp": 68.51851851851852,
-    "cells_pct": 6.9669247009148485,
-    "share_of_summed_lift_pct": 25.53864901174211,
-    "lift_without_them_pp": 14.960451336359052,
+    "cells": 102,
+    "baseline_pct": 5.22875816993464,
+    "with_pct": 68.95424836601308,
+    "lift_pp": 63.725490196078425,
+    "cells_pct": 6.662312214239059,
+    "share_of_summed_lift_pct": 24.13233429594533,
+    "lift_without_them_pp": 14.300081642174014,
     "loss_cells": 0
   },
   "current_three": {
     "tasks": 3,
-    "cells": 63,
-    "baseline_pct": 5.026455026455026,
-    "with_pct": 79.62962962962963,
-    "lift_pp": 74.60317460317461,
-    "cells_pct": 4.433497536945813,
-    "share_of_summed_lift_pct": 17.695083590445392,
-    "lift_without_them_pp": 16.09797496318115,
+    "cells": 66,
+    "baseline_pct": 4.545454545454545,
+    "with_pct": 72.97979797979798,
+    "lift_pp": 68.43434343434343,
+    "cells_pct": 4.310907903331156,
+    "share_of_summed_lift_pct": 16.768878446669703,
+    "lift_without_them_pp": 15.302491467576793,
     "loss_cells": 0,
     "per_task": {
       "earthquake-plate-calculation": {
         "tasks": 1,
-        "cells": 24,
-        "baseline_pct": 4.861111111111112,
-        "with_pct": 77.08333333333334,
-        "lift_pp": 72.22222222222221,
-        "cells_pct": 1.688951442646024,
-        "share_of_summed_lift_pct": 6.525846430518869,
-        "lift_without_them_pp": 17.772166547363398,
+        "cells": 26,
+        "baseline_pct": 3.846153846153846,
+        "with_pct": 71.15384615384616,
+        "lift_pp": 67.3076923076923,
+        "cells_pct": 1.6982364467668192,
+        "share_of_summed_lift_pct": 6.497166925831436,
+        "lift_without_them_pp": 16.734097452934662,
         "loss_cells": 0
       },
       "protein-expression-analysis": {
         "tasks": 1,
         "cells": 18,
         "baseline_pct": 9.25925925925926,
-        "with_pct": 85.18518518518519,
-        "lift_pp": 75.92592592592592,
-        "cells_pct": 1.266713581984518,
-        "share_of_summed_lift_pct": 5.145378916370645,
-        "lift_without_them_pp": 17.957507721549064,
+        "with_pct": 79.62962962962963,
+        "lift_pp": 70.37037037037037,
+        "cells_pct": 1.1757021554539517,
+        "share_of_summed_lift_pct": 4.7027112986970385,
+        "lift_without_them_pp": 16.965069398545936,
         "loss_cells": 0
       },
       "flood-risk-analysis": {
         "tasks": 1,
-        "cells": 21,
-        "baseline_pct": 1.5873015873015872,
-        "with_pct": 77.77777777777779,
-        "lift_pp": 76.19047619047619,
-        "cells_pct": 1.477832512315271,
-        "share_of_summed_lift_pct": 6.023858243555878,
-        "lift_without_them_pp": 17.82932142857143,
+        "cells": 22,
+        "baseline_pct": 1.515151515151515,
+        "with_pct": 69.69696969696969,
+        "lift_pp": 68.18181818181817,
+        "cells_pct": 1.4369693011103855,
+        "share_of_summed_lift_pct": 5.569000222141229,
+        "lift_without_them_pp": 16.855411972608792,
         "loss_cells": 0
       }
     }
@@ -73,15 +73,15 @@
   "change": {
     "tasks": -2,
     "cells": -36,
-    "baseline_pct": -0.5291005291005293,
-    "with_pct": 5.555555555555557,
-    "lift_pp": 6.084656084656089,
-    "cells_pct": -2.5334271639690353,
-    "share_of_summed_lift_pct": -7.8435654212967165,
-    "lift_without_them_pp": 1.1375236268220998,
+    "baseline_pct": -0.6833036244800947,
+    "with_pct": 4.025549613784904,
+    "lift_pp": 4.708853238265007,
+    "cells_pct": -2.3514043109079035,
+    "share_of_summed_lift_pct": -7.363455849275628,
+    "lift_without_them_pp": 1.0024098254027791,
     "loss_cells": 0
   },
-  "all_cells": 1421,
-  "all_lift_pp": 18.69180154820549,
-  "independently_checked_cells": 1421
+  "all_cells": 1531,
+  "all_lift_pp": 17.592956673198344,
+  "independently_checked_cells": 1531
 }

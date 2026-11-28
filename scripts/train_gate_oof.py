@@ -5,12 +5,12 @@ Module S19: SkillGate Model Training, Out-of-Fold Predictions, ROC-AUC, and Feat
 
 Independently trains the FastRandomForest models from upstream provenance tables:
   - `S02/normalized_trials.csv` (reconstructs deterministic raw-trial stream arrival order)
-  - `S02/paired_cells.csv` (1,421 paired cells ground-truth two-arm rewards)
-  - `S05/cell_features_1421.csv` (17D static hygiene, lexical alignment, and competence prior features)
+  - `S02/paired_cells.csv` (1,531 paired cells ground-truth two-arm rewards)
+  - `S05/cell_features.csv` (17D static hygiene, lexical alignment, and competence prior features)
   - `S12/method_config.json` (versioned hyperparameters, CV fold counts, and RNG seeds)
 
 Outputs (`artifacts/provenance/S19/`):
-  - `oof_predictions_1421.csv`: per-cell fold assignments and OOF predicted gain / negative-transfer risk
+  - `oof_predictions_1531.csv`: per-cell fold assignments and OOF predicted gain / negative-transfer risk
   - `feature_importances_17d.csv`: 10-fold averaged normalized split-gain importances across all 17 features
   - `cv_fold_membership_summary.csv`: fold sizes and strict zero-leakage verification across Cell-CV, TaskGroup-CV, and LOCO
   - `cv_order_sensitivity.json`: comparison of canonical stream order vs. alphabetical cell_id order
@@ -337,7 +337,7 @@ def main() -> None:
     parser.add_argument(
         "--s05-features",
         type=Path,
-        default=prov_tables / "S05" / "cell_features_1421.csv",
+        default=prov_tables / "S05" / "cell_features.csv",
     )
     parser.add_argument(
         "--s12-config",
@@ -373,7 +373,7 @@ def main() -> None:
     )
     rec.register_input_file("S02.normalized_trials.csv", args.s02_trials)
     rec.register_input_file("S02.paired_cells.csv", args.s02_cells)
-    rec.register_input_file("S05.cell_features_1421.csv", args.s05_features)
+    rec.register_input_file("S05.cell_features.csv", args.s05_features)
     rec.register_input_file("S12.method_config.json", args.s12_config)
 
     # Load S02 paired cells and S05 cell features
@@ -393,7 +393,7 @@ def main() -> None:
 
     rec.check_conservation(
         "cell_bijection_s02_s05_stream",
-        "Stream-reconstructed cell_ids form an exact bijection with S02 and S05 (1,421 cells)",
+        "Stream-reconstructed cell_ids form an exact bijection with S02 and S05 (1,531 cells)",
         len(stream_cell_ids) == len(s02_by_id) == len(s05_by_id) and set(stream_cell_ids) == set(s02_by_id) == set(s05_by_id),
         True,
     )
@@ -577,7 +577,7 @@ def main() -> None:
                 "pred_neg_loco": repr(float(pred_neg_loco[idx])),
             }
         )
-    rec.write_csv("oof_predictions_1421.csv", oof_rows)
+    rec.write_csv("oof_predictions_1531.csv", oof_rows)
 
     imp_pairs = sorted(enumerate(FEATURE_NAMES), key=lambda kv: float(imp_vec[kv[0]]), reverse=True)
     imp_rows: List[Dict[str, Any]] = []
@@ -654,7 +654,7 @@ def main() -> None:
                 "auc_full_10fold": alpha_cv_res["auc_full"],
                 "auc_prior_only_10fold": alpha_cv_res["auc_prior_only"],
             },
-            "note": "TaskGroup-10Fold and LOCO-28Cfg partition by sorted unique tasks/configs; Cell-10Fold permutes 1,421 rows with seed=42.",
+            "note": "TaskGroup-10Fold and LOCO-28Cfg partition by sorted unique tasks/configs; Cell-10Fold permutes 1,531 rows with seed=42.",
         },
     )
 
@@ -665,40 +665,40 @@ def main() -> None:
         "roc_auc_full_10fold",
         auc_full,
         "roc_auc",
-        "1,421 paired cells (10-fold cell CV, FastRandomForest 17D)",
-        1421,
+        "1,531 paired cells (10-fold cell CV, FastRandomForest 17D)",
+        1531,
         "Exact Mann-Whitney ROC-AUC of OOF pred_neg_cv vs y_neg (delta < -1e-6)",
-        "oof_predictions_1421.csv",
+        "oof_predictions_1531.csv",
         ".4f",
     )
     rec.add_metric(
         "roc_auc_prior_only_10fold",
         auc_prior,
         "roc_auc",
-        "1,421 paired cells (10-fold cell CV, Prior-Only 2D: wo_rew + is_openhands)",
-        1421,
+        "1,531 paired cells (10-fold cell CV, Prior-Only 2D: wo_rew + is_openhands)",
+        1531,
         "Exact Mann-Whitney ROC-AUC of OOF pred_neg_prior_only_cv vs y_neg",
-        "oof_predictions_1421.csv",
+        "oof_predictions_1531.csv",
         ".4f",
     )
     rec.add_metric(
         "roc_auc_taskgroup_10fold",
         auc_taskgroup,
         "roc_auc",
-        "1,421 paired cells across 83 evaluated tasks (Task-Grouped 10-Fold CV, zero task leakage)",
-        1421,
+        "1,531 paired cells across 83 evaluated tasks (Task-Grouped 10-Fold CV, zero task leakage)",
+        1531,
         "Exact Mann-Whitney ROC-AUC of OOF pred_neg_taskgroup vs y_neg",
-        "oof_predictions_1421.csv",
+        "oof_predictions_1531.csv",
         ".4f",
     )
     rec.add_metric(
         "roc_auc_loco_28cfg",
         auc_loco,
         "roc_auc",
-        "1,421 paired cells across 28 configs (Leave-One-Config-Out CV)",
-        1421,
+        "1,531 paired cells across 28 configs (Leave-One-Config-Out CV)",
+        1531,
         "Exact Mann-Whitney ROC-AUC of OOF pred_neg_loco vs y_neg",
-        "oof_predictions_1421.csv",
+        "oof_predictions_1531.csv",
         ".4f",
     )
     rec.add_metric(

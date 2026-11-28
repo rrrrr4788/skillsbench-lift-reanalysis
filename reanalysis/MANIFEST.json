@@ -1,6 +1,6 @@
 {
- "analysis_version": 3,
- "date": "2026-11-15",
+ "analysis_version": 4,
+ "date": "2026-11-27",
  "source_repository": {
   "name": "agent-skills-hurt",
   "url": "https://github.com/rrrrr4788/agent-skills-hurt",
@@ -14,36 +14,36 @@
  },
  "note_on_environment": "run in the Docker image python:3.11-slim with numpy installed in a virtual environment; matplotlib 3.x for figures",
  "inputs_sha256": {
-  "normalized_trials": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
-  "paired_cells": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
-  "cell_features": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
-  "task_partition": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
+  "normalized_trials": "a59e586ed0676c19f71bbe8b1470105d4329d54f6a3d5cd35e15f5a630fe7e1f",
+  "paired_cells": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
+  "cell_features": "63d687e4af8590122eec0c800a5a6f1ee1f1c43f806fecca849fff820f8ac42c",
+  "task_partition": "41ec94a4214fd2de04ca83f5429027dae3b95ebf43b0fc3a99c0d1259f3a6a31",
   "method_config": "e7c77a830181094f8ab05858db4b5234034c0fed12d99947e38152c87df72295",
-  "model_code": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de"
+  "model_code": "938352dcbd9627cb890c83c700df4cfe58c101281d60ffc8ecba369408c87e18"
  },
  "inputs_git_blob": {
-  "normalized_trials": "4987aa9465541922f96dd67b9d891c384f23c5a2",
-  "paired_cells": "c1b6cd3b6512051096e72814e49f1db2c336298f",
-  "cell_features": "21b0cde5ea76a10d7883ad1a86243a1332ce74d7",
-  "task_partition": "f3fb9ebd78e2415dfcb72b4141f7b3f1224a7bf7",
+  "normalized_trials": "2a2bfed90833c029c68544fe150846bd14d76df5",
+  "paired_cells": "b1138909d85b93ac053c802c722605ee336a34f8",
+  "cell_features": "06e6eb1b8610920a243590cb056c3133e95cabe2",
+  "task_partition": "b8e867d91a89249ea2d1a5d61176da6ece7cf6b1",
   "method_config": "eaf81ac4f09148ab1fe54664eae39a2c6162071a",
-  "model_code": "d08b7c260881f9086a73b17d581d5377e840dc4e"
+  "model_code": "4dcd6e25943dc03880e9ebf39a06d95676208810"
  },
  "inputs_path": {
   "normalized_trials": "data/provenance_tables/S02/normalized_trials.csv",
   "paired_cells": "data/provenance_tables/S02/paired_cells.csv",
-  "cell_features": "data/provenance_tables/S05/cell_features_1421.csv",
+  "cell_features": "data/provenance_tables/S05/cell_features.csv",
   "task_partition": "data/provenance_tables/S18/task_partition_87.csv",
   "method_config": "data/provenance_tables/S12/method_config.json",
   "model_code": "scripts/train_gate_oof.py"
  },
  "inputs_sha256_with_crlf_line_endings": {
-  "normalized_trials": "782c03774c94c0cfda88b7be7788aed6cc00a179fb070c048cb11c32a9fe2a9b",
-  "paired_cells": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd",
-  "cell_features": "45a12e00e5ec34ac50f232e51ec7b2af83d7e43f240c10416f363e352b7f9331",
-  "task_partition": "51c41fa9b8dadaf630c9928c6c1afaf1273c5514a3b55afe624d4672355f029d",
+  "normalized_trials": "49b307b4556d6402481a37d5f2b105cc7044ba40bde7f0b6a38cc5f35f7a336b",
+  "paired_cells": "47223c3350dd56859d4d0fd47c96052ac3e38d22fb285cc579260ddd0607cd42",
+  "cell_features": "46c4c1dcdb69e616f96ceed98f29c19765871ca5860b47d15b0bd739208e49a2",
+  "task_partition": "f5246e2a22890742aebecb73bf5f2e9aa03ebf0a18294cd0735cedb7bcdf60b8",
   "method_config": "dff5a59ece0e449aee03f1a20baee529cb0a1805fa0b0c50ae13c927318e1629",
-  "model_code": "8a03cfb195c8452bdfe1870a089a1f85266a1c5e5bec40606bbab83624ab12f7"
+  "model_code": "25a9119acc5d72d56e2328bfb0ad86c87f626be5a4ba0fe4f7f60e601cde0941"
  },
  "model_code_dependency": {
   "scripts/provenance_common.py": {
@@ -51,7 +51,7 @@
    "git_blob": "ec3bbc1e3d8c6c6559ebd0758314eca9af94e0db"
   }
  },
- "note_on_input_hashes": "inputs_sha256 are the hashes of the files as committed at the commit above (LF line endings); they equal 'git show <commit>:<path> | sha256sum' and the files in repo_snapshot/. The version-2 manifest recorded the hashes of the same text with CRLF line endings, listed here under inputs_sha256_with_crlf_line_endings; no recorded hash was edited.",
+ "note_on_input_hashes": "inputs_sha256 are the LF-normalized SHA-256 hashes matching reanalysis/repo_snapshot/SOURCE.json for the v3 primary snapshot (1,029 unscored in-repo v1.1 timeout trials scored as 0; 8,769 paired trials across 1,531 cells).",
  "seeds": {
   "null": 20261112,
   "split": 20261113,
@@ -86,12 +86,12 @@
   "verify_independent_run": "python verify_independent_run.py results ../docs/verification-2026-11-15/rerun ../docs/verification-2026-11-15/comparison.json"
  },
  "runtime_seconds": {
-  "base": 88.9,
-  "exact": 0.4,
-  "tasks": 28.6,
-  "seeds": 678.4,
-  "null": 2770.4,
-  "split": 2495.8
+  "base": 99.9,
+  "exact": 0.6,
+  "tasks": 27.7,
+  "seeds": 263.2,
+  "null": 1028.6,
+  "split": 982.7
  },
  "leakage_checks": {
   "decision_and_heldout_trial_ids_disjoint": true,
@@ -99,92 +99,43 @@
   "refit_is_deterministic": true
  },
  "scripts_sha256": {
-  "skillgate_checks.py": "ee39d6a1d39e81ade1bd98842b6768947312115a7f8769918d0ea5f0898b3d70",
-  "make_figures.py": "555e22ca5fae645936ea74dad76da8673d1cddbcf9cde106a8a39a250ccfc106",
-  "verify_paper_numbers.py": "345659d84bd98c927659832a809a492024dfe9bcafe0795ca32be6dfc60b9e95",
-  "check_inputs.py": "cf97c5cbadb557715d8c08148e3e7bd72e0370c4f333bdb7679c75f1532d33e5",
+  "skillgate_checks.py": "057de5a79c65d991bed40e4409f7d44351cb58648e4153a079c1b2525137dd56",
+  "make_figures.py": "a2ad9c023c4d829812f67dc18bdf7e9a2e4eb9e8c058c66b436cc0a146202f3c",
+  "verify_paper_numbers.py": "d1f21b1f3c4f4a6541c1be70e050f40f229f22185d5d3158a552560791cc1bc2",
+  "check_inputs.py": "805802ac3547d53288917949483d4b9c1a2f854b4565811a6054ab68dfa62817",
   "compare_runs.py": "9fff66f8721d81ae480033d940c47c75a8d63ea9410764bc1b333eee82227313"
  },
  "results_sha256": {
-  "base.json": "fbcb7f7ac9e2ce49e09876d98c1ba553222f181175b6c556105824c8b1293c31",
-  "exact.json": "de366d1d89de31488c50f3207ba9d8474b487531a8e6986da03540c1afdc7f1d",
-  "null.json": "1f97113610c17d32957b682a209945697102b8974cfc74a37616963f3824a354",
-  "seeds.json": "014cad338ad15915c6d9a11d748f06b377751885b99b53d2b0284894da56e64b",
-  "split.json": "08acf519e264df654a68442fc2bfe77e86a8ea98ec14869ab066cd25c348298c",
-  "split_records_forest_policies.csv.gz": "f2c7a968f10b800e36877ecbb72a5a3a4934cb101db0b9c8c2938eb9410a9465",
-  "task_tests.csv": "9a5dca3697122105dfeea552afffd0da86cbbeab164c9d6955a4b39d4ac9a177",
-  "tasks.json": "84ebd6e5b54fd67fba0b81da33bdb142f2a3e3522c1c34a65c432b995c2be36d"
- },
- "comparison_with_version_2": {
-  "base.json": {
-   "identical_result_leaves": 237,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 7
-  },
-  "exact.json": {
-   "identical_result_leaves": 32,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 6
-  },
-  "tasks.json": {
-   "identical_result_leaves": 1364,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 7
-  },
-  "seeds.json": {
-   "identical_result_leaves": 269,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 7
-  },
-  "null.json": {
-   "identical_result_leaves": 1551,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 7
-  },
-  "split.json": {
-   "identical_result_leaves": 1221,
-   "differing_result_leaves": 0,
-   "leaves_present_in_one_run_only": 0,
-   "differing_run_description_leaves": 7
-  },
-  "task_tests.csv": {
-   "rows": 83,
-   "differing_rows": 0
-  },
-  "split_records_forest_policies.csv.gz": {
-   "rows": 72120,
-   "differing_rows": 0
-  },
-  "result": "identical",
-  "note": "Version 2 ran on a Windows checkout (CRLF line endings), version 3 on the files as committed (LF). Run-description leaves are the recorded input hashes and run times. The version-2 files are not part of this repository."
+  "base.json": "835af805babd197073fdc780aaa9fa412af6ce19941ac5e97edd034a03c5d41d",
+  "exact.json": "d253273a6edc455134a22f31c3da05761c8c3060bb80c78f11ca8bb2e621f441",
+  "null.json": "1e94e07fdfb5032ffee07f94c9010e561f773bd7b1d5e835b038c5e7c85a4471",
+  "section3_revision.json": "40c84f6f735efc3cd8ecb5ae0fbe489d75e3b2a42cfec406ff721b8c4403e409",
+  "seeds.json": "83803274113d8b381260278becd6efdc2dd78b11653f531c6933935fbaa06c2d",
+  "split.json": "4bcc6b3945dcd80959903abb04d160e1404ed74d330f332f5f7d1fa6c84d0aa1",
+  "split_records_forest_policies.csv.gz": "1c0042fc029efec6245bf033a2f92e3cf1b5a3c3be2e860522f9938a71ab3d76",
+  "task_tests.csv": "be8fac3c2c990bb5764be42769a575573613af2a886aa4fde834c29e84247fd6",
+  "tasks.json": "3a0c47a16ef9ec6dfd896acc69faebaa324f1e8870aa45562b74ecacbad2707f"
  },
  "note_on_scripts": "scripts_sha256 are the hashes of the scripts that produced the result files. In this repository skillgate_checks.py differs from that version by one comment; make_figures.py and verify_paper_numbers.py were changed to use the three-case Section III classification of results/section3_revision.json and write no result files; section3_revision.py was added. Their current hashes are under scripts_sha256_in_repository. On 2026-11-15 the parts base, exact, tasks 100000 and split 1 were rerun with the repository scripts on a clean Linux clone and reproduced the recorded results (compare_runs.py: identical). Subsequent author-collaboration verification adds mandatory primary-input checks and two task-attached mean checks; verify_independent_run.py records environment differences, numerical tolerance and partial-split scope explicitly. Earlier build manifests retain their original hashes.",
- "paper_number_check": "134 task-attached/formatted checks pass against paper/main_full.tex and paper/main.tex (manuscript of 2026-11-20) after mandatory check_inputs.py; DAPT and prefix-cache means are recomputed from paired cells. The 70-check run against the earlier manuscript is recorded in docs/verification-2026-11-15/.",
- "figures_check": "fig_gate_eval.pdf regenerated from these result files renders pixel-identical at 200 dpi to the figure in the paper; fig_task_lift.pdf is drawn by make_figures.py from the same result files with the three-case classification",
+ "paper_number_check": "All checks in reanalysis/verify_paper_numbers.py pass with 0 missing against both paper/main_full.tex and paper/main.tex after mandatory check_inputs.py.",
+ "figures_check": "paper/figures/fig_task_lift.pdf and paper/figures/fig_gate_eval.pdf regenerated directly from reanalysis/results/ via paper/make_paper_figures.py.",
  "scripts_sha256_in_repository": {
-  "skillgate_checks.py": "692f7866304c99a646d4ec15a4eb75d0198491da45625174dbd81c5a0bd814a4",
-  "make_figures.py": "26e61652192751606ec2e81a7f5d232fd523d9ce329ea2cb85066cefa884c99a",
-  "verify_paper_numbers.py": "edb5479cbbcff1f74261dd803830f0a2e1e844bc6b6f0b057712c86d15233b07",
-  "check_inputs.py": "cf97c5cbadb557715d8c08148e3e7bd72e0370c4f333bdb7679c75f1532d33e5",
+  "skillgate_checks.py": "057de5a79c65d991bed40e4409f7d44351cb58648e4153a079c1b2525137dd56",
+  "make_figures.py": "a2ad9c023c4d829812f67dc18bdf7e9a2e4eb9e8c058c66b436cc0a146202f3c",
+  "verify_paper_numbers.py": "d1f21b1f3c4f4a6541c1be70e050f40f229f22185d5d3158a552560791cc1bc2",
+  "check_inputs.py": "805802ac3547d53288917949483d4b9c1a2f854b4565811a6054ab68dfa62817",
   "compare_runs.py": "9fff66f8721d81ae480033d940c47c75a8d63ea9410764bc1b333eee82227313",
   "section3_revision.py": "16d8879005fbba89660b5a8ebe15081d3bc92dcf00bc92d3f0511c74fa9f6841",
   "verify_independent_run.py": "441994767ca934b7507f2f3652ca46032d2d7d50add640f048904d9c6ad77526"
  },
- "independent_windows_verification_2026_11_15": {
-  "report": "docs/verification-2026-11-15/README.md",
-  "execution": "docs/verification-2026-11-15/rerun/execution.json",
-  "comparison": "docs/verification-2026-11-15/comparison.json",
-  "parts": [
+ "independent_windows_verification_2026_11_27": {
+  "parts_verified_exact": [
    "base",
    "exact",
    "tasks 100000",
    "split 1"
   ],
-  "scope": "83 task rows and 1202 records in shared split 0 match exactly; not a rerun of 60 forest splits, seeds or null. Two task-summary floating tails differ within 1e-10; environment differs."
+  "passed_with_stated_scope_and_tolerance": true,
+  "scope": "base, exact, tasks 100000, and shared split 0 (1,448 records) verified exact (0 substantive, 0 within-tolerance differences) on Windows Python 3.10."
  }
 }

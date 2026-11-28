@@ -28,7 +28,7 @@ FILES = {
     "scripts/provenance_common.py": "imported by the model code",
     "data/provenance_tables/S02/normalized_trials.csv": "normalized_trials",
     "data/provenance_tables/S02/paired_cells.csv": "paired_cells",
-    "data/provenance_tables/S05/cell_features_1421.csv": "cell_features",
+    "data/provenance_tables/S05/cell_features.csv": "cell_features",
     "data/provenance_tables/S12/method_config.json": "method_config",
     "data/provenance_tables/S18/task_partition_87.csv": "task_partition",
 }

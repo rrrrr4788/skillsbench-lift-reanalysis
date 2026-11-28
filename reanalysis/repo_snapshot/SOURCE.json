@@ -2,14 +2,14 @@
  "repository": "https://github.com/rrrrr4788/agent-skills-hurt",
  "commit": "6b11d0beaff1707a193465e088aff519e0e2a730",
  "tag": "v1.0.0-rc1",
- "note": "The seven files below are copied byte for byte from the commit above (LF line endings). sha256_crlf_checkout is the hash of the same text with CRLF line endings, as a Windows checkout with core.autocrlf=true stores it; the version-2 result files recorded those hashes.",
+ "note": "v3 primary inputs (LF line endings): v1.1 unscored timed-out trials on audited repository tasks (1,029 rows) are scored 0 and included in pairing, yielding 8,769 paired trials across 1,531 cells; cell_features.csv replaces cell_features_1421.csv.",
  "files": {
   "scripts/train_gate_oof.py": {
    "role": "model_code",
-   "git_blob": "d08b7c260881f9086a73b17d581d5377e840dc4e",
-   "bytes": 30248,
-   "sha256_as_committed": "4df589ab1ecacaa32484f15e455e19e2dcee1e4f3f08607f7d05a94dec7b24de",
-   "sha256_crlf_checkout": "8a03cfb195c8452bdfe1870a089a1f85266a1c5e5bec40606bbab83624ab12f7"
+   "git_blob": "4dcd6e25943dc03880e9ebf39a06d95676208810",
+   "bytes": 30233,
+   "sha256_as_committed": "938352dcbd9627cb890c83c700df4cfe58c101281d60ffc8ecba369408c87e18",
+   "sha256_crlf_checkout": "25a9119acc5d72d56e2328bfb0ad86c87f626be5a4ba0fe4f7f60e601cde0941"
   },
   "scripts/provenance_common.py": {
    "role": "imported by the model code",
@@ -20,24 +20,24 @@
   },
   "data/provenance_tables/S02/normalized_trials.csv": {
    "role": "normalized_trials",
-   "git_blob": "4987aa9465541922f96dd67b9d891c384f23c5a2",
-   "bytes": 2455381,
-   "sha256_as_committed": "5cf36d4be0bac79d81a51becfa7e1cf4b13d371149f648c08d5a15cfeaf6d55f",
-   "sha256_crlf_checkout": "782c03774c94c0cfda88b7be7788aed6cc00a179fb070c048cb11c32a9fe2a9b"
+   "git_blob": "2a2bfed90833c029c68544fe150846bd14d76df5",
+   "bytes": 2442330,
+   "sha256_as_committed": "a59e586ed0676c19f71bbe8b1470105d4329d54f6a3d5cd35e15f5a630fe7e1f",
+   "sha256_crlf_checkout": "49b307b4556d6402481a37d5f2b105cc7044ba40bde7f0b6a38cc5f35f7a336b"
   },
   "data/provenance_tables/S02/paired_cells.csv": {
    "role": "paired_cells",
-   "git_blob": "c1b6cd3b6512051096e72814e49f1db2c336298f",
-   "bytes": 363061,
-   "sha256_as_committed": "78b643e3ae92a1b040f4fe45c26314b3490bfff7fdd1c03b57500477a6fcf7d5",
-   "sha256_crlf_checkout": "fde8d7a4a911acb751bf07f29c5cae07a1f8cbe4794ccc1fcec398a07f5609dd"
+   "git_blob": "b1138909d85b93ac053c802c722605ee336a34f8",
+   "bytes": 400513,
+   "sha256_as_committed": "37e5aa4ffee78fe003ec9dcbc21c26ce9b296ed87d83bba166f680e674fe5fb5",
+   "sha256_crlf_checkout": "47223c3350dd56859d4d0fd47c96052ac3e38d22fb285cc579260ddd0607cd42"
   },
-  "data/provenance_tables/S05/cell_features_1421.csv": {
+  "data/provenance_tables/S05/cell_features.csv": {
    "role": "cell_features",
-   "git_blob": "21b0cde5ea76a10d7883ad1a86243a1332ce74d7",
-   "bytes": 345878,
-   "sha256_as_committed": "5ca19502f7a6e8f7babe56c1bc187dbd89dfa3aa2b33d9ffbe385712b6d19078",
-   "sha256_crlf_checkout": "45a12e00e5ec34ac50f232e51ec7b2af83d7e43f240c10416f363e352b7f9331"
+   "git_blob": "06e6eb1b8610920a243590cb056c3133e95cabe2",
+   "bytes": 375004,
+   "sha256_as_committed": "63d687e4af8590122eec0c800a5a6f1ee1f1c43f806fecca849fff820f8ac42c",
+   "sha256_crlf_checkout": "46c4c1dcdb69e616f96ceed98f29c19765871ca5860b47d15b0bd739208e49a2"
   },
   "data/provenance_tables/S12/method_config.json": {
    "role": "method_config",
@@ -48,10 +48,10 @@
   },
   "data/provenance_tables/S18/task_partition_87.csv": {
    "role": "task_partition",
-   "git_blob": "f3fb9ebd78e2415dfcb72b4141f7b3f1224a7bf7",
+   "git_blob": "b8e867d91a89249ea2d1a5d61176da6ece7cf6b1",
    "bytes": 6553,
-   "sha256_as_committed": "fc04ba8b1b6fe19c5333ef60262e7934e7066ef27e1a5d8560c8a5faeb54f510",
-   "sha256_crlf_checkout": "51c41fa9b8dadaf630c9928c6c1afaf1273c5514a3b55afe624d4672355f029d"
+   "sha256_as_committed": "41ec94a4214fd2de04ca83f5429027dae3b95ebf43b0fc3a99c0d1259f3a6a31",
+   "sha256_crlf_checkout": "f5246e2a22890742aebecb73bf5f2e9aa03ebf0a18294cd0735cedb7bcdf60b8"
   }
  }
 }

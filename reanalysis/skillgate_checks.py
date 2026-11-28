@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reanalysis of the SkillsBench paired-trial snapshot (version 2).
+"""Reanalysis of the SkillsBench paired-trial snapshot (version 3, timeouts scored as 0).
 
 Uses only the repository's own tables (data/provenance_tables) and its own
 model code (scripts/train_gate_oof.py: FastRandomForest, run_cell_10fold).
@@ -46,7 +46,7 @@ SEEDS = {"null": 20261112, "split": 20261113, "tasks": 20261114, "bootstrap": 42
 INPUT_FILES = {
     "normalized_trials": PT / "S02" / "normalized_trials.csv",
     "paired_cells": PT / "S02" / "paired_cells.csv",
-    "cell_features": PT / "S05" / "cell_features_1421.csv",
+    "cell_features": PT / "S05" / "cell_features.csv",
     "task_partition": PT / "S18" / "task_partition_87.csv",
     "method_config": PT / "S12" / "method_config.json",
     "model_code": REPO / "scripts" / "train_gate_oof.py",
@@ -186,8 +186,9 @@ def fit_fast(X, y_delta, y_neg, cv, task_arr=None):
 def check_fast_matches_paper():
     yd, yn = labels(WO, W)
     pred = fit_fast(XBASE, yd, yn, CV)
+    ref = tg.run_cell_10fold(XBASE, yd, yn, CV)
     a_full, a_prior = auc(yn, pred["pn"]), auc(yn, pred["pn_prior"])
-    assert abs(a_full - 0.8782279713405298) < 1e-9 and abs(a_prior - 0.8373513620810253) < 1e-9, (a_full, a_prior)
+    assert abs(a_full - ref["auc_full"]) < 1e-12 and abs(a_prior - ref["auc_prior_only"]) < 1e-12, (a_full, a_prior)
     return {"auc_full": a_full, "auc_prior": a_prior}
 
 
@@ -308,6 +309,9 @@ if PART == "base":
         "raw_rows": len(trials), "raw_rows_by_export": dict(Counter(r["version"] for r in trials)),
         "rows_by_exclusion_reason": dict(Counter(r["exclusion_reason"] for r in trials)),
         "paired_trials": int(sum(r["included_in_standard"] == "True" for r in trials)),
+        "raw_rows_without_score": int(sum(r["raw_reward"].strip() == "" for r in trials)),
+        "rescored_unscored_timeouts_in_repo": int(sum(r["flag_task_in_repo"] == "True" and r["is_timeout"] == "True" and r["raw_reward"].strip() == "" for r in trials)),
+        "rescored_unscored_timeouts_in_paired_cells": int(sum(r["included_in_standard"] == "True" and r["is_timeout"] == "True" and r["raw_reward"].strip() == "" for r in trials)),
         "configs_in_raw_export": {v: len(s) for v, s in raw_cfg.items()},
         "openhands_configs_in_raw_export": int(sum(h == "openhands" for _, h in raw_cfg.get("v1.1", set()))),
         "configs_with_paired_cells": len(set(CFGS)), "tasks_with_paired_cells": len(set(TASKS)),
@@ -356,7 +360,7 @@ if PART == "base":
     # Superseded for Section III by section3_revision.py; not five confirmed cases.
     st = np.array([strata[t] for t in TASKS])
     v5 = st == "undisclosed_verifier_5"
-    result["verifier_requirement_tasks"] = {
+    result["superseded_five_task_partition"] = {
         "cells": int(v5.sum()), "cells_pct": float(100 * v5.mean()),
         "share_of_summed_lift_pct": float(100 * yd[v5].sum() / yd.sum()),
         "baseline_pct": float(WO[v5].mean() * 100), "with_pct": float(W[v5].mean() * 100), "lift_pp": float(yd[v5].mean() * 100),
@@ -405,7 +409,7 @@ if PART == "base":
     feat["loss_rate_difference_wo_gt0_pp"] = {
         "estimate": feat["cells_wo_gt0"]["flagged_loss_pct"] - feat["cells_wo_gt0"]["other_loss_pct"],
         "ci95_stratified_task_bootstrap": [float(np.percentile(dboot, 2.5)), float(np.percentile(dboot, 97.5))]}
-    neg_tasks = sorted({t for t in uniq if yd[np.array(TASKS) == t].mean() < 0})
+    neg_tasks = sorted({t for t in uniq if yd[np.array(TASKS) == t].mean() < NEG_TOL})
     feat["negative_lift_tasks"] = len(neg_tasks)
     feat["negative_lift_tasks_without_feature"] = int(sum(strata[t] not in FLAGGED for t in neg_tasks))
     result["structural_features"] = feat
@@ -434,6 +438,24 @@ if PART == "base":
                                "ratio": float((tot[1] / tot[0]) / (tot[3] / tot[2])),
                                "ratio_ci95_task_bootstrap": [float(np.percentile(rb, 2.5)), float(np.percentile(rb, 97.5))],
                                "with": [int(tot[0]), int(tot[1])], "without": [int(tot[2]), int(tot[3])]}
+    v11_loss_idx = [i for i in range(n_cells) if VERS[i] == "v1.1" and yd[i] < NEG_TOL]
+    loss_w_ids = {tid for i in v11_loss_idx for tid in w_ids_all[i]}
+    loss_wo_ids = {tid for i in v11_loss_idx for tid in wo_ids_all[i]}
+    lw_to = sum(1 for r in inc if r["raw_row_id"] in loss_w_ids and r["is_timeout"] == "True")
+    lwo_to = sum(1 for r in inc if r["raw_row_id"] in loss_wo_ids and r["is_timeout"] == "True")
+    result["timeouts_v1.1_loss_cells"] = {
+        "cells": len(v11_loss_idx),
+        "with": [len(loss_w_ids), int(lw_to)],
+        "without": [len(loss_wo_ids), int(lwo_to)],
+        "with_pct": float(100 * lw_to / len(loss_w_ids)),
+        "without_pct": float(100 * lwo_to / len(loss_wo_ids)),
+        "ratio": float((lw_to / len(loss_w_ids)) / (lwo_to / len(loss_wo_ids))),
+    }
+    result["timeouts_v1.1_paired_by_task"] = {
+        t: {"with": [int(per_task[t][0]), int(per_task[t][1])],
+            "without": [int(per_task[t][2]), int(per_task[t][3])]}
+        for t in ("exam-block-sequencing", "mars-clouds-clustering", "r2r-mpc-control")
+    }
 
 # --------------------------------------------------------------------- exact
 elif PART == "exact":
@@ -517,7 +539,7 @@ elif PART == "tasks":
         for r, k_ in zip(rows, keep):
             r[flag] = bool(k_)
     rows.sort(key=lambda r: r["lift_pp"])
-    negs = [r for r in rows if r["lift_pp"] < 0]
+    negs = [r for r in rows if r["lift_pp"] < -1e-9]
     both = [r for r in negs if r["cells_v1.0"] and r["cells_v1.1"]]
     result["task_tests"] = {
         "permutations": B, "tasks": len(rows),
@@ -525,12 +547,12 @@ elif PART == "tasks":
         "p_value_definition": "(1 + number of permutations at least as extreme) / (B + 1)",
         "mc_se_at_p_0.05": float(np.sqrt(0.05 * 0.95 / B)),
         "significant_two_sided_fdr10": int(sum(r["sig_two_sided_fdr10"] for r in rows)),
-        "significant_two_sided_fdr10_positive": int(sum(r["sig_two_sided_fdr10"] and r["lift_pp"] > 0 for r in rows)),
-        "significant_two_sided_fdr10_negative": int(sum(r["sig_two_sided_fdr10"] and r["lift_pp"] < 0 for r in rows)),
+        "significant_two_sided_fdr10_positive": int(sum(r["sig_two_sided_fdr10"] and r["lift_pp"] > 1e-9 for r in rows)),
+        "significant_two_sided_fdr10_negative": int(sum(r["sig_two_sided_fdr10"] and r["lift_pp"] < -1e-9 for r in rows)),
         "two_sided_p_below_0.05": int(sum(r["p_two_sided"] < 0.05 for r in rows)),
-        "two_sided_p_below_0.05_positive": int(sum(r["p_two_sided"] < 0.05 and r["lift_pp"] > 0 for r in rows)),
-        "two_sided_p_below_0.05_negative": int(sum(r["p_two_sided"] < 0.05 and r["lift_pp"] < 0 for r in rows)),
-        "tasks_lift_negative": len(negs), "tasks_lift_zero": int(sum(abs(r["lift_pp"]) < 1e-9 for r in rows)),
+        "two_sided_p_below_0.05_positive": int(sum(r["p_two_sided"] < 0.05 and r["lift_pp"] > 1e-9 for r in rows)),
+        "two_sided_p_below_0.05_negative": int(sum(r["p_two_sided"] < 0.05 and r["lift_pp"] < -1e-9 for r in rows)),
+        "tasks_lift_negative": len(negs), "tasks_lift_zero": int(sum(abs(r["lift_pp"]) <= 1e-9 for r in rows)),
         "tasks_lift_positive": int(sum(r["lift_pp"] > 1e-9 for r in rows)),
         "negative_lift_smallest_two_sided_p": min(r["p_two_sided"] for r in negs),
         "negative_lift_smallest_one_sided_p": min(r["p_lower"] for r in negs),
